@@ -1,0 +1,227 @@
+.content-wrapper{
+    display: flex;
+    position: relative;
+    width: 835px;
+    height: 332px;
+    top: 164px;
+    left: 59px;
+    >.headline{
+        position: absolute;
+
+        width: 214px;
+        height: 52px;
+        display: flex;
+
+        font-family: 'Quantico';
+        font-size: 54px;
+        -webkit-text-stroke: 3px #B5E93B;
+        color: transparent;
+        transform: translateX(-44%) translateY(132%) rotate(-90deg);
+    }
+}
+
+#text{
+    width: 708px;
+}
+
+.content-column{
+    position: relative;
+    left: 104px;
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    >span{
+        font-family: 'Quantico';
+        font-weight: 400;
+        font-size: 18px;
+        color: #FFFDFD;
+        text-align: justify;
+    }
+}
+
+.location-elipse{
+    position: relative;
+    display: flex;
+    top: 35px;
+    right: 4.5px;
+    filter: opacity(0);
+}
+
+.remote-signal{
+    position: relative;
+    display: flex;
+    top: 1px;
+    right: 0px;
+    filter: opacity(0);
+    width: 24.17px;
+    height: 21.97px;
+}
+
+.content-bottom{
+    cursor: default;
+    display: flex;
+    width: 100%;
+    height: 130px;
+    top: 0;
+    position: relative;
+    >span{
+        font-family: 'Quantico';
+        font-weight: 700;
+        font-size: 48px;
+        color: #B5E93B;
+    }
+    >.content-bottom-row{
+        position: absolute;
+        left: 58px;
+        top: 65px;
+        display: flex;
+        gap: 45px;
+        width: 758px;
+        height: 96px;
+        >.content-row-column{
+            display: flex;
+            flex-direction: column;
+            height: 96px;
+            font-family: 'Quantico';
+            text-align: center;
+            text-overflow: inherit;
+            font-size: 18px;
+            color:#FFFDFD;
+            justify-content: space-between;
+            align-items: center;
+            >.located{
+                cursor: auto;
+                position: relative;
+                height: 40px;
+                width: 32.5px;
+                background-position: center;
+                background-size: cover;
+                background-image: url('../../assets/img/located.png');
+            }
+            >.remote{
+                position: relative;
+                height: 46.99px;
+                width: 53.58px;
+                background-position: center;
+                background-size: cover;
+                left: -6px;
+                background-image: url('../../assets/img/remote.png');
+            }
+            >.relocate{
+                position: relative;
+                height: 48.98px;
+                width: 30px;
+                background-position: center;
+                background-size: cover;
+                background-image: url('../../assets/img/relocate.png');
+                top: 2.5px;
+                &:hover{
+                    transition: 0.3s;
+                    background-image: url('../../assets/img/relocatehover.png');
+                    height: 54.98px;
+                    top: -5.5px;
+                    >#openRelocate{
+                        color: #B5E93B !important;
+                    }
+                }
+                &:not(:hover){
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+#location{
+    &:hover{
+        .location-elipse {
+            transition: 0.3s ease-in-out;
+            filter: opacity(1);
+        }
+ 
+    color: #B5E93B; 
+    }
+    &:not(:hover){
+        .location-elipse{
+        transition: 0.3s ease-in-out;
+    }
+    transition: 0.3s;   
+    }
+}
+
+#openRemote{
+    &:hover{
+        .remote-signal {
+            transition: 0.3s ease-in-out;
+            filter: opacity(1);
+        }
+        .open-remote{
+            color: #B5E93B;
+        }
+    }
+    &:not(:hover){
+        .remote-signal{
+        transition: 0.3s ease-in-out;}
+        transition: 0.3s;
+    }
+}
+
+#openRelocate{
+    &:hover{
+        .relocate{        
+            transition: 0.3s ease-in-out;
+            background-image: url('../../assets/img/relocatehover.png');
+            height: 54.98px;
+            top: -5.5px;
+
+        }
+        color: #B5E93B;
+    }
+    &:not(:hover){
+        transition: 0.3s;
+    }
+}
+
+.contact-me{
+    cursor: pointer;
+    position: relative;
+    top: 194px;
+    left: 523px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B5E93B;
+    width: 135px;
+    height: 43px;
+    border-radius: 30px;
+    font-family: 'Quantico';
+    font-size: 24px;
+    padding: 13px 30px 13px 30px;
+    color: black;
+    text-decoration: none;
+    &:hover{
+        background: linear-gradient(#B5E93B,#547800);
+    }
+    &:active{
+        background-color: #9E9D9D;
+    }
+}
+
+.arrow-right{
+    cursor: pointer;
+    position: absolute;
+    left: 1000px !important;
+    top: 752px !important;
+    width: 107px;
+    height: 30px;
+    &:hover{
+        transition: 0.3s;
+        transform: scale(1.2);
+        filter: brightness(5);
+    }
+    &:not(:hover){
+        transition: 0.3s;
+        transform: scale(1.0);
+        filter: brightness(1);
+    }
+}

@@ -36,24 +36,30 @@
         position: absolute;
         top: 696px;
         left: 599px;
-        // filter: opacity(0);
     }
-    >.arrow-right{
-        cursor: pointer;
-        position: absolute;
-        left: 1400px !important;
-        top: 348px !important;
-        width: 107px;
-        height: 30px;
-        &:hover{
-            transition: 0.3s;
-            transform: scale(1.2);
-            filter: brightness(5);
-        }
-        &:not(:hover){
-            transition: 0.3s;
-            transform: scale(1.0);
-            filter: brightness(1);
-        }
+}
+
+.arrow-right{
+    cursor: pointer;
+    position: absolute;
+    left: 1300px !important;
+    top: 348px !important;
+    width: 107px;
+    height: 30px;
+    &:hover{
+        transition: 0.3s;
+        transform: scale(1.2);
+        filter: brightness(5);
     }
+    &:not(:hover){
+        transition: 0.3s;
+        transform: scale(1.0);
+        filter: brightness(1);
+    }
+}
+
+#landing{
+    position: absolute;
+    left: 0;
+    margin: 0;
 }

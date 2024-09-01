@@ -1,6 +1,8 @@
 body{
     overflow-y: hidden;
     max-height: 100%;
+    background-color: black;
+    scroll-behavior: smooth;
 }
 
 app-landingpage{
@@ -8,12 +10,22 @@ app-landingpage{
     max-width: 1440px;
     width: 100%;
     left: 0;
+    height: 100vh;
+    background-color: black;
 }
 
 app-whyme{
     position: relative;
     max-width: 1440px;
     width: 100%;
-    left: 1440px;
-    background-color: aliceblue;
+    height: 100vh;
+    background-color: black;
+}
+
+app-myskillset{
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
 }

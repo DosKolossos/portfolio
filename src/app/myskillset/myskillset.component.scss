@@ -1,0 +1,93 @@
+.content-wrapper{
+    display: flex;
+    position: relative;
+    width: 931px;
+    height: 359px;
+    top: 461px;
+    left: 59px;
+    font-family: 'Quantico';
+    >.headline{
+        position: absolute;
+        width: 303px;
+        height: 65px;
+        display: flex;
+        font-size: 54px;
+        -webkit-text-stroke: 3px #B5E93B;
+        color: transparent;
+        transform: translateX(-44%) translateY(132%) rotate(-90deg);
+    }
+    >.content-column{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: -36px;
+        width: 860px;
+        left: 101px;
+        justify-content: space-between;
+        >#mySkillsText{
+            position: relative;
+            color: #FFFDFD;
+            width: 860px;
+            height: 66px;
+            font-size: 18px;
+            text-align: justify;
+            font-weight: 400;
+        }
+        >.logo-box{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 44px;
+            width: 860px;
+            height: 249px;
+            >.logo-with-text{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 86px;
+                height: 90px;
+                color: #FFFDFD;
+                gap: 12px;
+                >.logo{
+                    height: 60px;
+                }
+                >span{
+                    display: flex;
+                    align-items: center;
+                    text-wrap: wrap;
+                    text-align: center;
+                }
+            }
+        }
+
+        >#newTechnoText{
+            display: flex;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            width: 215px;
+            height: 88px;
+            font-size: 18px;
+            color: #FFFDFD;
+        }
+    }
+
+}
+.arrow-right{
+    cursor: pointer;
+    position: absolute;
+    left: 1200px !important;
+    top: 387px !important;
+    width: 107px;
+    height: 30px;
+    &:hover{
+        transition: 0.3s;
+        transform: scale(1.2);
+        filter: brightness(5);
+    }
+    &:not(:hover){
+        transition: 0.3s;
+        transform: scale(1.0);
+        filter: brightness(1);
+    }
+}
