@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    max-width: 1440px;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+    // overflow: overlay;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #B5E93B;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    filter: opacity(0);
+}
+
+.fontQuantico {
+    font-family: 'Quantico';
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Quantico';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/Quantico-Regular.ttf');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Quantico';
+    font-style: bold;
+    font-weight: 700;
+    src: url('./assets/fonts/Quantico-Bold.ttf');
+}
