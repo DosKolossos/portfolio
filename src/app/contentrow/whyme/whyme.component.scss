@@ -96,7 +96,7 @@
                 width: 32.5px;
                 background-position: center;
                 background-size: cover;
-                background-image: url('../../assets/img/located.png');
+                background-image: url('../../../assets/img/located.png');
             }
             >.remote{
                 position: relative;
@@ -105,7 +105,7 @@
                 background-position: center;
                 background-size: cover;
                 left: -6px;
-                background-image: url('../../assets/img/remote.png');
+                background-image: url('../../../assets/img/remote.png');
             }
             >.relocate{
                 position: relative;
@@ -113,11 +113,11 @@
                 width: 30px;
                 background-position: center;
                 background-size: cover;
-                background-image: url('../../assets/img/relocate.png');
+                background-image: url('../../../assets/img/relocate.png');
                 top: 2.5px;
                 &:hover{
                     transition: 0.3s;
-                    background-image: url('../../assets/img/relocatehover.png');
+                    background-image: url('../../../assets/img/relocatehover.png');
                     height: 54.98px;
                     top: -5.5px;
                     >#openRelocate{
@@ -170,7 +170,7 @@
     &:hover{
         .relocate{        
             transition: 0.3s ease-in-out;
-            background-image: url('../../assets/img/relocatehover.png');
+            background-image: url('../../../assets/img/relocatehover.png');
             height: 54.98px;
             top: -5.5px;
 
