@@ -1,11 +1,12 @@
-<div class="content-wrapper" id="mySkills">
+<div id="mySkills"></div>
+<div class="content-wrapper">
     <div class="headline">My Skill Set</div>
     <div class="content-column">
         <span id="mySkillsText">
-            The IT landscape is continuously evolving, 
+            The IT landscape is continuously evolving,
             with new technologies and methodologies.
-            Staying motivated to expand my IT skills 
-            requires a strategic approach, a curious mindset, 
+            Staying motivated to expand my IT skills
+            requires a strategic approach, a curious mindset,
             and a commitment to lifelong learning.
         </span>
         <div class="logo-box">
@@ -13,12 +14,28 @@
                 <img [ngStyle]="{'left.px': index * 128}" class="logo" src="../../../assets/img/mySkillSet/{{i}}.png">
                 <span>{{logoTexts[index]}}</span>
             </div>
+            <div class="logo-with-text-mobile" *ngFor="let i of [1,2,3,4,5,6,7,8,9]; let index = index">
+                <div class="hauptgruppe">
+                    <img class="logo" src="../../../assets/img/mySkillSet/{{i}}.png">
+                    <span id="span{{[i]}}" class="{{classes[index]}}">{{logoTexts[index]}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="logo-box-2-mobile">
+            <div class="logo-with-text-mobile-2nd-area {{style[index]}}" *ngFor="let i of [10,11]; let index = index">
+                <img class="logo" src="../../../assets/img/mySkillSet/{{i}}.png">
+                <span id="span{{[i]}}" class="{{style[index]}}">{{logoTextsMobile2ndArea[index]}}</span>
+            </div>
         </div>
         <div id="newTechnoText">
-            I am always happy to learn new technonogies,
+            I am always happy to learn new technologies,
             just tell me what you need.</div>
+        <div id="newTechnoTextMobile">
+            I always try to expand my current skill set
+            and I am happy to learn new technologies,
+            just tell me what else do you need.</div>
     </div>
-    
+    <a href="https://google.de" target="_blank" class="lets-talk">Let's talk</a>
 </div>
-<a href="#" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png" class="arrow-right"></a>
-
+<a href="#projects" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png"
+        class="arrow-right"></a>

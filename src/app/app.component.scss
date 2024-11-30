@@ -1,6 +1,15 @@
-app-contentrow{
+app-contentrow {
     display: flex;
-    width: 9640px;
+    width: 9259px;
     height: 100vh;
     max-height: 95%;
+}
+
+@media only screen and (orientation:portrait) {
+    app-contentrow {
+        flex-direction: column;
+        width: 100%;
+        overflow-x: hidden;
+        height: auto;
+    }
 }

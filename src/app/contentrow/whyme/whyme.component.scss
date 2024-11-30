@@ -20,8 +20,10 @@
     }
 }
 
+
 #text{
     width: 708px;
+    text-wrap: wrap;
 }
 
 .content-column{
@@ -186,7 +188,6 @@
     cursor: pointer;
     position: relative;
     top: 194px;
-    left: 523px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,7 +211,7 @@
 .arrow-right{
     cursor: pointer;
     position: absolute;
-    left: 1000px !important;
+    left: 900px !important;
     top: 752px !important;
     width: 107px;
     height: 30px;
@@ -224,4 +225,105 @@
         transform: scale(1.0);
         filter: brightness(1);
     }
+}
+
+#whyMe{
+    position: absolute;
+    top: 0;
+    left: -140px;
+}
+
+@media only screen and (orientation:portrait) {
+    .content-wrapper{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        overflow-x: hidden;
+        height: max-content;
+        left: 0;
+        right: 0;
+        top: 0;
+        >.headline{
+            position: relative;
+            top: 0;
+            left: 24px;
+            display: flex;
+            font-weight: 700;
+            font-size: 32px;
+            -webkit-text-stroke: 1px #B5E93B;
+            color: transparent;
+            transform: translateX(0) translateY(0) rotate(0deg);
+        }
+        >.content-column{
+            position: relative;
+            gap: 24px;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100vw;
+            height: 505px;
+            top: 0;
+            overflow-y: visible;
+            >span{
+                font-family: 'Quantico';
+                font-weight: 400;
+                font-size: 16px;
+                color: #FFFDFD;
+                text-align: justify;
+                width: 100%;            
+            }
+            >.content-bottom{
+                flex-direction: column;
+                align-items: center;
+                left: 0;
+                position: relative;
+                >span{
+                    font-size: 32px;
+                }
+                >.content-bottom-row{
+
+                    top: 160px;
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    width: 100%;
+                    left: 0;
+                    gap: 24px;
+                    >.content-row-column{
+                    gap: 10px;}
+                }
+            }
+        }
+        #text{
+            width: 80%;
+            text-align: left;
+            position: relative;
+            left: 24px;
+        }
+        #location{
+            display: none;
+        }
+        #openRelocate{
+            display: flex;
+        }
+    }
+    .contact-me{
+        position: relative;
+        top: 250px;
+        left: 0;
+        border-radius: 30px;
+        font-family: 'Quantico';
+        font-size: 14px;
+        padding: 0;
+        &:hover{
+            background: linear-gradient(#B5E93B,#547800);
+        }
+        &:active{
+            background-color: #9E9D9D;
+        }
+    }
+
 }

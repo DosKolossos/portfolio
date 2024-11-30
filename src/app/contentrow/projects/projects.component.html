@@ -1,1 +1,102 @@
-<p>projects works!</p>
+<div id="myWork"></div>
+
+<div class="content-wrapper">
+    <div class="headline">My Work</div>
+    <div class="projects">
+        <div *ngFor="let project of projectlist | keyvalue" class="project-wrapper">
+            <div class="project-headline">
+                <div class="project-number">{{ project.value.id }}</div>
+                <div class="project-name">{{ project.key }}</div>
+            </div>
+
+            <div class="project-description">
+                <div class="image-wrapper">
+                    <img src="../../../assets/img/Projects/{{ project.value.id }}.png" alt="">
+                    <div class="button-row">
+                        <a [href]="project.value.github" target="_blank" class="github-btn">GitHub</a>
+                        <a [href]="project.value.link" target="_blank" class="livetest-btn">Live Test</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="subtitle-headline">
+                        <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
+                        <h3>About the project</h3>
+                    </div>
+                    <span>{{ project.value.description }}</span>
+                    <div class="subtitle-headline">
+                        <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
+                        <h3>Technologies used</h3>
+                    </div>
+                    <span>{{ project.value.technologies }}</span>
+                    <div class="subtitle-headline">
+                        <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
+                        <h3>What I have learned</h3>
+                    </div>
+                    <span>{{ project.value.notes }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="projects-mobile">
+        <div *ngFor="let project of projectlist | keyvalue" class="project-wrapper">
+            <div class="project-headline">
+                <div class="project-number">{{ project.value.id }}</div>
+                <div class="project-name">{{ project.key }}</div>
+            </div>
+
+            <div class="project-description">
+                <div class="image-wrapper">
+                    <img src="../../../assets/img/Projects/{{ project.value.id }}.png" alt="">
+                    <div class="button-row">
+                        <a [href]="project.value.github" target="_blank" class="github-btn">GitHub</a>
+                        <a [href]="project.value.link" target="_blank" class="livetest-btn">Live Test</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="subtitle-headline">
+                        <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
+                        <h3>About the project</h3>
+                    </div>
+                    <span>{{ project.value.description }}</span>
+                    <div class="subtitle-headline">
+                        <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
+                        <h3>Technologies used</h3>
+                    </div>
+                    <span>{{ project.value.technologies }}</span>
+                    <div class="subtitle-headline">
+                        <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
+                        <h3>What I have learned</h3>
+                    </div>
+                    <span>{{ project.value.notes }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ongoingProject">
+        <div id="ogpHeadline">
+            <div id="ogpNumber">4</div>
+            <div id="ogpTitle">Ongoing project</div>
+        </div>
+        <div id="ogptext">
+            I am currently working on developing an online shop for pet foods.<br>
+This is for me  both exciting and challenging. In my work the key to success lies in a good planning and execution.
+        </div>
+        <div id="letsTalk">
+            <a href="#contact" id="contactBtn">Let's talk</a>
+        </div>
+    </div>
+    <div id="ongoingProjectMobile">
+        <div id="ogpHeadlineMobile">
+            <div id="ogpNumberMobile">4</div>
+            <div id="ogpTitleMobile">Ongoing project</div>
+        </div>
+        <div id="ogptextMobile">
+            I am currently working on developing an online shop for pet foods.<br>
+This is for me  both exciting and challenging. In my work the key to success lies in a good planning and execution.
+        </div>
+        <div id="letsTalkMobile">
+            <a href="#contact" id="contactBtnMobile">Let's talk</a>
+        </div>
+    </div>
+</div>
+<a href="#" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png" class="arrow-right"></a>

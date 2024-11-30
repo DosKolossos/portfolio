@@ -1,0 +1,286 @@
+.contactme-wrapper {
+    display: flex;
+    width: 565px;
+    height: 530px;
+    top: 156px;
+    position: relative;
+    font-family: 'Quantico';
+    text-wrap: wrap;
+    >.headline {
+        position: absolute;
+        width: 303px;
+        height: 65px;
+        display: flex;
+        font-size: 54px;
+        -webkit-text-stroke: 3px #B5E93B;
+        color: transparent;
+        transform: translateX(-44%) translateY(132%) rotate(-90deg);
+    }
+
+    >.form-wrapper {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 456px;
+        height: 407px;
+        color: #D3ED97;
+    }
+}
+
+.is-invalid {
+    border: 2px solid red !important;
+    color: red;
+  }
+  
+  .form-group input.is-invalid::placeholder,
+  .form-group textarea.is-invalid::placeholder {
+    color: red; /* Placeholder-Farbe für ungültige Felder */
+    filter: opacity(1);
+  }
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+::placeholder{
+    color: #D3ED97;
+    font-family: 'Quantico';
+    font-weight: 400;
+    border: none;
+    filter: opacity(0.4);
+}
+
+.error-message{
+    color: red;
+}
+
+#contactMe{
+    position: absolute;
+    top: 0;
+}
+
+span{
+    position: relative;
+    display: flex;
+    padding: 0;
+    bottom: 0;
+}
+
+.arrow-right {
+    cursor: pointer;
+    position: absolute;
+    left: 889px !important;
+    top: 50% !important;
+    width: 107px;
+    height: 30px;
+    transform: scaleX(-1);
+
+    &:hover {
+        transition: 0.3s;
+        transform: scaleX(-1) scale(1.2);
+        filter: brightness(5);
+    }
+
+    &:not(:hover) {
+        transition: 0.3s;
+        transform: scaleX(-1) scale(1.0);
+        filter: brightness(1);
+    }
+}
+
+.subtext {
+    display: flex;
+    flex-direction: column;
+    width: 417px;
+    height: 665px;
+    top: 152px;
+    position: absolute;
+    font-family: 'Quantico';
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFDFD;
+    gap: 16px;
+    text-align: right;
+    right: 20px;
+    >.green-font {
+        color: #D3ED97;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    >.subtext-row {
+        position: relative;
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+        align-items: center;
+
+        >.mail-icon {
+            width: 14.47px;
+            height: 17.75px;
+        }
+
+        >.phone-icon {
+            width: 14.39px;
+            height: 15.86px;
+        }
+    }
+
+    .imprint {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: 101px;
+        text-align: right;
+        gap: 8px;
+        bottom: 0;
+        right: 0;
+    
+        >a {
+            text-decoration: none;
+            color: #FFFDFD;
+            transition: color 0.3s ease; // Übergang für die Farbe
+    
+            &:hover {
+                color: #B5E93B; // Farbe nach Hover
+            }
+    
+            &:after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 1px;
+                background: #B5E93B; // Unterstreichungseffektfarbe
+                transition: width 0.3s ease; // Sanfter Übergang für die Breite
+            }
+    
+            &:hover:after {
+                width: 100%; // Unterstreichung erscheint mit Verzögerung
+            }
+        }
+    }
+    
+}   
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 456px;
+    height: 60px;
+    padding-left: 20px; /* Some padding */ 
+    border: 1px solid #B5E93B; /* Gray border */
+    border-radius: 30px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    background: none;
+    color: #D3ED97;
+    font-size: 14px;
+  }
+
+input[type=email], select, textarea {
+    width: 456px;
+    height: 60px;
+    padding-left: 20px; /* Some padding */ 
+    border: 1px solid #B5E93B; /* Gray border */
+    border-radius: 30px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    background-color: black;
+    color: #D3ED97;
+  }
+
+textarea{
+    height: 255px;
+    padding-top: 24px;
+    background-color: none;
+}
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    display: flex;
+    position: relative;
+    width: 94px;
+    height: 43px;
+    border-radius: 30px;
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  input:focus {
+    border: 1px solid #B5E93B; /* Gray border */
+    border-radius: 30px;
+    outline: none; /* Entfernt den blauen Standard-Glow */
+  }
+
+  input:not(:placeholder-shown) {
+    background-color: #f5f5f5; /* Behalte Hintergrundfarbe bei Eingabe */
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  .privacy-policy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 407px;
+    height: 107px;
+    .top-row{
+        display: flex;
+        gap: 12px;
+        >label{
+            width: 100%;
+            font-size: 14px;
+        }
+        a{
+            color: #FFFDFD;
+            transition: color 0.3s ease; // Übergang für die Farbe
+
+            &:hover {
+                text-decoration: underline !important;
+            }
+            &:not(:hover) {
+                text-decoration: none !important;
+            }}
+    }
+    .submit-wrapper{
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        width: 100%;
+        right: 0;
+    }
+
+  }
+
+  .submit-button{
+    display: flex;
+    width: 94px;
+    height: 43px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-family: 'Quantico';
+    background-color: #9E9D9D;
+    color: #4A4A4A;
+  }
+

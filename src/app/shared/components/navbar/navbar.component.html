@@ -1,11 +1,17 @@
 <div class="navbar">
     <div class="navbar-content">
-        <a href="#landing"><img src="../../assets/img/LogoDK.png"></a>
+        <a (click)="scrollToElement('landing')"><img src="../../assets/img/LogoDK.png" class="logo-desktop"></a>
         <div class="navbar-text-wrapper">
-            <a>Contact</a>
-            <a>My Work</a>
-            <a href="#mySkills">Skills</a>
-            <a href="#whyMe">Why me</a>
+            <a (click)="scrollToElement('contactMe')">Contact</a>
+            <a (click)="scrollToElement('myWork')">My Work</a>
+            <a (click)="scrollToElement('mySkills')">Skills</a>
+            <a (click)="scrollToElement('whyMe')">Why me</a>
         </div>
+    </div>
+</div>
+<div class="navbar-mobile">
+    <div class="navbar-content-mobile">
+        <a (click)="scrollToElement('landing')"><img src="../../assets/img/LogoDK.png" class="logo-mobile"></a>
+        <a (click)="scrollToElement('#')"><img src="../../assets/img/burgermenu.png" class="burger-menu-mobile"></a>
     </div>
 </div>

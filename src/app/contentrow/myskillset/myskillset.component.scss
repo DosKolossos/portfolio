@@ -1,4 +1,4 @@
-.content-wrapper{
+.content-wrapper {
     display: flex;
     position: relative;
     width: 931px;
@@ -6,7 +6,8 @@
     top: 461px;
     left: 59px;
     font-family: 'Quantico';
-    >.headline{
+
+    >.headline {
         position: absolute;
         width: 303px;
         height: 65px;
@@ -16,7 +17,8 @@
         color: transparent;
         transform: translateX(-44%) translateY(132%) rotate(-90deg);
     }
-    >.content-column{
+
+    >.content-column {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -24,7 +26,8 @@
         width: 860px;
         left: 101px;
         justify-content: space-between;
-        >#mySkillsText{
+
+        >#mySkillsText {
             position: relative;
             color: #FFFDFD;
             width: 860px;
@@ -32,15 +35,18 @@
             font-size: 18px;
             text-align: justify;
             font-weight: 400;
+            text-wrap: wrap;
         }
-        >.logo-box{
+
+        >.logo-box {
             position: relative;
             display: flex;
             flex-wrap: wrap;
             gap: 44px;
             width: 860px;
             height: 249px;
-            >.logo-with-text{
+
+            >.logo-with-text {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -48,16 +54,19 @@
                 height: 90px;
                 color: #FFFDFD;
                 gap: 12px;
-                &:hover{
-                       .logo{
+
+                &:hover {
+                    .logo {
                         filter: drop-shadow(0px 0px 10px rgba(181, 233, 59, 0.5));
-                       } 
+                    }
                 }
-                >.logo{
+
+                >.logo {
                     height: 60px;
 
                 }
-                >span{
+
+                >span {
                     cursor: default;
                     display: flex;
                     align-items: center;
@@ -67,7 +76,7 @@
             }
         }
 
-        >#newTechnoText{
+        >#newTechnoText {
             display: flex;
             bottom: 0;
             right: 0;
@@ -76,25 +85,240 @@
             height: 88px;
             font-size: 18px;
             color: #FFFDFD;
+            text-wrap: wrap;
         }
     }
 
 }
-.arrow-right{
+
+.arrow-right {
     cursor: pointer;
     position: absolute;
     left: 1200px !important;
     top: 387px !important;
     width: 107px;
     height: 30px;
-    &:hover{
+
+    &:hover {
         transition: 0.3s;
         transform: scale(1.2);
         filter: brightness(5);
     }
-    &:not(:hover){
+
+    &:not(:hover) {
         transition: 0.3s;
         transform: scale(1.0);
         filter: brightness(1);
     }
+}
+
+.logo-with-text-mobile {
+    display: none;
+}
+
+#mySkills {
+    position: absolute;
+    top: 0;
+    left: -140px;
+}
+
+.contact-me{
+    display: none;
+}
+
+#newTechnoTextMobile {
+    display: none;
+}
+
+@media only screen and (orientation:portrait) {
+    .arrow-right {
+        display: none;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+
+        >.headline {
+            position: relative;
+            margin-left: 45px;
+            width: 100%;
+            justify-content: flex-start;
+            top: 0;
+            height: 38px;
+            display: flex;
+            font-size: 32px;
+            -webkit-text-stroke: 1px #B5E93B;
+            color: transparent;
+            transform: translateX(-0%) translateY(0%) rotate(0deg);
+        }
+
+        >.content-column {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 0;
+            width: 100%;
+            left: 0;
+            gap: 10px;
+
+            >#mySkillsText {
+                position: relative;
+                color: #FFFDFD;
+                width: fit-content;
+                height: 66px;
+                font-size: 16px;
+                text-align: justify;
+                font-weight: 400;
+                text-wrap: wrap;
+                margin-left: 24px;
+                margin-right: 24px;
+            }
+
+            >#newTechnoText {
+                display: none;
+            }
+
+            >#newTechnoTextMobile {
+                display: flex;
+                margin-left: 27px;
+                margin-right: 27px;
+                text-align: justify;
+                bottom: 0;
+                right: 0;
+                top: 130px;
+                position: relative;
+                width: fit-content;
+                height: 63px;
+                font-size: 16px;
+                font-weight: 400;
+                color: #FFFDFD;
+                text-wrap: wrap;
+            }
+
+            >.logo-box {
+                position: relative;
+                top: 88px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0px 85px;
+                width: 82%;
+                margin-left: 29px;
+                margin-right: 29px;
+                justify-content: space-between;
+
+                >.logo-with-text {
+                    display: none;
+                }
+
+                >.logo-with-text-mobile {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: #FFFDFD;
+                    height: fit-content;
+
+                    >.hauptgruppe {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 45px;
+
+                        >.logo {
+                            height: 45px;
+                            width: min-content;
+                        }
+
+                        >.hide-mobile {
+                            display: none;
+                        }
+
+                        >span {
+                            display: flex;
+                            align-items: center;
+                            font-size: 16px;
+                            font-weight: 400;
+                            text-wrap: nowrap;
+                            font-family: 'RobotoMono';
+                        }
+                    }
+                }
+
+
+
+            }
+
+            >.logo-box-2-mobile {
+                position: relative;
+                top: 88px;
+                display: flex;
+                width: 100%;
+                margin-left: 29px;
+
+                >.logo-with-text-mobile-2nd-area {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: unset !important;
+                    color: #FFFDFD;
+                    height: fit-content;
+
+                    >.logo-with-text {
+                        display: none;
+                    }
+
+                    >.logo {
+                        height: 45px;
+                        width: min-content;
+                    }
+
+                    >.hide-mobile {
+                        display: none;
+                    }
+
+                    >span {
+                        display: flex;
+                        align-items: center;
+                        font-size: 16px;
+                        font-weight: 400;
+                        text-wrap: nowrap;
+                        font-family: 'RobotoMono';
+                    }
+                }
+                >.absolute-center {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    width: 82%;
+                    gap: 8px;
+                    }
+            }
+        }
+
+
+
+    }
+    .lets-talk{
+        cursor: pointer;
+        position: relative;
+        top: 164px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #B5E93B;
+        width: 122px;
+        height: 43px;
+        border-radius: 30px;
+        font-family: 'Quantico';
+        font-size: 14px;
+        color: black;
+        text-decoration: none;
+        z-index: 1;
+    }
+
 }

@@ -12,7 +12,8 @@ import { ContentrowComponent } from './contentrow/contentrow.component';
     ContentrowComponent, 
     RouterOutlet, 
     NavbarComponent, 
-    HeaderComponent,],
+    HeaderComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

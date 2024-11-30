@@ -3,6 +3,9 @@ import { LandingpageComponent } from '../contentrow/landingpage/landingpage.comp
 import { WhymeComponent } from '../contentrow/whyme/whyme.component';
 import { MyskillsetComponent } from '../contentrow/myskillset/myskillset.component';
 import { ContactformComponent } from './contactform/contactform.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ReferencesComponent } from './references/references.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-contentrow',
@@ -11,9 +14,12 @@ import { ContactformComponent } from './contactform/contactform.component';
     LandingpageComponent, 
     WhymeComponent, 
     MyskillsetComponent,
-    ContactformComponent],
+    ProjectsComponent,
+    ReferencesComponent,
+    ContactformComponent,
+    FooterComponent],
   templateUrl: './contentrow.component.html',
-  styleUrl: './contentrow.component.scss'
+  styleUrls: ['./contentrow.component.scss']
 })
 export class ContentrowComponent {
 

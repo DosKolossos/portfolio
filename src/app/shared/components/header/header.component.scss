@@ -8,22 +8,24 @@
     left: 1000px;
     gap: 40px;
     z-index: 9999;
+
     >.social-wrapper {
         display: flex;
         position: relative;
         gap: 16px;
-        >a{
+
+        >a {
             >img {
                 cursor: pointer;
                 width: 30px;
                 height: 30px;
                 filter: brightness(5);
-    
+
                 &:hover {
                     transition: 0.3s;
                     filter: brightness(1);
                 }
-    
+
                 &:not(:hover) {
                     transition: 0.5s;
                     filter: brightness(5);
@@ -31,24 +33,36 @@
             }
         }
     }
-    >.languages{
+
+    >.languages {
         display: flex;
         position: relative;
         gap: 4px;
-        >p{
+
+        >p {
             color: white;
         }
-        >#languageDe,#languageEn{
+
+        >#languageDe,
+        #languageEn {
             color: white;
             cursor: pointer;
             font-family: 'Roboto Mono';
-            &:hover{
+
+            &:hover {
                 transition: 0.3s;
                 color: #B5E93B;
             }
-            &:not(:hover){
+
+            &:not(:hover) {
                 transition: 0.3s;
             }
         }
+    }
+}
+
+@media only screen and (orientation:portrait) {
+    .header {
+        display: none;
     }
 }

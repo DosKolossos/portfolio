@@ -1,1 +1,70 @@
-<p>contactform works!</p>
+<div id="contactMe"></div>
+<div class="contactme-wrapper">
+    <div class="headline">Contact me</div>
+    <div class="form-wrapper">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" style="display: flex;
+        flex-direction: column;
+        align-items: center;">
+
+            <div class="form-group">
+                <input [(ngModel)]="contactData.name" 
+                type="text" 
+                id="name" 
+                name="name"
+                [placeholder]="name.invalid && name.touched ? 'Your name is required' : 'Your name'" 
+                required
+                #name="ngModel" 
+                [class]="{'is-invalid': name.invalid && name.touched}">
+            </div>
+
+            <div class="form-group">
+                <input [(ngModel)]="contactData.email" type="email" id="email" name="email"
+                    [placeholder]="email.invalid && email.touched ? 'Your e-mail is required' : 'Your e-mail'" required
+                    #email="ngModel" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                    [ngClass]="{'is-invalid': email.invalid && email.touched}">
+            </div>
+
+            <div class="form-group">
+                <textarea [(ngModel)]="contactData.message" id="message" name="message"
+                    [placeholder]="message.invalid && message.touched ? 'Your message is required' : 'Your message'"
+                    required minlength="8" #message="ngModel"
+                    [ngClass]="{'is-invalid': message.invalid && message.touched}">
+                </textarea>
+            </div>
+
+            <div class="privacy-policy">
+                <div class="top-row">
+                    <input type="checkbox" id="privacy" name="privacy" [(ngModel)]="contactData.privacy" required
+                        #checkbox="ngModel" [class]="{'is-invalid': checkbox.invalid && checkbox.touched}">
+                    <label for="privacy">I've read <a href="/privacy"> privacy policy</a> and agree to the processing of
+                        my
+                        data as outlined</label>
+                </div>
+                <span *ngIf="!checkbox.valid && checkbox.touched" class="error-message">Please accept the privacy
+                    policy</span>
+                <div class="submit-wrapper"><button type="submit" [disabled]="contactForm.invalid" [class.active]="!contactForm.invalid"
+                        class="submit-button">Send</button>
+
+                    <p *ngIf="isSubmitted" class="success-message">Email has been successfully sent!</p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<div class="subtext">
+    <div class="green-font">Let us work together.</div>
+    Whether your project involves developing a new<br>application, upgrading existing systems,<br>
+    or implementing robust cybersecurity measures,<br>
+    I have the technical acumen and problem-solving<br>skills to ensure successful outcomes. <br><br>
+    <div class="subtext-row"><img src="../../../assets/img/mailto-icon.png" class="mail-icon" alt=""><span>E-mail:
+            kontakt&#64;david-kolosza.de</span></div>
+    <div class="subtext-row"><img src="../../../assets/img/phone-icon.png" class="phone-icon" alt=""><span>Tel: +49 176
+            41590450</span></div>
+    <div class="imprint">
+        <a href="#">Legal Notice</a>
+        <a href="#">Imprint</a>
+        © David Kolosza 2024
+    </div>
+</div>
+<a href="#" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png" class="arrow-right"></a>

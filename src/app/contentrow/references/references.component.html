@@ -1,0 +1,32 @@
+<a href="#" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png" class="arrow-right"></a>
+
+<div #references>
+    <div class="content-wrapper">
+
+        <div class="headline">References</div>
+        <div class="comment-area" id="commentArea">
+
+            <div class="comment-wrapper" [class.slide-left]="animationDirection === 'left'"
+                [class.slide-right]="animationDirection === 'right'" (animationend)="animationDirection = ''">
+                <div class="comment-text">"{{ comments[currentIndex].comment }}"</div>
+                <div class="comment-name-project">
+                    <div class="comment-author">{{ comments[currentIndex].name }}</div>
+                    <div class="comment-project">{{ comments[currentIndex].project }}</div>
+
+                </div>
+                <div class="navigation">
+                    <button (click)="showPrevious()">&#8592;</button>
+                    <button 
+                    (mousedown)="stopSlide()" 
+                    (mouseup)="startSlide()" 
+                    (mouseleave)="startSlide()" 
+                    (touchstart)="stopSlide()" 
+                    (touchend)="startSlide()">
+                    | |
+                </button>
+                    <button (click)="showNext()">&#8594;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

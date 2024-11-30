@@ -2,8 +2,10 @@ body {
     margin: 0;
     height: 100vh;
     scroll-behavior: smooth;
-    overflow-y: hidden;
-}
+    overflow-x: scroll; /* Erlaubt horizontales Scrollen */
+    overflow-y: hidden; /* Verhindert vertikales Scrollen */
+    white-space: nowrap; 
+  }
 
 .d-none{
     display: none;
@@ -43,4 +45,23 @@ body {
     font-style: bold;
     font-weight: 700;
     src: url('./assets/fonts/Quantico-Bold.ttf');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'RobotoMono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/RobotoMono-VariableFont_wght.ttf');
+}
+
+@media only screen and (orientation:portrait) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    body{
+        height: auto;
+        overflow-y: scroll;
+    }
+
 }

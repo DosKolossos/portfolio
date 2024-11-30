@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 })
 export class MyskillsetComponent {
 
-  logoTexts =[
+  logoTexts = [
     "Angular",
     "TypeScript",
     "JavaScript",
@@ -23,5 +23,23 @@ export class MyskillsetComponent {
     "Material Design",
     "Challenge me",
   ]
-
+  classes = [
+    "hide-mobile",
+    "hide-mobile",
+    "hide-mobile",
+    "hide-mobile",
+    "hide-mobile",
+    "hide-mobile",
+    "hide-mobile",
+    "hide-mobile",
+    "hide-mobile",
+  ]
+  style = [
+    "hide-mobile",
+    "absolute-center",
+  ]
+  logoTextsMobile2ndArea=[
+    "Material Design",
+    "Challenge me",
+  ]
 }
