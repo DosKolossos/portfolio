@@ -1,5 +1,8 @@
 <app-navbar></app-navbar>
-<app-header></app-header>
+<app-header
+  [languages]="languages"
+  (languageChange)="changeLanguage($event)">
+</app-header>
 
 <app-contentrow></app-contentrow>
 <router-outlet></router-outlet>

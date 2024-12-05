@@ -1,0 +1,23 @@
+{
+    "language": "DE",
+    "de": "DE",
+    "en": "EN",
+    "title": "Portfolio",
+    "welcome": "Willkommen",
+    "whyMe": "Zu mir",
+    "Iam": "Ich bin:",
+    "motivation": "I am motivated to continuously learn new technologies and develop myself. My ability to solve complex problems and my passion for programming make me a valuable member of your team.",
+    "located":"located in Niederkassel",
+    "openRemote":"open to work remote",
+    "openRelocate":"open to relocate",
+    "contactMe":"Schreib mir",
+    "myWork":"Projekte",
+    "aboutTheProject": "Über das Projekt",
+    "technologies": "Genutzte Technologien",
+    "learned":"Was ich mitnehme",
+    "showMeLess":"Weniger",
+    "ongoingProject":"Aktuelles Projekt",
+    "ongoingProjectText":" I am currently working on developing an online shop for pet foods. This is for me both exciting and challenging. In my work the key to success lies in a good planning and execution.",
+    "letsTalk": "Lust zu Schreiben?"
+
+}

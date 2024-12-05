@@ -1,35 +1,32 @@
 <div id="whyMe"></div>
 <div class="content-wrapper">
-    <div class="headline">Why me</div>
+    <div class="headline">{{ 'whyMe' | translate }}</div>
     <div class="content-column">
         <span id="text">
-            I am motivated to continuously
-            learn new technologies and develop myself. 
-            My ability to solve complex problems and my passion for
-            programming make me a valuable member of your team.
+            {{ 'motivation' | translate }}
         </span>
         <div class="content-bottom">
-            <span>I am:</span>
+            <span>{{ 'Iam' | translate }}</span>
             <div class="content-bottom-row" >
                 <div class="content-row-column" id="location">
                     <div class="located">
                         <img src="../../../assets/img/ellipse.png" class="location-elipse">
                     </div>
-                    <span>located in Niederkassel</span>
+                    <span>{{ 'located' | translate }}</span>
                 </div>
                 <div class="content-row-column" id="openRemote">
                     <div class="remote">
                         <img src="../../../assets/img/signal.png" class="remote-signal">
                     </div>
-                    <span class="open-remote">open to work remote</span>
+                    <span class="open-remote">{{ 'openRemote' | translate }}</span>
                 </div>
                 <div class="content-row-column" id="openRelocate">
                     <div class="relocate">
                     </div>
-                    <span>open to relocate</span>
+                    <span>{{ 'openRelocate' | translate }}</span>
                 </div>
             </div>
-            <a href="https://google.de" target="_blank" class="contact-me">Contact me</a>
+            <a href="https://google.de" target="_blank" class="contact-me">{{ 'contactMe' | translate }}</a>
         </div>
     </div>
 </div>

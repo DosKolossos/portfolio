@@ -5,8 +5,9 @@
         <a target="_blank" href="https://github.com/DosKolossos"><img src="../../../../assets/img/githubicon.png"></a>
     </div>
     <div class="languages">
-        <p id="languageDe">DE</p>
-        <p>|</p>
-        <p id="languageEn">EN</p>
-    </div>
+        <p *ngFor="let language of languages" (click)="changeLanguage(language)">
+          {{ language | translate }}
+        </p>
+      </div>
+      
 </div>
