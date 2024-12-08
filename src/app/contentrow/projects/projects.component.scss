@@ -19,6 +19,10 @@
         transform: translateX(-44%) translateY(132%) rotate(-90deg);
     }
 
+    >.projects-mobile {
+        display: none;
+    }
+
     >.projects {
         display: flex;
         gap: 40px;
@@ -321,7 +325,8 @@
             background-color: rgba(181, 233, 59, 0.2);
             z-index: 1;
             border-radius: 30px;
-            >.project-wrapper{
+
+            >.project-wrapper {
                 >.project-headline {
                     align-items: center;
                     display: flex;
@@ -329,7 +334,7 @@
                     position: relative;
                     gap: 10px;
                     left: 20px;
-    
+
                     >.project-number {
                         position: relative;
                         font-size: 40px;
@@ -338,7 +343,7 @@
                         color: transparent;
                         -webkit-text-stroke: 1px #B5E93B;
                     }
-    
+
                     >.project-name {
                         position: relative;
                         font-size: 24px;
@@ -346,12 +351,14 @@
                         color: #B5E93B;
                     }
                 }
+
                 >.project-description {
                     display: flex;
                     position: relative;
                     justify-content: center;
                     flex-direction: column;
                     width: fit-content;
+
                     >.image-wrapper {
                         display: flex;
                         position: relative;
@@ -361,17 +368,20 @@
                         align-items: center;
                         gap: 20px;
                         width: fit-content;
-                        >img{
+
+                        >img {
                             border-radius: 30px;
                             position: relative;
                             width: 90%;
                         }
-                        >.button-row{
+
+                        >.button-row {
                             display: flex;
                             position: relative;
                             top: 0px;
                             gap: 16px;
                             z-index: 100;
+
                             >.github-btn {
                                 display: flex;
                                 align-items: center;
@@ -385,11 +395,14 @@
                                 border-radius: 30px;
                                 border-color: #B5E93B;
                                 border-style: solid;
-                                >a{
+
+                                >a {
                                     display: flex;
                                     position: relative;
                                     z-index: 999;
-                            }}
+                                }
+                            }
+
                             >.livetest-btn {
                                 display: flex;
                                 align-items: center;
@@ -406,32 +419,36 @@
                             }
                         }
                     }
-                    >.column{
+
+                    >.column {
                         position: relative;
                         text-align: left;
                         left: 13px;
-                        >span{
+
+                        >span {
                             position: relative;
                             font-size: 16px;
                             display: flex;
                             left: 35px;
                             width: 80%;
                         }
-                        >.subtitle-headline{
+
+                        >.subtitle-headline {
                             left: 0;
-                            h3{
+
+                            h3 {
                                 font-weight: 400;
                             }
                         }
                     }
                 }
             }
-            
 
-                >.collapse-mobile{
-                    color: #B5E93B;
-                    text-decoration: underline 1px;
-                }
+
+            >.collapse-mobile {
+                color: #B5E93B;
+                text-decoration: underline 1px;
+            }
         }
     }
 

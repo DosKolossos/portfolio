@@ -22,11 +22,19 @@ interface Project {
 export class ProjectsComponent implements OnInit {
   private translateService = inject(TranslateService);
   projectlist: { [key: string]: Project } = {
+    // "Project Join": {
+    //   id: 1,
+    //   description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    //   technologies: "JavaScript, Firebase, HTML, CSS",
+    //   notes: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am",
+    //   github: "https://www.google.de",
+    //   link: "https://www.google.de",
+    // },
     "Project Join": {
       id: 1,
-      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      description: "", // Wird durch die Übersetzung befüllt
       technologies: "JavaScript, Firebase, HTML, CSS",
-      notes: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am",
+      notes: "", // Wird durch die Übersetzung befüllt
       github: "https://www.google.de",
       link: "https://www.google.de",
     },
@@ -47,8 +55,27 @@ export class ProjectsComponent implements OnInit {
     //   link: "https://www.google.de",
     // }
   }
-  ngOnInit(): void {
-    this.translateService.get('projects').subscribe((translation) => {
+//   ngOnInit(): void {
+//     this.translateService.get('projects').subscribe((translation) => {
+//     });
+//   }
+// }
+ngOnInit(): void {
+  // Übersetzungen laden und in die Projektliste einfügen
+  Object.keys(this.projectlist).forEach(projectKey => {
+    this.translateService.get(`projects.${this.toCamelCase(projectKey)}`).subscribe((translation) => {
+      this.projectlist[projectKey].description = translation.description;
+      this.projectlist[projectKey].notes = translation.notes;
     });
-  }
+  });
+}
+
+// Helper-Funktion, um "Project Join" in "projectJoin" zu konvertieren (falls erforderlich)
+private toCamelCase(str: string): string {
+  return str
+    .replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function(match, index) {
+      return index === 0 ? match.toLowerCase() : match.toUpperCase();
+    })
+    .replace(/\s+/g, '');
+}
 }

@@ -18,5 +18,26 @@
     "showMeLess":"Show me less",
     "ongoingProject":"Ongoing Project",
     "ongoingProjectText":" I am currently working on developing an online shop for pet foods. This is for me both exciting and challenging. In my work the key to success lies in a good planning and execution.",
-    "letsTalk": "Let's talk"
-}
+    "letsTalk": "Let's talk",
+    "mySkillsText": "The IT landscape is continuously evolving, with new technologies and methodologies. Staying motivated to expand my IT skills requires a strategic approach, a curious mindset, and a commitment to lifelong learning.",
+    "newTechnoText":"I am always happy to learn new technologies, just tell me what you need.",
+    "newTechnoTextMobile":"I always try to expand my current skill set and I am happy to learn new technologies, just tell me what else do you need.",
+    "mySkills":"My Skill Set",
+    "projects": {
+      "projectJoin": {
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "technologies": "JavaScript, Firebase, HTML, CSS",
+        "notes": "This is a placeholder for notes about Project Join."
+      },
+      "projectWizardLegacy": {
+        "description": "Jump, run and throw game based on object-oriented approach. Help Merlin to fight against dangerous enemies and destroy the strong endboss.",
+        "technologies": "Object-oriented programming, JavaScript, HTML, CSS",
+        "notes": "Notes for Wizard Legacy project."
+      },
+      "projectPokedex": {
+        "description": "A REST-API based application for displaying all Pokémon, with data fetched from PokéAPI.",
+        "technologies": "REST-API, JavaScript, HTML, CSS",
+        "notes": "Notes for PokéDex project."
+      }
+    }
+  }

@@ -1,13 +1,8 @@
 <div id="mySkills"></div>
 <div class="content-wrapper">
-    <div class="headline">My Skill Set</div>
+    <div class="headline">{{ 'mySkills' | translate }}</div>
     <div class="content-column">
-        <span id="mySkillsText">
-            The IT landscape is continuously evolving,
-            with new technologies and methodologies.
-            Staying motivated to expand my IT skills
-            requires a strategic approach, a curious mindset,
-            and a commitment to lifelong learning.
+        <span id="mySkillsText">{{ 'mySkillsText' | translate }}
         </span>
         <div class="logo-box">
             <div class="logo-with-text" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11]; let index = index">
@@ -27,15 +22,10 @@
                 <span id="span{{[i]}}" class="{{style[index]}}">{{logoTextsMobile2ndArea[index]}}</span>
             </div>
         </div>
-        <div id="newTechnoText">
-            I am always happy to learn new technologies,
-            just tell me what you need.</div>
-        <div id="newTechnoTextMobile">
-            I always try to expand my current skill set
-            and I am happy to learn new technologies,
-            just tell me what else do you need.</div>
+        <div id="newTechnoText">{{ 'newTechnoText' | translate }}</div>
+        <div id="newTechnoTextMobile">{{ 'newTechnoTextMobile' | translate }}</div>
     </div>
-    <a href="https://google.de" target="_blank" class="lets-talk">Let's talk</a>
+    <a href="https://google.de" target="_blank" class="lets-talk">{{ 'letsTalk' | translate }}</a>
 </div>
 <a href="#projects" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png"
         class="arrow-right"></a>

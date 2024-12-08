@@ -6,7 +6,9 @@
     top: 461px;
     left: 59px;
     font-family: 'Quantico';
-
+    .lets-talk{
+        display: none;
+    }
     >.headline {
         position: absolute;
         width: 303px;
@@ -26,7 +28,9 @@
         width: 860px;
         left: 101px;
         justify-content: space-between;
-
+        >.logo-box-2-mobile {
+            display: none;
+            }
         >#mySkillsText {
             position: relative;
             color: #FFFDFD;
@@ -45,7 +49,6 @@
             gap: 44px;
             width: 860px;
             height: 249px;
-
             >.logo-with-text {
                 display: flex;
                 flex-direction: column;
