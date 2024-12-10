@@ -34,10 +34,32 @@
         "technologies": "Object-oriented programming, JavaScript, HTML, CSS",
         "notes": "Notes for Wizard Legacy project."
       },
-      "projectPokedex": {
+      "projectPokeDex": {
         "description": "A REST-API based application for displaying all Pokémon, with data fetched from PokéAPI.",
         "technologies": "REST-API, JavaScript, HTML, CSS",
         "notes": "Notes for PokéDex project."
       }
+    },
+    "references": {
+      "title": "References",
+      "comments": {
+        "julian": {
+          "name": "Julian Wünkhaus",
+          "comment": "David consistently demonstrates reliability and a strong sense of collaboration, making him a valuable asset to any team. His positive mindset brings a sense of optimism and motivation to those around him. Beyond his professional qualities, David is also someone who is easy to get along with, making him the type of colleague you'd genuinely enjoy sharing a beer with after work.",
+          "project": "Project Join and more"
+        },
+        "sarah": {
+          "name": "Sarah Schneider",
+          "comment": "David always worked very precisely in our group work and paid attention to every detail. With his sense of humor, he regularly put the team in a good mood. His open and active communication was a great help in keeping everyone on the same page.",
+          "project": "Project Join"
+        },
+        "alexander": {
+          "name": "Alexander Sinner",
+          "comment": "It was a pleasure to work with David. He not only brings excellent programming skills, but also an open and collaborative attitude that makes teamwork much easier. His ability to quickly analyze complex problems and propose effective solutions has been instrumental in moving our project forward.",
+          "project": "Project Join"
+        }
+      }
     }
-  }
+}
+    
+     

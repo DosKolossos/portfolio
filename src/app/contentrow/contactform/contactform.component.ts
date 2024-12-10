@@ -1,19 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, TranslateModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
-export class ContactformComponent {
+export class ContactformComponent implements OnInit {
 
   http = inject(HttpClient);
-
+  private translateService = inject(TranslateService);
   contactData = {
     name: "",
     email: "",
@@ -60,6 +61,11 @@ export class ContactformComponent {
     setTimeout(() => {
       this.isSubmitted = false;
     }, 5000);
+  }
+
+  ngOnInit(): void {
+    this.translateService.get('contactform').subscribe((translation) => {
+    });
   }
 
 }

@@ -320,7 +320,7 @@
             flex-direction: column;
             position: relative;
             width: calc(100% - 44px);
-            height: 900px;
+            height: fit-content;
             left: 0;
             background-color: rgba(181, 233, 59, 0.2);
             z-index: 1;
@@ -442,13 +442,15 @@
                         }
                     }
                 }
+
+                >.collapse-mobile {
+                    color: #B5E93B;
+                    text-decoration: underline 1px;
+                }
             }
 
 
-            >.collapse-mobile {
-                color: #B5E93B;
-                text-decoration: underline 1px;
-            }
+
         }
     }
 
