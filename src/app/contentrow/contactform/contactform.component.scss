@@ -93,7 +93,7 @@ span{
 .subtext {
     display: flex;
     flex-direction: column;
-    width: 417px;
+    width: 365px;
     height: 665px;
     top: 152px;
     position: absolute;
@@ -103,6 +103,7 @@ span{
     color: #FFFDFD;
     gap: 16px;
     text-align: right;
+    text-wrap: wrap;
     right: 20px;
     >.green-font {
         color: #D3ED97;

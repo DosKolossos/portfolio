@@ -59,7 +59,28 @@
           "project": "Project Join"
         }
       }
-    }
+    },
+      "contactform": {
+        "title": "Contact Me",
+        "namePlaceholder": "Your name",
+        "nameRequired": "Your name is required",
+        "emailPlaceholder": "Your e-mail",
+        "emailRequired": "Your e-mail is required",
+        "messagePlaceholder": "Your message",
+        "messageRequired": "Your message is required",
+        "privacyPolicy": "I have read the <a href='/privacy'>privacy policy</a> and agree to the processing of my data as outlined.",
+        "privacyError": "Please accept the privacy policy",
+        "submitButton": "Send",
+        "successMessage": "Email has been successfully sent!",
+        "subtextHeader": "Let us work together.",
+        "subtextDescription": "Whether your project involves developing a new application, upgrading existing systems, or implementing robust cybersecurity measures, I have the technical acumen and problem-solving skills to ensure successful outcomes.",
+        "emailLabel": "E-mail",
+        "phoneLabel": "Tel",
+        "legalNotice": "Legal Notice",
+        "imprint": "Imprint",
+        "copyright": "David Kolosza"
+      }
+    
 }
     
      

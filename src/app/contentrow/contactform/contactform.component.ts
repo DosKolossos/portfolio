@@ -64,8 +64,7 @@ export class ContactformComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.translateService.get('contactform').subscribe((translation) => {
-    });
+    this.translateService.get('contactform').subscribe((translation) => {});
   }
-
+  
 }
