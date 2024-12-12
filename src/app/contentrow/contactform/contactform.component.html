@@ -57,7 +57,7 @@
                         required 
                         #checkbox="ngModel" 
                         [class]="{'is-invalid': checkbox.invalid && checkbox.touched}">
-                    <label for="privacy">{{ 'contactform.privacyPolicy' | translate }}</label>
+                    <label for="privacy">{{ 'contactform.privacyPolicy1' | translate }}<a href='/privacy'> {{ 'contactform.privacyPolicyName' | translate }} </a>{{ 'contactform.privacyPolicy2' | translate }}</label>
                 </div>
                 <span *ngIf="!checkbox.valid && checkbox.touched" class="error-message">{{ 'contactform.privacyError' | translate }}</span>
                 

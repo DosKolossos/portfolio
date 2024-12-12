@@ -13,7 +13,11 @@ export class HeaderComponent {
   @Input() languages: string[] = [];
   @Output() languageChange = new EventEmitter<string>();
 
+  // Variable zur Speicherung der aktuellen Sprache
+  currentLanguage: string = 'en'; // Standardmäßig auf 'en' (Englisch) gesetzt
+
   changeLanguage(lang: string) {
-    this.languageChange.emit(lang);
+    this.currentLanguage = lang; // Setze die aktive Sprache
+    this.languageChange.emit(lang); // Emitiere das Ereignis, um die Änderung zu melden
   }
 }

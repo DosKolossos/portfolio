@@ -38,26 +38,44 @@
         display: flex;
         position: relative;
         gap: 4px;
-
         >p {
-            color: white;
-        }
-
-        >#languageDe,
-        #languageEn {
             color: white;
             cursor: pointer;
             font-family: 'Roboto Mono';
-
+          
             &:hover {
-                transition: 0.3s;
-                color: #B5E93B;
+              transition: 0.3s;
+              color: #B5E93B;
             }
-
+          
             &:not(:hover) {
-                transition: 0.3s;
+              transition: 0.3s;
             }
-        }
+          
+            &.active {
+              color: #B5E93B; /* Oder eine Farbe deiner Wahl */
+              font-weight: bold; /* Optional: Mache die aktive Sprache fett */
+            }
+          
+            :active {
+              color: red;
+            }
+          }
+        // >p {
+        //     color: white;
+        //     cursor: pointer;
+        //     font-family: 'Roboto Mono';
+        //     &:hover {
+        //         transition: 0.3s;
+        //         color: #B5E93B;
+        //     }
+        //     &:not(:hover) {
+        //         transition: 0.3s;
+        //     }
+        //     &:active{
+        //         color: #c7e977;
+        //     }
+        // }
     }
 }
 
