@@ -110,9 +110,8 @@ app-footer {
 
     app-references {
         position: relative;
-
-
-
+        max-width: 100%;
+        min-width: unset;
         background-color: black;
     }
 

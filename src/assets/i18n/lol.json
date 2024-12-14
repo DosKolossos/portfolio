@@ -7,38 +7,38 @@
     "welcome": "Welcome",
     "whyMe": "Why me",
     "Iam": "I am:",
-    "motivation": "I am motivated to continuously learn new ways to macro managing and develop myself. My ability to win 1v9 and my passion for late game make me a valuable member of your team.",
-    "located":"located in Iron IV",
-    "openRemote":"flex on every lane",
+    "motivation": "I am motivated to continuously feed my opponents. Team success is rated higher when the team is under massive pressure and needs to prove itself. My communication skills evoke a lot of emotions within my team.",
+    "located":"located in Summoner's Rift",
+    "openRemote":"feeding on every lane",
     "openRelocate":"open to gank everywhere",
     "contactMe":"Ping me",
     "myWork":"My Work",
     "aboutTheProject": "About the project",
-    "technologies": "Technologies used",
+    "technologies": "Necessary skills",
     "learned":"What I have learned",
     "showMeLess":"Show me less",
     "ongoingProject":"Ongoing Project",
-    "ongoingProjectText":" I am currently working on developing an online shop for pet foods. This is for me both exciting and challenging. In my work the key to success lies in a good planning and execution.",
-    "letsTalk": "Let's talk",
-    "mySkillsText": "The IT landscape is continuously evolving, with new technologies and methodologies. Staying motivated to expand my IT skills requires a strategic approach, a curious mindset, and a commitment to lifelong learning.",
-    "newTechnoText":"I am always happy to learn new technologies, just tell me what you need.",
-    "newTechnoTextMobile":"I always try to expand my current skill set and I am happy to learn new technologies, just tell me what else do you need.",
+    "ongoingProjectText":"During my lunch break, I'm always looking for new players to play this fantastic game with in order to improve them. One match is enough to significantly improve them. After that, they no longer need my help.",
+    "letsTalk": "Report mid",
+    "mySkillsText": "With every patch, the game becomes more extensive, and my deep understanding of risky tower dives grows. After minute 15, my team wants to give the opponent the chance to win, which is why FF15 is always communicated.",
+    "newTechnoText":"I am always happy to learn new shortcuts like D for dance and FF15.",
+    "newTechnoTextMobile":"I always try to expand my current skill set like E and R and I am happy to learn new technologies, just tell me what else do you need.",
     "mySkills":"My Skill Set",
     "projects": {
       "projectJoin": {
-        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-        "technologies": "JavaScript, Firebase, HTML, CSS",
-        "notes": "This is a placeholder for notes about Project Join."
+        "description": "",
+        "technologies": "",
+        "notes": ""
       },
       "projectWizardLegacy": {
-        "description": "Jump, run and throw game based on object-oriented approach. Help Merlin to fight against dangerous enemies and destroy the strong endboss.",
-        "technologies": "Object-oriented programming, JavaScript, HTML, CSS",
-        "notes": "Notes for Wizard Legacy project."
+        "description": "",
+        "technologies": "",
+        "notes": ""
       },
       "projectPokeDex": {
-        "description": "A REST-API based application for displaying all Pokémon, with data fetched from PokéAPI.",
-        "technologies": "REST-API, JavaScript, HTML, CSS",
-        "notes": "Notes for PokéDex project."
+        "description": "",
+        "technologies": "",
+        "notes": "."
       }
     },
     "references": {
