@@ -117,10 +117,12 @@ app-footer {
     }
 
     app-contactform {
-
+        width: 100%;
         background-color: black;
         position: relative;
-
+        min-height: max-content;
+        display: flex;
+        flex-direction: column;
     }
 
     app-footer {

@@ -6,6 +6,7 @@
     position: relative;
     font-family: 'Quantico';
     text-wrap: wrap;
+
     >.headline {
         position: absolute;
         width: 303px;
@@ -31,20 +32,21 @@
 .is-invalid {
     border: 2px solid red !important;
     color: red;
-  }
-  
-  .form-group input.is-invalid::placeholder,
-  .form-group textarea.is-invalid::placeholder {
-    color: red; /* Placeholder-Farbe für ungültige Felder */
-    filter: opacity(1);
-  }
+}
 
-.form-group{
+.form-group input.is-invalid::placeholder,
+.form-group textarea.is-invalid::placeholder {
+    color: red;
+    /* Placeholder-Farbe für ungültige Felder */
+    filter: opacity(1);
+}
+
+.form-group {
     display: flex;
     flex-direction: column;
 }
 
-::placeholder{
+::placeholder {
     color: #D3ED97;
     font-family: 'Quantico';
     font-weight: 400;
@@ -52,16 +54,16 @@
     filter: opacity(0.4);
 }
 
-.error-message{
+.error-message {
     color: red;
 }
 
-#contactMe{
+#contactMe {
     position: absolute;
     top: 0;
 }
 
-span{
+span {
     position: relative;
     display: flex;
     padding: 0;
@@ -105,6 +107,7 @@ span{
     text-align: right;
     text-wrap: wrap;
     right: 20px;
+
     >.green-font {
         color: #D3ED97;
         width: 100%;
@@ -139,16 +142,16 @@ span{
         gap: 8px;
         bottom: 0;
         right: 0;
-    
+
         >a {
             text-decoration: none;
             color: #FFFDFD;
             transition: color 0.3s ease; // Übergang für die Farbe
-    
+
             &:hover {
                 color: #B5E93B; // Farbe nach Hover
             }
-    
+
             &:after {
                 content: "";
                 display: block;
@@ -157,53 +160,71 @@ span{
                 background: #B5E93B; // Unterstreichungseffektfarbe
                 transition: width 0.3s ease; // Sanfter Übergang für die Breite
             }
-    
+
             &:hover:after {
                 width: 100%; // Unterstreichung erscheint mit Verzögerung
             }
         }
     }
-    
-}   
+
+}
 
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
+input[type=text],
+select,
+textarea {
     width: 456px;
     height: 60px;
-    padding-left: 20px; /* Some padding */ 
-    border: 1px solid #B5E93B; /* Gray border */
-    border-radius: 30px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    padding-left: 20px;
+    /* Some padding */
+    border: 1px solid #B5E93B;
+    /* Gray border */
+    border-radius: 30px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical;
+    /* Allow the user to vertically resize the textarea (not horizontally) */
     background: none;
     color: #D3ED97;
     font-size: 14px;
-  }
+}
 
-input[type=email], select, textarea {
+input[type=email],
+select,
+textarea {
     width: 456px;
     height: 60px;
-    padding-left: 20px; /* Some padding */ 
-    border: 1px solid #B5E93B; /* Gray border */
-    border-radius: 30px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    padding-left: 20px;
+    /* Some padding */
+    border: 1px solid #B5E93B;
+    /* Gray border */
+    border-radius: 30px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical;
+    /* Allow the user to vertically resize the textarea (not horizontally) */
     background-color: black;
     color: #D3ED97;
-  }
+}
 
-textarea{
+textarea {
     height: 255px;
     padding-top: 24px;
     background-color: none;
 }
-  
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
     display: flex;
     position: relative;
     width: 94px;
@@ -214,56 +235,65 @@ textarea{
     padding: 12px 20px;
     border: none;
     cursor: pointer;
-  }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
     background-color: #45a049;
-  }
+}
 
-  input:focus {
-    border: 1px solid #B5E93B; /* Gray border */
+input:focus {
+    border: 1px solid #B5E93B;
+    /* Gray border */
     border-radius: 30px;
-    outline: none; /* Entfernt den blauen Standard-Glow */
-  }
+    outline: none;
+    /* Entfernt den blauen Standard-Glow */
+}
 
-  input:not(:placeholder-shown) {
-    background-color: #f5f5f5; /* Behalte Hintergrundfarbe bei Eingabe */
-  }
-  
-  /* Add a background color and some padding around the form */
-  .container {
+input:not(:placeholder-shown) {
+    background-color: #f5f5f5;
+    /* Behalte Hintergrundfarbe bei Eingabe */
+}
+
+/* Add a background color and some padding around the form */
+.container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-  }
+}
 
-  .privacy-policy{
+.privacy-policy {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     width: 407px;
     height: 107px;
-    .top-row{
+
+    .top-row {
         display: flex;
         gap: 12px;
-        >label{
+
+        >label {
             width: 100%;
             font-size: 14px;
         }
-        a{
+
+        a {
             color: #FFFDFD;
             transition: color 0.3s ease; // Übergang für die Farbe
 
             &:hover {
                 text-decoration: underline !important;
             }
+
             &:not(:hover) {
                 text-decoration: none !important;
-            }}
+            }
+        }
     }
-    .submit-wrapper{
+
+    .submit-wrapper {
         display: flex;
         position: relative;
         justify-content: flex-end;
@@ -271,9 +301,9 @@ textarea{
         right: 0;
     }
 
-  }
+}
 
-  .submit-button{
+.submit-button {
     display: flex;
     width: 94px;
     height: 43px;
@@ -283,5 +313,121 @@ textarea{
     font-family: 'Quantico';
     background-color: #9E9D9D;
     color: #4A4A4A;
-  }
+}
 
+@media only screen and (orientation:portrait) {
+    .arrow-right {
+        display: none;
+    }
+
+    .contactme-wrapper {
+        display: flex;
+        width: 100%;
+        height: max-content;
+        top: 0;
+        position: relative;
+        font-family: 'Quantico';
+        text-wrap: wrap;
+        flex-direction: column;
+
+        >.headline {
+            position: absolute;
+            width: fit-content;
+            height: 65px;
+            display: flex;
+            font-size: 32px;
+            -webkit-text-stroke: 1px #B5E93B;
+            color: transparent;
+            left: 32px;
+            top: -51px;
+            transform: translateX(0%) translateY(0%) rotate(0deg);
+        }
+
+        >.form-wrapper {
+            display: flex;
+            position: relative;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 407px;
+            color: #D3ED97;
+            justify-content: center;
+
+            >.form-overall {
+                width: 100%;
+                position: relative;
+
+                >.form-group {
+                    width: 100%;
+                    align-items: center;
+                }
+            }
+
+        }
+    }
+
+    input[type=text],
+    select,
+    textarea {
+        width: 90%;
+    }
+
+    input[type=email],
+    select,
+    textarea {
+        width: 90%;
+    }
+
+    .subtext {
+        width: 90%;
+        position: relative;
+        right: 0;
+        text-align: left;
+        left: 20px;
+        >.green-font{
+            text-align: left;
+            justify-content: unset;
+        }
+        >.subtext-row{
+            text-align: left;
+            justify-content: unset;
+
+        }
+    }
+
+    .privacy-policy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 107px;
+
+        >.top-row {
+            padding: 10px;
+
+            >label {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            a {
+                color: #FFFDFD;
+                transition: color 0.3s ease; // Übergang für die Farbe
+
+                &:hover {
+                    text-decoration: underline !important;
+                }
+
+                &:not(:hover) {
+                    text-decoration: none !important;
+                }
+            }
+        }
+
+        .submit-wrapper {
+            padding-right: 32px;    
+            width: 100%;
+        }
+    }
+}
