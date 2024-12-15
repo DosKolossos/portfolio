@@ -113,6 +113,7 @@ app-footer {
         max-width: 100%;
         min-width: unset;
         background-color: black;
+        height: 1000px;
     }
 
     app-contactform {
@@ -123,9 +124,10 @@ app-footer {
     }
 
     app-footer {
-        width: 100px;
-        max-width: 100px;
+        display: flex;
+        width: 100%;
+        max-width: unset;
         position: relative;
-        height: 100vh;
+        height: 153px;
     }
 }
