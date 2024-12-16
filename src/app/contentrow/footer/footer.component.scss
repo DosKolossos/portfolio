@@ -22,17 +22,21 @@
         right: 0;
         top: 0;
         z-index: 20;
-
+        font-family: 'Quantico';
+        color: #4A4A4A;
         >.footer-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
             // justify-content: center;
+            top: 71px;
             width: 100%;
-
+            >.footer-bot-lane{
+                display: flex;
+                gap: 16px;
+            }
             >img {
                 height: auto;
-                top: 14px;
                 width: 80px;
                 position: relative;
                 // Optional: Farbtöne anpassen
