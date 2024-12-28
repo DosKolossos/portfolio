@@ -164,6 +164,7 @@ button:not(:hover) {
       top: 255px;
       flex-direction: column;
       left: 0;
+      height: max-content;
       justify-content: center;
       >.headline {
         position: absolute;

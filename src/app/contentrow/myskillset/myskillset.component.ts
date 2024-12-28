@@ -36,15 +36,11 @@ export class MyskillsetComponent implements OnInit {
     "hide-mobile",
     "hide-mobile",
     "hide-mobile",
-  ]
-  style = [
     "hide-mobile",
-    "absolute-center",
+    "content-column",
   ]
-  logoTextsMobile2ndArea=[
-    "Material Design",
-    "Challenge me",
-  ]
+
+
   ngOnInit(): void {
     this.translateService.get('myskillset').subscribe((translation) => {
     });

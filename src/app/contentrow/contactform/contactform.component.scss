@@ -7,16 +7,7 @@
     font-family: 'Quantico';
     text-wrap: wrap;
 
-    >.headline {
-        position: absolute;
-        width: 303px;
-        height: 65px;
-        display: flex;
-        font-size: 54px;
-        -webkit-text-stroke: 3px #B5E93B;
-        color: transparent;
-        transform: translateX(-44%) translateY(132%) rotate(-90deg);
-    }
+
 
     >.form-wrapper {
         display: flex;
@@ -27,6 +18,19 @@
         height: 407px;
         color: #D3ED97;
     }
+}
+
+.headline {
+    position: absolute;
+    width: 303px;
+    height: 65px;
+    display: flex;
+    font-size: 54px;
+    font-family: 'Quantico';
+
+    -webkit-text-stroke: 3px #B5E93B;
+    color: transparent;
+    transform: translateX(-44%) translateY(132%) rotate(-90deg);
 }
 
 .is-invalid {
@@ -107,7 +111,9 @@ span {
     text-align: right;
     text-wrap: wrap;
     right: 20px;
-
+    >.imprint {
+        display: none !important;
+    }
     >.green-font {
         color: #D3ED97;
         width: 100%;
@@ -320,6 +326,24 @@ input:not(:placeholder-shown) {
         display: none;
     }
 
+    .headline {
+        position: absolute;
+        width: fit-content;
+        height: 65px;
+        display: flex;
+        font-size: 32px;
+        -webkit-text-stroke: 1px #B5E93B;
+        color: transparent;
+        left: 26px;
+        top: -51px;
+        transform: translateX(0%) translateY(0%) rotate(0deg);
+    }
+
+    .column-reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .contactme-wrapper {
         display: flex;
         width: 100%;
@@ -330,18 +354,7 @@ input:not(:placeholder-shown) {
         text-wrap: wrap;
         flex-direction: column;
 
-        >.headline {
-            position: absolute;
-            width: fit-content;
-            height: 65px;
-            display: flex;
-            font-size: 32px;
-            -webkit-text-stroke: 1px #B5E93B;
-            color: transparent;
-            left: 32px;
-            top: -51px;
-            transform: translateX(0%) translateY(0%) rotate(0deg);
-        }
+
 
         >.form-wrapper {
             display: flex;
@@ -383,7 +396,11 @@ input:not(:placeholder-shown) {
         position: relative;
         right: 0;
         text-align: left;
-        left: 20px;
+        left: 26px;
+        font-size: 16px;
+        height: max-content;
+        top: 0;
+        padding: 16px 0 16px 0;
         >.green-font{
             text-align: left;
             justify-content: unset;
@@ -430,4 +447,5 @@ input:not(:placeholder-shown) {
             width: 100%;
         }
     }
+
 }

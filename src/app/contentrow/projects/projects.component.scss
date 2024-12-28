@@ -324,142 +324,145 @@
             left: 0;
             z-index: 1;
             border-radius: 30px;
-            gap: 32px;
+            gap: 64px;
 
             >.project-wrapper {
                 display: flex;
                 flex-direction: column;
                 background-color: rgba(181, 233, 59, 0.2);
                 border-radius: 30px;
-                height: 861px;
+                height: max-content;
                 gap: 32px;
-
-                >.project-headline {
-                    align-items: center;
-                    display: flex;
-                    flex-direction: row;
-                    position: relative;
-                    gap: 10px;
-                    left: 20px;
-                    >.project-number {
+                >.for-show-me-less{
+                    .collapse-mobile {
                         position: relative;
-                        font-size: 40px;
-                        font-weight: 400;
-                        top: 17px;
-                        color: transparent;
-                        -webkit-text-stroke: 1px #B5E93B;
-                    }
-
-                    >.project-name {
-                        position: relative;
-                        font-size: 24px;
-                        top: 12px;
                         color: #B5E93B;
+                        text-decoration: underline 1px;
+                        display: flex;
+                        justify-content: center;
+                        top: 32px;
                     }
-                }
-
-                >.project-description {
-                    display: flex;
-                    position: relative;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    width: fit-content;
-                    gap: 32px;
-                    >.image-wrapper {
+                    >.project-headline {
+                        align-items: center;
+                        display: flex;
+                        flex-direction: row;
+                        position: relative;
+                        gap: 10px;
+                        left: 20px;
+                        >.project-number {
+                            position: relative;
+                            font-size: 40px;
+                            font-weight: 400;
+                            top: 17px;
+                            color: transparent;
+                            -webkit-text-stroke: 1px #B5E93B;
+                        }
+    
+                        >.project-name {
+                            position: relative;
+                            font-size: 24px;
+                            top: 12px;
+                            color: #B5E93B;
+                        }
+                    }
+    
+                    >.project-description {
                         display: flex;
                         position: relative;
-                        top: 20px;
-                        flex-direction: column;
                         justify-content: center;
                         align-items: center;
+                        flex-direction: column;
                         width: fit-content;
-                        gap: 20px;
-                        >img {
-                            border-radius: 30px;
-                            position: relative;
-                            width: 90%;
-                        }
-
-                        >.button-row {
+                        gap: 32px;
+                        padding-bottom: 10px;
+                        >.image-wrapper {
                             display: flex;
                             position: relative;
-                            top: 0px;
-                            gap: 16px;
-                            z-index: 100;
-
-                            >.github-btn {
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                text-decoration: none;
-                                width: 106px;
-                                height: 43px;
-                                background-color: transparent;
-                                color: #B5E93B;
-                                font-family: 'Quantico';
+                            top: 20px;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            width: fit-content;
+                            gap: 20px;
+                            >img {
                                 border-radius: 30px;
-                                border-color: #B5E93B;
-                                border-style: solid;
-
-                                >a {
+                                position: relative;
+                                width: 90%;
+                            }
+    
+                            >.button-row {
+                                display: flex;
+                                position: relative;
+                                top: 0px;
+                                gap: 16px;
+                                z-index: 100;
+    
+                                >.github-btn {
                                     display: flex;
-                                    position: relative;
-                                    z-index: 999;
-                                    
+                                    align-items: center;
+                                    justify-content: center;
+                                    text-decoration: none;
+                                    width: 106px;
+                                    height: 43px;
+                                    background-color: transparent;
+                                    color: #B5E93B;
+                                    font-family: 'Quantico';
+                                    border-radius: 30px;
+                                    border-color: #B5E93B;
+                                    border-style: solid;
+    
+                                    >a {
+                                        display: flex;
+                                        position: relative;
+                                        z-index: 999;
+                                        
+                                    }
+                                }
+    
+                                >.livetest-btn {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    text-decoration: none;
+                                    cursor: pointer;
+                                    width: 106px;
+                                    height: 43px;
+                                    background: #B5E93B;
+                                    color: rgba(37, 37, 37, 1);
+                                    font-family: 'Quantico';
+                                    border-radius: 30px;
+                                    border-style: none;
                                 }
                             }
-
-                            >.livetest-btn {
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                text-decoration: none;
-                                cursor: pointer;
-                                width: 106px;
-                                height: 43px;
-                                background: #B5E93B;
-                                color: rgba(37, 37, 37, 1);
-                                font-family: 'Quantico';
-                                border-radius: 30px;
-                                border-style: none;
-                            }
                         }
-                    }
-
-                    >.column {
-                        position: relative;
-                        text-align: left;
-                        left: 13px;
-
-                        >span {
+    
+                        >.column {
                             position: relative;
-                            font-size: 16px;
-                            display: flex;
-                            left: 35px;
-                            width: 80%;
-                        }
-
-                        >.subtitle-headline {
-                            left: 0;
-
-                            h3 {
-                                font-weight: 400;
+                            text-align: left;
+                            left: 13px;
+    
+                            >span {
+                                position: relative;
+                                font-size: 16px;
+                                display: flex;
+                                left: 35px;
+                                width: 80%;
+                            }
+    
+                            >.subtitle-headline {
+                                left: 0;
+    
+                                h3 {
+                                    font-weight: 400;
+                                }
                             }
                         }
                     }
+    
+    
                 }
-
-                >.collapse-mobile {
-                    position: relative;
-                    color: #B5E93B;
-                    text-decoration: underline 1px;
-                    display: flex;
-                    justify-content: center;
-                }
+                
             }
-
-
 
         }
     }
