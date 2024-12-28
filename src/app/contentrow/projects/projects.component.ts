@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 interface Project {
   id: number;
@@ -16,7 +17,24 @@ interface Project {
   standalone: true,
   imports: [TranslateModule, CommonModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrl: './projects.component.scss',
+  animations: [
+    trigger('toggleDescription', [
+      state('collapsed', style({
+        height: '0px',
+        overflow: 'hidden',
+        opacity: 0,
+      })),
+      state('expanded', style({
+        height: '*',
+        overflow: 'visible',
+        opacity: 1,
+      })),
+      transition('collapsed <=> expanded', [
+        animate('300ms ease-in-out'),
+      ]),
+    ]),
+  ],
 })
 
 export class ProjectsComponent implements OnInit {
@@ -48,6 +66,8 @@ export class ProjectsComponent implements OnInit {
     }
   }
 
+  expandedMobileProjectId: number | null = null;
+
   ngOnInit(): void {
     // Übersetzungen laden und in die Projektliste einfügen
     Object.keys(this.projectlist).forEach(projectKey => {
@@ -58,6 +78,18 @@ export class ProjectsComponent implements OnInit {
       });
     });
   }
+
+  toggleMobileProject(id: number): void {
+    this.expandedMobileProjectId = this.expandedMobileProjectId === id ? null : id;
+  }
+
+getToggleText(projectId: number): string {
+  return this.expandedMobileProjectId === projectId
+      ? this.translateService.instant('showMeLess')
+      : this.translateService.instant('showMeMore');
+}
+
+
 
     // Custom-Sortierfunktion für die keyvalue-Pipe
     sortById(a: any, b: any): number {

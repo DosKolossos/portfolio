@@ -37,45 +37,103 @@
             </div>
         </div>
     </div>
-    <div class="projects-mobile">
+
+    <!-- <div class="projects-mobile">
+        <div *ngFor="let project of projectlist | keyvalue: sortById" class="project-wrapper">
+          <div class="for-show-me-less">
+            <div class="project-headline" (click)="toggleMobileProject(project.value.id)">
+              <div class="project-number">{{ project.value.id }}</div>
+              <div class="project-name">{{ project.key }}</div>
+            </div>
+      
+            <div class="project-description" *ngIf="expandedMobileProjectId === project.value.id">
+              <div class="column">
+                <div class="subtitle-headline">
+                  <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
+                  <h3>{{ 'aboutTheProject' | translate }}</h3>
+                </div>
+                <span>{{ project.value.description }}</span>
+                <div class="subtitle-headline">
+                  <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
+                  <h3>{{ 'technologies' | translate }}</h3>
+                </div>
+                <span>{{ project.value.technologies }}</span>
+                <div class="subtitle-headline">
+                  <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
+                  <h3>{{ 'learned' | translate }}</h3>
+                </div>
+                <span>{{ project.value.notes }}</span>
+              </div>
+              <div class="image-wrapper">
+                <img src="../../../assets/img/Projects/{{ project.value.id }}.png" alt="">
+                <div class="button-row">
+                  <a [href]="project.value.github" target="_blank" class="github-btn">GitHub</a>
+                  <a [href]="project.value.link" target="_blank" class="livetest-btn">Live Test</a>
+                </div>
+              </div>
+            </div>
+      
+            <div 
+              class="collapse-mobile" 
+              (click)="toggleMobileProject(project.value.id)" 
+              *ngIf="expandedMobileProjectId === project.value.id">
+              {{ 'showMeLess' | translate }}
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="projects-mobile">
         <div *ngFor="let project of projectlist | keyvalue: sortById" class="project-wrapper">
             <div class="for-show-me-less">
-            <div class="project-headline">
-                <div class="project-number">{{ project.value.id }}</div>
-                <div class="project-name">{{ project.key }}</div>
-            </div>
-            <div class="project-description">
-                <div class="column">
-                    <div class="subtitle-headline">
-                        <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
-                        <h3>{{ 'aboutTheProject' | translate }}</h3>
-                    </div>
-                    <span>{{ project.value.description }}</span>
-                    <div class="subtitle-headline">
-                        <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
-                        <h3>{{ 'technologies' | translate }}</h3>
-                    </div>
-                    <span>{{ project.value.technologies }}</span>
-                    <div class="subtitle-headline">
-                        <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
-                        <h3>{{ 'learned' | translate }}</h3>
-                    </div>
-                    <span>{{ project.value.notes }}</span>
+                <!-- Projektüberschrift -->
+                <div class="project-headline" (click)="toggleMobileProject(project.value.id)">
+                    <div class="project-number">{{ project.value.id }}</div>
+                    <div class="project-name">{{ project.key }}</div>
                 </div>
-                <div class="image-wrapper">
-                    <img src="../../../assets/img/Projects/{{ project.value.id }}.png" alt="">
-                    <div class="button-row">
-                        <a [href]="project.value.github" target="_blank" class="github-btn">GitHub</a>
-                        <a [href]="project.value.link" target="_blank" class="livetest-btn">Live Test</a>
+    
+                <!-- Projektbeschreibung: Sichtbarkeit steuern -->
+                <div 
+                    class="project-description" 
+                    [@toggleDescription]="expandedMobileProjectId === project.value.id ? 'expanded' : 'collapsed'">
+                    
+                    <div class="column">
+                        <div class="subtitle-headline">
+                            <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
+                            <h3>{{ 'aboutTheProject' | translate }}</h3>
+                        </div>
+                        <span>{{ project.value.description }}</span>
+                        <div class="subtitle-headline">
+                            <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
+                            <h3>{{ 'technologies' | translate }}</h3>
+                        </div>
+                        <span>{{ project.value.technologies }}</span>
+                        <div class="subtitle-headline">
+                            <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
+                            <h3>{{ 'learned' | translate }}</h3>
+                        </div>
+                        <span>{{ project.value.notes }}</span>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="../../../assets/img/Projects/{{ project.value.id }}.png" alt="Project Image">
+                        <div class="button-row">
+                            <a [href]="project.value.github" target="_blank" class="github-btn">GitHub</a>
+                            <a [href]="project.value.link" target="_blank" class="livetest-btn">Live Test</a>
+                        </div>
                     </div>
                 </div>
+    
+                <!-- Collapse-Bereich -->
+                <div 
+                    class="collapse-mobile" 
+                    (click)="toggleMobileProject(project.value.id)">
+                    {{ getToggleText(project.value.id) }}
+                </div>
             </div>
-            <div class="collapse-mobile" id="collapser{{ project.value.id }}">{{ 'showMeLess' | translate }}</div>
         </div>
-
     </div>
-
-    </div>
+    
+      
 
     <div id="ongoingProject">
         <div id="ogpHeadline">
