@@ -287,6 +287,10 @@
 }
 
 @media only screen and (orientation:portrait) {
+    #myWork {
+        position: relative;
+        top: 78px;
+    }
     .arrow-right {
         display: none;
     }

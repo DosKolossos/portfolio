@@ -234,6 +234,10 @@
 }
 
 @media only screen and (orientation:portrait) {
+    #whyMe{
+        position: relative;
+        top: -78px;
+    }
     .content-wrapper{
         display: flex;
         gap: 10px;

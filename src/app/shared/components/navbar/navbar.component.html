@@ -1,6 +1,9 @@
+<div id="burgerNClose" [class.open]="isMenuOpen" (click)="toggleMenu()"></div>
 <div class="navbar">
     <div class="navbar-content">
-        <a (click)="scrollToElement('landing')"><img src="../../assets/img/LogoDK.png" class="logo-desktop"></a>
+        <a (click)="scrollToElement('landing')">
+            <img src="../../assets/img/LogoDK.png" class="logo-desktop" />
+        </a>
         <div class="navbar-text-wrapper">
             <a (click)="scrollToElement('contactMe')">Contact</a>
             <a (click)="scrollToElement('myWork')">My Work</a>
@@ -9,9 +12,21 @@
         </div>
     </div>
 </div>
+
+<div class="navbar-mobile-overlay" [class.open]="isMenuOpen" (click)="toggleMenu()">
+    <div class="navbar-wrapper">
+        <a (click)="scrollToElement('whyMe')">Why me</a>
+        <a (click)="scrollToElement('mySkills')">My Skill Set</a>
+        <a (click)="scrollToElement('myWork')">My Work</a>
+        <a (click)="scrollToElement('contactMe')">Contact me</a>
+        <div class="languages">DE | EN | LOL</div>
+    </div>
+</div>
+
 <div class="navbar-mobile">
     <div class="navbar-content-mobile">
-        <a (click)="scrollToElement('landing')"><img src="../../assets/img/LogoDK.png" class="logo-mobile"></a>
-        <a (click)="scrollToElement('#')"><img src="../../assets/img/burgermenu.png" class="burger-menu-mobile"></a>
+        <a (click)="scrollToElement('landing')">
+            <img src="../../assets/img/LogoDK.png" class="logo-mobile" />
+        </a>
     </div>
 </div>

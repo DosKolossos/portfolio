@@ -27,7 +27,7 @@
     display: flex;
     font-size: 54px;
     font-family: 'Quantico';
-
+    top: 181px;
     -webkit-text-stroke: 3px #B5E93B;
     color: transparent;
     transform: translateX(-44%) translateY(132%) rotate(-90deg);
@@ -322,6 +322,10 @@ input:not(:placeholder-shown) {
 }
 
 @media only screen and (orientation:portrait) {
+    #contactMe {
+        position: relative;
+        top: -128px;
+    }
     .arrow-right {
         display: none;
     }
