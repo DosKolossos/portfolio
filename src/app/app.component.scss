@@ -10,6 +10,8 @@ app-contentrow {
         flex-direction: column;
         width: 100%;
         overflow-x: hidden;
+        overflow-y: hidden;
         height: auto;
+        position: sticky;
     }
 }
