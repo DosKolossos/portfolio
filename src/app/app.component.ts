@@ -22,6 +22,11 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit{
+  contactMeUsed: boolean = false;
+  updateContactMeUsed(newValue: boolean) {
+    this.contactMeUsed = newValue;
+    console.log('contactMeUsed updated:', this.contactMeUsed);
+  }
   languages = ['en', 'de', 'lol'];
   private translateService = inject(TranslateService);
 

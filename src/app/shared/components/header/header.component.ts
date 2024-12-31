@@ -10,6 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  @Input() contactMeUsed: boolean = false;
   @Input() languages: string[] = [];
   @Output() languageChange = new EventEmitter<string>();
 

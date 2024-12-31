@@ -26,8 +26,8 @@
                     <span>{{ 'openRelocate' | translate }}</span>
                 </div>
             </div>
-            <a href="https://google.de" target="_blank" class="contact-me">{{ 'contactMe' | translate }}</a>
+            <a (click)="scrollToElement('contactMe')" class="contact-me">{{ 'contactMe' | translate }}</a>
         </div>
     </div>
 </div>
-<a href="#mySkills" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png" class="arrow-right"></a>
+<a (click)="scrollToElement('mySkills')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png" class="arrow-right"></a>

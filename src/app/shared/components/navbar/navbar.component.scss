@@ -183,7 +183,10 @@ a {
         color: black;
       }
       >.languages{
+        display: flex;
+        gap: 8px;
         font-family: 'Quantico';
+        color: black;
       }
     }
   }

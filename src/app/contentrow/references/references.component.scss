@@ -154,6 +154,12 @@ button:not(:hover) {
     }
   }
 
+  #references {
+    position: absolute;
+    top: 0;
+    left: -90px;
+}
+
   @media only screen and (orientation:portrait) {
     .arrow-right {
         display: none;

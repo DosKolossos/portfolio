@@ -45,24 +45,24 @@ export class ProjectsComponent implements OnInit {
       description: "",
       technologies: "JavaScript, Firebase, HTML, CSS",
       notes: "",
-      github: "https://www.google.de",
-      link: "https://www.google.de",
+      github: "https://github.com/DosKolossos/join",
+      link: "https://www.david-kolosza.de/join",
     },
     "Project Wizard Legacy": {
       id: 2,
       description: "",
       technologies: "Object oriented programming, JavaScript, HTML, CSS",
       notes: "",
-      github: "https://www.google.de",
-      link: "https://www.google.de",
+      github: "https://github.com/DosKolossos/Wizard-Legacy",
+      link: "https://www.david-kolosza.de/wizard-legacy",
     },
     "Project PokeDex": {
       id: 3,
       description: "",
       technologies: "Rest-API, JavaScript, HTML, CSS",
       notes: "",
-      github: "https://www.google.de",
-      link: "https://www.google.de",
+      github: "https://github.com/DosKolossos/Pokedex",
+      link: "https://www.david-kolosza.de/pokedex",
     }
   }
 
@@ -106,5 +106,22 @@ getToggleText(projectId: number): string {
         index === 0 ? match.toLowerCase() : match.toUpperCase()
       )
       .replace(/\s+/g, '');
+  }
+
+  isMenuOpen = false; // Standard: Menü geschlossen
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen; // Umschalten des Zustands
+
+  }
+
+  scrollToElement(id: string) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', inline: 'start'});
+    }
+    this.isMenuOpen = false; // Schließen des Menüs nach Navigation
+    this.toggleMenu();
+
   }
 }

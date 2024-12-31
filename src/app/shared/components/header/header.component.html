@@ -1,28 +1,15 @@
-<!-- <div class="header">
-    <div class="social-wrapper">
-        <a target="_blank" href="https://google.com"><img src="../../../../assets/img/mailicon.png"></a>
-        <a target="_blank" href="https://www.linkedin.com/in/david-kolosza-59745b2b1/"><img src="../../../../assets/img/linkedinicon.png"></a>
-        <a target="_blank" href="https://github.com/DosKolossos"><img src="../../../../assets/img/githubicon.png"></a>
-    </div>
-    <div class="languages">
-        <p *ngFor="let language of languages" (click)="changeLanguage(language)">
-          {{ language | translate }}
-        </p>
-      </div>
-      
-</div> -->
+
 <div class="header">
   <div class="social-wrapper">
-      <a target="_blank" href="https://google.com"><img src="../../../../assets/img/mailicon.png"></a>
+      <a href="mailto:kontakt@david-kolosza.de"><img src="../../../../assets/img/mailicon.png"></a>
       <a target="_blank" href="https://www.linkedin.com/in/david-kolosza-59745b2b1/"><img src="../../../../assets/img/linkedinicon.png"></a>
       <a target="_blank" href="https://github.com/DosKolossos"><img src="../../../../assets/img/githubicon.png"></a>
   </div>
 
   <div class="languages">
-      <p *ngFor="let language of languages" 
-         (click)="changeLanguage(language)" 
-         [class.active]="language === currentLanguage">
-        {{ language | translate }}
-      </p>
-  </div>
+    
+    <p (click)="changeLanguage('en')">EN</p><p>|</p>
+    <p (click)="changeLanguage('de')">DE</p><p *ngIf="contactMeUsed">|</p>
+    <p (click)="changeLanguage('lol')" *ngIf="contactMeUsed">LOL</p>
+</div>
 </div>
