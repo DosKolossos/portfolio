@@ -118,7 +118,8 @@ app-footer {
         max-width: 100%;
         min-width: unset;
         background-color: black;
-        height: 1000px;
+        min-height: 860px;
+        height: auto;
     }
 
     app-contactform {
@@ -138,8 +139,8 @@ app-footer {
         bottom: 0;
         width: 100%;
         max-width: unset;
-        // height: 153px;
-        height: unset;
+        height: 153px;
+        // height: unset;
 
     }
 }

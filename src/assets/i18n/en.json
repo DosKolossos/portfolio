@@ -3,6 +3,10 @@
     "de": "DE",
     "en": "EN",
     "lol": "LOL",
+    "name": "David Kolosza",
+    "job": "Frontend Developer",
+    "jobCaps": "Frontend Developer",
+    "town":"Niederkassel",
     "title": "Portfolio",
     "welcome": "Willkommen",
     "whyMe": "Why me",
@@ -19,7 +23,7 @@
     "showMeLess":"Show me less",
     "showMeMore": "Show me more",
     "ongoingProject":"Ongoing Project",
-    "ongoingProjectText":" I am currently working on developing an online shop for pet foods. This is for me both exciting and challenging. In my work the key to success lies in a good planning and execution.",
+    "ongoingProjectText":" I am currently working on a Quidditch management game. HTML, CSS, JS and FireBase are being used for this. Quidditch is the most popular sport in the Harry Potter universe.",
     "letsTalk": "Let's talk",
     "mySkillsText": "The IT landscape is continuously evolving, with new technologies and methodologies. Staying motivated to expand my IT skills requires a strategic approach, a curious mindset, and a commitment to lifelong learning.",
     "newTechnoText":"I am always happy to learn new technologies, just tell me what you need.",
@@ -44,6 +48,8 @@
     },
     "references": {
       "title": "References",
+      "need-a-teamplayer":"Need a teamplayer?",
+      "teamplayerText": "Here what my colleagues said about me",
       "comments": {
         "julian": {
           "name": "Julian Wünkhaus",

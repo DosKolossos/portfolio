@@ -26,6 +26,11 @@ export class AppComponent implements OnInit{
   updateContactMeUsed(newValue: boolean) {
     this.contactMeUsed = newValue;
     console.log('contactMeUsed updated:', this.contactMeUsed);
+  
+    // Falls aktiviert, Sprache auf "LoL" umstellen
+    if (this.contactMeUsed) {
+      this.changeLanguage('lol');
+    }
   }
   languages = ['en', 'de', 'lol'];
   private translateService = inject(TranslateService);
@@ -47,4 +52,6 @@ export class AppComponent implements OnInit{
     localStorage.setItem('language', lang);
 
   }
+
+  
 }

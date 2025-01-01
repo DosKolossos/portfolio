@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { LandingpageComponent } from '../contentrow/landingpage/landingpage.component';
 import { WhymeComponent } from '../contentrow/whyme/whyme.component';
 import { MyskillsetComponent } from '../contentrow/myskillset/myskillset.component';
@@ -22,7 +22,11 @@ import { FooterComponent } from './footer/footer.component';
   styleUrls: ['./contentrow.component.scss']
 })
 export class ContentrowComponent {
+  @Output() contactMeUsedChange = new EventEmitter<boolean>();
 
+  onContactMeUsedChange(newValue: boolean) {
+    this.contactMeUsedChange.emit(newValue); // Propagiert das Ereignis nach oben
+  }  
   isMenuOpen = false; // Standard: Menü geschlossen
 
   toggleMenu() {

@@ -190,7 +190,7 @@
 }
 
 #ongoingProject {
-    left: 100px;
+    left: 70px;
     display: flex;
     width: 367px;
     height: 293px;
@@ -263,7 +263,28 @@
     cursor: pointer;
     position: absolute;
     left: 3190px !important;
-    top: 797px !important;
+    top: 600px !important;
+    width: 107px;
+    height: 30px;
+
+    &:hover {
+        transition: 0.3s;
+        transform: scale(1.2);
+        filter: brightness(5);
+    }
+
+    &:not(:hover) {
+        transition: 0.3s;
+        transform: scale(1.0);
+        filter: brightness(1);
+    }
+}
+
+.arrow-right-center {
+    cursor: pointer;
+    position: absolute;
+    left: 1453px !important;
+    top: 730px !important;
     width: 107px;
     height: 30px;
 
@@ -337,6 +358,7 @@
                 border-radius: 30px;
                 height: max-content;
                 gap: 32px;
+
                 >.for-show-me-less{
                     .collapse-mobile {
                         position: relative;
@@ -475,11 +497,46 @@
         display: none !important;
     }
 
+    #ongoingProjectMobile{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        >.project-headline{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            >.project-number {
+                position: relative;
+                font-size: 40px;
+                font-weight: 400;
+                top: 17px;
+                color: transparent;
+                -webkit-text-stroke: 1px #B5E93B;
+            }
+
+            >.project-name {
+                position: relative;
+                font-size: 24px;
+                top: 12px;
+                color: #B5E93B;
+            }
+        }
+        >#ogptextMobile{
+            display: flex;
+
+        }
+    }
+
 }
 
-#ongoingProject {
-    display: none;
+#project3 {
+    position: absolute;
+    top: 0px !important;
+    left: 1800px;
+    width: 0px;
 }
+
 
 #letsTalkMobile {
     display: flex;
@@ -511,20 +568,10 @@
             background: linear-gradient(#B5E93B, #B5E93B);
         }
     }
-}
 
     
-    // .project-description {
-    //     animation: fadeInOut 0.5s ease-in-out;
-    //     overflow: hidden;
-    // }
-    
-    // .collapse-mobile {
-    //     cursor: pointer;
-    //     text-align: center;
-    //     color: #B5E93B;
-    //     text-decoration: underline;
-    //     margin-top: 20px;
-    // }
+}
+
+
     
 

@@ -2,9 +2,13 @@
 <a (click)="scrollToElement('contactMe')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png" class="arrow-right"></a>
 <div id="references"></div>
 <div #references>
+  
   <div class="content-wrapper">
     <div class="headline">{{ 'references.title' | translate }}</div>
-
+    <div class="need-a-teamplayer">
+      <div class="teamplayer-headline">{{ 'references.need-a-teamplayer' | translate }}</div>
+      <span>{{ 'references.teamplayerText' | translate }}</span>
+    </div>
     <div class="comment-area" id="commentArea">
       <div 
         class="comment-wrapper" 

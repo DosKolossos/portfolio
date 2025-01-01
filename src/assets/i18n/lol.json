@@ -3,6 +3,10 @@
     "de": "DE",
     "en": "EN",
     "lol": "LOL",
+    "name": "DosKolossos",
+    "job": "Professional Iron IV Feeder",
+    "jobCaps": "IRON IV FEEDER",
+    "town":"Top Lane",
     "title": "Portfolio",
     "welcome": "Welcome",
     "whyMe": "Why me",
@@ -43,22 +47,24 @@
       }
     },
     "references": {
+      "need-a-teamplayer":"Need a 1v9 player?",
       "title": "References",
+      "teamplayerText": "Here what my team chat said about me",
       "comments": {
         "julian": {
-          "name": "Julian Wünkhaus",
-          "comment": "David consistently demonstrates reliability and a strong sense of collaboration, making him a valuable asset to any team. His positive mindset brings a sense of optimism and motivation to those around him. Beyond his professional qualities, David is also someone who is easy to get along with, making him the type of colleague you'd genuinely enjoy sharing a beer with after work.",
-          "project": "Project Join and more"
+          "name": "Team member A",
+          "comment": "Dude, why are you always feeding?! Like, every single game, you overextend in lane, don’t ward, and then blame the jungler. I swear, it’s like you have no map awareness at all! You’re making it impossible for the rest of us to play. Can you just play safe for once? Stop diving under tower at 5 minutes and giving their top a free snowball!",
+          "project": "Bronze Promo"
         },
         "sarah": {
-          "name": "Sarah Schneider",
-          "comment": "David always worked very precisely in our group work and paid attention to every detail. With his sense of humor, he regularly put the team in a good mood. His open and active communication was a great help in keeping everyone on the same page.",
-          "project": "Project Join"
+          "name": "Team member B",
+          "comment": "FF15 or I’m running it down mid. At this point, the enemy top should be sending you thank-you cards for all the gold donations. You’re not just feeding—you’re catering their whole buffet. Are you secretly trying to boost them to Challenger? Like, what’s the strat here? Please enlighten us, because the rest of us are trying to win.",
+          "project": "Random Iron Game"
         },
         "alexander": {
-          "name": "Alexander Sinner",
-          "comment": "It was a pleasure to work with David. He not only brings excellent programming skills, but also an open and collaborative attitude that makes teamwork much easier. His ability to quickly analyze complex problems and propose effective solutions has been instrumental in moving our project forward.",
-          "project": "Project Join"
+          "name": "Team member C",
+          "comment": "Dos is a very special player with his very own style of play. He's such a genius that it's impossible to follow his ideas. I'm always in the top 4 with Dos and I've become a much better player thanks to him. I always re-roll in the early game, giving me an unassailable advantage when I already have three units as three-stars at 2-7!",
+          "project": "TFT Double-Up"
         }
       }
     },

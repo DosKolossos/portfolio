@@ -1,9 +1,10 @@
 <div id="myWork"></div>
-
+<div id="project3"></div>
 <div class="content-wrapper">
     <div class="headline">{{ 'myWork' | translate }}</div>
     <div class="projects">
         <div *ngFor="let project of projectlist | keyvalue: sortById" class="project-wrapper">
+
             <div class="project-headline">
                 <div class="project-number">{{ project.value.id }}</div>
                 <div class="project-name">{{ project.key }}</div>
@@ -34,6 +35,18 @@
                     </div>
                     <span>{{ project.value.notes }}</span>
                 </div>
+            </div>
+        </div>
+        <div id="ongoingProject">
+            <div id="ogpHeadline">
+                <div id="ogpNumber">4</div>
+                <div id="ogpTitle">{{ 'ongoingProject' | translate }}</div>
+            </div>
+            <div id="ogptext">
+                {{ 'ongoingProjectText' | translate }}
+            </div>
+            <div id="letsTalk">
+                <a (click)="scrollToElement('contactMe')" id="contactBtn">{{ 'letsTalk' | translate }}</a>
             </div>
         </div>
     </div>
@@ -85,34 +98,21 @@
                 </div>
             </div>
         </div>
-    </div>
-    
-      
 
-    <div id="ongoingProject">
-        <div id="ogpHeadline">
-            <div id="ogpNumber">4</div>
-            <div id="ogpTitle">{{ 'ongoingProject' | translate }}</div>
-        </div>
-        <div id="ogptext">
-            {{ 'ongoingProjectText' | translate }}
-        </div>
-        <div id="letsTalk">
-            <a href="#contact" id="contactBtn">{{ 'letsTalk' | translate }}</a>
+        <div id="ongoingProjectMobile">
+            <div id="ogpHeadlineMobile" class="project-headline">
+                <div id="ogpNumberMobile" class="project-number">4</div>
+                <div id="ogpTitleMobile" class="project-name">{{ 'ongoingProject' | translate }}</div>
+            </div>
+            <div id="ogptextMobile">
+                {{ 'ongoingProjectText' | translate }}
+            </div>
+            <div id="letsTalkMobile">
+                <a (click)="scrollToElement('contactMe')" id="contactBtnMobile">Let's talk</a>
+            </div>
         </div>
     </div>
-    <!-- <div id="ongoingProjectMobile">
-        <div id="ogpHeadlineMobile">
-            <div id="ogpNumberMobile">4</div>
-            <div id="ogpTitleMobile">Ongoing project</div>
-        </div>
-        <div id="ogptextMobile">
-            I am currently working on developing an online shop for pet foods.<br>
-This is for me  both exciting and challenging. In my work the key to success lies in a good planning and execution.
-        </div>
-        <div id="letsTalkMobile">
-            <a href="#contact" id="contactBtnMobile">Let's talk</a>
-        </div>
-    </div> -->
+
 </div>
+<a (click)="scrollToElement('project3')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png" class="arrow-right-center"></a>
 <a (click)="scrollToElement('references')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png" class="arrow-right"></a>

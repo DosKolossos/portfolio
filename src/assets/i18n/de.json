@@ -3,11 +3,15 @@
     "de": "DE",
     "en": "EN",
     "lol": "LOL",
+    "name": "David Kolosza",
+    "job": "Frontend Developer",
+    "jobCaps": "Frontend Developer",
+    "town":"Niederkassel",
     "title": "Portfolio",
     "welcome": "Willkommen",
     "whyMe": "Zu mir",
     "Iam": "Ich bin:",
-    "motivation": "Ich bin motiviert, kontinuierlich neue Technologien zu erlernen und mich weiterzuentwickeln. Meine Fähigkeit, komplexe Probleme zu lösen, sowie meine Leidenschaft für Programmierung machen mich zu einem wertvollen Mitglied Ihres Teams.",
+    "motivation": "Ich bin motiviert, neue Technologien zu erlernen und mich weiterzuentwickeln. Mit meinem Engagement trage ich zum Erfolg des Teams bei.",
     "located": "ansässig in Niederkassel",
     "openRemote": "offen für Remote-Arbeit",
     "openRelocate": "bereit für einen Umzug",
@@ -19,9 +23,9 @@
     "showMeLess": "Weniger",
     "showMeMore": "Zeig mir mehr",
     "ongoingProject": "Aktuelles Projekt",
-    "ongoingProjectText": " I am currently working on developing an online shop for pet foods. This is for me both exciting and challenging. In my work the key to success lies in a good planning and execution.",
+    "ongoingProjectText": "Derzeit arbeite ich an einem Quidditch-Management-Spiel. Hierzu kommen HTML, CSS, JS und FireBase zum Einsatz. Quidditch ist die populärste Sportart aus dem Harry-Potter-Universum.",
     "letsTalk": "Lust zu Schreiben?",
-    "mySkillsText": "Die IT-Landschaft entwickelt sich kontinuierlich weiter, mit neuen Technologien und Methoden. Um motiviert zu bleiben, meine IT-Fähigkeiten zu erweitern, bedarf es einer strategischen Herangehensweise, einer neugierigen Denkweise und der Verpflichtung zum lebenslangen Lernen.",
+    "mySkillsText": "Die IT-Landschaft entwickelt sich stetig weiter. Um meine Fähigkeiten zu erweitern, brauche ich eine strategische Herangehensweise, Neugier und lebenslanges Lernen.",
     "newTechnoText": "Ich lerne immer gerne neue Technologien, sag mir einfach, was du brauchst.",
     "newTechnoTextMobile": "Ich versuche stets, mein aktuelles Skillset zu erweitern, und lerne gerne neue Technologien. Sag mir einfach, was du sonst noch brauchst.",
     "mySkills": "Meine Fähigkeiten",
@@ -43,7 +47,9 @@
         }
     },
     "references": {
+        "need-a-teamplayer":"Mitspieler gesucht?",
         "title": "Referenzen",
+        "teamplayerText": "Was meine Kollegen über mich gesagt haben",
         "comments": {
             "julian": {
                 "name": "Julian Wünkhaus",

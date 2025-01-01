@@ -6,5 +6,6 @@
   (languageChange)="changeLanguage($event)" [contactMeUsed]="contactMeUsed">
 </app-header>
 
-<app-contentrow></app-contentrow>
+<app-contentrow (contactMeUsedChange)="updateContactMeUsed($event)"></app-contentrow>
+
 <router-outlet></router-outlet>

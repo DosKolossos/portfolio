@@ -1,13 +1,20 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit, inject } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-landingpage',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule, CommonModule],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss'
 })
-export class LandingpageComponent {
+export class LandingpageComponent implements OnInit {
+  private translateService = inject(TranslateService);
+
+  ngOnInit(): void {
+    // Hier können Initialisierungslogiken eingefügt werden, falls notwendig
+  }
 
   isMenuOpen = false; // Standard: Menü geschlossen
 
