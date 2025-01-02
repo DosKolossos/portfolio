@@ -4,7 +4,9 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { ContentrowComponent } from './contentrow/contentrow.component';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
 
 
 @Component({
@@ -22,18 +24,36 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit{
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private translateService: TranslateService
+  ) {}
+
   contactMeUsed: boolean = false;
+  // updateContactMeUsed(newValue: boolean) {
+  //   this.contactMeUsed = newValue;
+  //   console.log('contactMeUsed updated:', this.contactMeUsed);
+  
+  //   // Falls aktiviert, Sprache auf "LoL" umstellen
+  //   if (this.contactMeUsed) {
+  //     this.changeLanguage('lol');
+  //   }
+  // }
   updateContactMeUsed(newValue: boolean) {
     this.contactMeUsed = newValue;
     console.log('contactMeUsed updated:', this.contactMeUsed);
-  
+
+    // Save the new value to localStorage
+    localStorage.setItem('contactMeUsed', JSON.stringify(this.contactMeUsed));
+
     // Falls aktiviert, Sprache auf "LoL" umstellen
     if (this.contactMeUsed) {
       this.changeLanguage('lol');
     }
   }
   languages = ['en', 'de', 'lol'];
-  private translateService = inject(TranslateService);
 
   ngOnInit(): void {
     this.languages.forEach(lang => {
@@ -47,6 +67,9 @@ export class AppComponent implements OnInit{
     this.translateService.setDefaultLang(defaultLang);
     this.translateService.use(defaultLang);
   }
+
+
+  
   changeLanguage(lang: string){
     this.translateService.use(lang);
     localStorage.setItem('language', lang);
@@ -55,3 +78,4 @@ export class AppComponent implements OnInit{
 
   
 }
+

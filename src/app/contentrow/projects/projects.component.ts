@@ -3,6 +3,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
+
 interface Project {
   id: number;
   description: string;
@@ -39,6 +40,7 @@ interface Project {
 
 export class ProjectsComponent implements OnInit {
   private translateService = inject(TranslateService);
+
   projectlist: { [key: string]: Project } = {
     "Project Join": {
       id: 1,
@@ -69,7 +71,6 @@ export class ProjectsComponent implements OnInit {
   expandedMobileProjectId: number | null = null;
 
   ngOnInit(): void {
-    // Übersetzungen laden und in die Projektliste einfügen
     Object.keys(this.projectlist).forEach(projectKey => {
       const key = this.toCamelCase(projectKey); // Wandelt "Project PokéDex" zu "projectPokedex"
       this.translateService.get(`projects.${key}`).subscribe((translation) => {
@@ -91,12 +92,10 @@ getToggleText(projectId: number): string {
 
 
 
-    // Custom-Sortierfunktion für die keyvalue-Pipe
     sortById(a: any, b: any): number {
       return a.value.id - b.value.id; // Sortiert nach der ID aufsteigend
     }
 
-  // Optimierte Helper-Funktion, um "Project Join" in "projectJoin" zu konvertieren
   private toCamelCase(str: string): string {
     return str
       .normalize('NFD') // Sonderzeichen wie é in e umwandeln
