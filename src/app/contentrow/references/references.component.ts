@@ -18,12 +18,24 @@ interface Comments {
 
 
 export class ReferencesComponent implements OnInit {
+
+
+  ngOnInit(): void {
+    this.updateReferences();
+    this.translateService.onLangChange.subscribe(() => {
+      this.updateReferences();
+    });
+    this.startSlide(); // Starte automatisch das Sliden
+  }
+
+  pause: boolean = false;
+  
   private translateService = inject(TranslateService);
 
   comments: Comments[] = [];
   currentIndex: number = 0;
   private slideInterval: any;
-  private isSliding: boolean = true;
+  isSliding: boolean = true;
   animationDirection: string = '';
   private restartTimeout: any;
 
@@ -31,8 +43,9 @@ export class ReferencesComponent implements OnInit {
     this.startSlide();
   }
 
+
   showNext(): void {
-    this.stopSlideTemporarily();
+    if (this.pause) return; // Wenn pausiert, tue nichts
     this.animationDirection = 'left';
     if (this.comments.length > 0) {
       this.currentIndex = (this.currentIndex + 1) % this.comments.length;
@@ -40,37 +53,40 @@ export class ReferencesComponent implements OnInit {
   }
 
   showPrevious(): void {
-    this.stopSlideTemporarily();
+    if (this.pause) return; // Wenn pausiert, tue nichts
     this.animationDirection = 'right';
     if (this.comments.length > 0) {
       this.currentIndex = (this.currentIndex - 1 + this.comments.length) % this.comments.length;
     }
   }
 
+
   startSlide(): void {
-    this.isSliding = true;
+    if (!this.isSliding || this.pause) return; // Starte nur, wenn Slider aktiv und nicht pausiert
     this.slideInterval = setInterval(() => {
-      if (this.isSliding && this.comments.length > 0) {
+      if (this.comments.length > 0) {
         this.showNext();
       }
-    }, 10000);
+    }, 10000); // Zeitintervall für den Slider
   }
 
   stopSlide(): void {
-    this.isSliding = false;
     if (this.slideInterval) {
       clearInterval(this.slideInterval);
       this.slideInterval = null;
     }
   }
 
+
   toggleSlide(): void {
-    if (this.isSliding) {
+    this.pause = !this.pause; // Umschalten des Pause-Zustands
+    if (this.pause) {
       this.stopSlide();
     } else {
       this.startSlide();
     }
   }
+
 
   stopSlideTemporarily(): void {
     this.stopSlide();
@@ -89,7 +105,9 @@ export class ReferencesComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
+
+
+  updateReferences(){
     this.translateService.get('references.comments').subscribe((translation) => {
       // Die Struktur des Objekts ist { julian: {...}, sarah: {...}, alexander: {...} }
       // Wir müssen es in ein Array umwandeln

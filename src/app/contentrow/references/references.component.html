@@ -1,8 +1,8 @@
-
-<a (click)="scrollToElement('contactMe')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png" class="arrow-right"></a>
+<a (click)="scrollToElement('contactMe')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png"
+    class="arrow-right"></a>
 <div id="references"></div>
 <div #references>
-  
+
   <div class="content-wrapper">
     <div class="headline">{{ 'references.title' | translate }}</div>
     <div class="need-a-teamplayer">
@@ -10,12 +10,8 @@
       <span>{{ 'references.teamplayerText' | translate }}</span>
     </div>
     <div class="comment-area" id="commentArea">
-      <div 
-        class="comment-wrapper" 
-        [class.slide-left]="animationDirection === 'left'" 
-        [class.slide-right]="animationDirection === 'right'" 
-        (animationend)="animationDirection = ''"
-      >
+      <div class="comment-wrapper" [class.slide-left]="animationDirection === 'left'"
+        [class.slide-right]="animationDirection === 'right'" (animationend)="animationDirection = ''">
         <!-- Kommentaranzeige nur, wenn comments vorhanden sind -->
         <div *ngIf="comments.length > 0" class="comment-text">"{{ comments[currentIndex].comment }}"</div>
 
@@ -26,13 +22,13 @@
 
         <div class="navigation">
           <button (click)="showPrevious()">&#8592;</button>
+          <!-- <button (click)="stopSlide()">| |</button> -->
           <button 
-            (mousedown)="stopSlide()" 
-            (mouseup)="startSlide()" 
-            (mouseleave)="startSlide()" 
-            (touchstart)="stopSlide()" 
-            (touchend)="startSlide()"
-          >| |</button>
+          [class.active]="pause" 
+          (click)="toggleSlide()"
+        >
+          {{ pause ? '| |' : '| |' }}
+        </button>
           <button (click)="showNext()">&#8594;</button>
         </div>
       </div>

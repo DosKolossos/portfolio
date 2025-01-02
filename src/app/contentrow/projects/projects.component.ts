@@ -44,7 +44,7 @@ export class ProjectsComponent implements OnInit {
   projectlist: { [key: string]: Project } = {
     "Project Join": {
       id: 1,
-      description: "",
+      description: "projects.projectJoin.description",
       technologies: "JavaScript, Firebase, HTML, CSS",
       notes: "",
       github: "https://github.com/DosKolossos/join",
@@ -71,6 +71,14 @@ export class ProjectsComponent implements OnInit {
   expandedMobileProjectId: number | null = null;
 
   ngOnInit(): void {
+    this.updateDescriptions();
+
+    this.translateService.onLangChange.subscribe(() => {
+      this.updateDescriptions();
+    })
+  }
+
+  updateDescriptions(){
     Object.keys(this.projectlist).forEach(projectKey => {
       const key = this.toCamelCase(projectKey); // Wandelt "Project PokéDex" zu "projectPokedex"
       this.translateService.get(`projects.${key}`).subscribe((translation) => {

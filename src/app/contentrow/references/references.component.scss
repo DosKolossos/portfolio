@@ -124,6 +124,12 @@ button:hover {
   -webkit-text-stroke: black 1px;
 }
 
+button.active {
+  transition: 0.3s;
+  background-color: #B5E93B;
+  -webkit-text-stroke: black 1px;
+}
+
 button:not(:hover) {
   transition: 0.3s;
 }

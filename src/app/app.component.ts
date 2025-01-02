@@ -31,7 +31,7 @@ export class AppComponent implements OnInit{
     private translateService: TranslateService
   ) {}
 
-  contactMeUsed: boolean = false;
+  contactMeUsed: boolean = true;
   // updateContactMeUsed(newValue: boolean) {
   //   this.contactMeUsed = newValue;
   //   console.log('contactMeUsed updated:', this.contactMeUsed);

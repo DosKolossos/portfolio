@@ -6,7 +6,29 @@
     position: relative;
     font-family: 'Quantico';
     text-wrap: wrap;
-
+    >.success-window{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: #546d1a;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        border: #B5E93B solid 5px;
+        align-items: center;
+        justify-content: center;
+        >.success-message{
+            display: flex;
+            font-size: 32px;
+            padding: 20px;
+        }
+        >span {
+            padding: 20px !important;
+            font-size: 24px;
+            
+        }
+    }
 
 
     >.form-wrapper {
@@ -335,7 +357,7 @@ input:not(:placeholder-shown) {
 .active{
     background-color:#B5E93B !important;
     color: black;
-
+    cursor: pointer;
 }
 
 @media only screen and (orientation:portrait) {

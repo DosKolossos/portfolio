@@ -2,11 +2,15 @@
 <div class="headline">{{ 'contactform.title' | translate }}</div>
 <div class="column-reverse">
     <div class="contactme-wrapper">
+        <div class="success-window" *ngIf="isSubmitted">
+            <p  class="success-message">{{ 'contactform.successMessage' | translate }}
 
+            </p>
+            <span>{{ 'contactform.successMessageSubtext' | translate }}</span>
+        </div>
         <div class="form-wrapper">
-            <!-- <form (ngSubmit)="onSubmit(contactForm)" class="form-overall" #contactForm="ngForm"
-                style="display: flex; flex-direction: column; align-items: center;"> -->
-                <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="form-overall" style="display: flex; flex-direction: column; align-items: center;">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="form-overall"
+                style="display: flex; flex-direction: column; align-items: center;">
 
                 <!-- Name Input -->
                 <div class="form-group">
@@ -16,40 +20,23 @@
                 </div>
 
                 <!-- Email Input -->
-                <!-- <div class="form-group">
-                    <input [(ngModel)]="contactData.email" type="email" id="email" name="email"
-                        [placeholder]="email.invalid && email.touched ? 'contactform.emailRequired' : 'contactform.emailPlaceholder' | translate"
-                        required #email="ngModel" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                        [ngClass]="{'is-invalid': email.invalid && email.touched}">
-                </div> -->
+
                 <div class="form-group">
-                    <input [(ngModel)]="contactData.email" 
-                           type="email" 
-                           id="email" 
-                           name="email"
-                           [placeholder]="email.invalid && email.touched ? 
+                    <input [(ngModel)]="contactData.email" type="email" id="email" name="email" [placeholder]="email.invalid && email.touched ? 
                                           ('contactform.emailRequired' | translate) : 
-                                          ('contactform.emailPlaceholder' | translate)" 
-                           required 
-                           #email="ngModel" 
-                           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" 
-                           [ngClass]="{'is-invalid': email.invalid && email.touched}">
-                  </div>
+                                          ('contactform.emailPlaceholder' | translate)" required #email="ngModel"
+                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                        [ngClass]="{'is-invalid': email.invalid && email.touched}">
+                </div>
                 <!-- Message Textarea -->
                 <div class="form-group">
-                    <textarea [(ngModel)]="contactData.message" 
-                              id="message" 
-                              name="message"
-                              [placeholder]="message.invalid && message.touched ? 
+                    <textarea [(ngModel)]="contactData.message" id="message" name="message" [placeholder]="message.invalid && message.touched ? 
                                              ('contactform.messageRequired' | translate) : 
-                                             ('contactform.messagePlaceholder' | translate)" 
-                              required 
-                              minlength="8" 
-                              #message="ngModel"
-                              [ngClass]="{'is-invalid': message.invalid && message.touched}">
+                                             ('contactform.messagePlaceholder' | translate)" required minlength="8"
+                        #message="ngModel" [ngClass]="{'is-invalid': message.invalid && message.touched}">
                     </textarea>
-                  </div>
-                  
+                </div>
+
 
                 <!-- Privacy Policy -->
                 <div class="privacy-policy">
@@ -69,9 +56,6 @@
                             class="submit-button">
                             {{ 'contactform.submitButton' | translate }}
                         </button>
-
-                        <p *ngIf="isSubmitted" class="success-message">{{ 'contactform.successMessage' | translate }}
-                        </p>
                     </div>
                 </div>
             </form>
@@ -85,7 +69,8 @@
 
         <div class="subtext-row">
             <img src="../../../assets/img/mailto-icon.png" class="mail-icon" alt="">
-            <span>{{ 'contactform.emailLabel' | translate }}:<a href="mailto:kontakt@david-kolosza.de">kontakt&#64;david-kolosza.de</a></span>
+            <span>{{ 'contactform.emailLabel' | translate }}:<a
+                    href="mailto:kontakt@david-kolosza.de">kontakt&#64;david-kolosza.de</a></span>
         </div>
 
         <div class="subtext-row">
