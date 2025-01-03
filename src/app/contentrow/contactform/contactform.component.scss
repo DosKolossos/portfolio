@@ -460,6 +460,7 @@ input:not(:placeholder-shown) {
 }
 
 @media only screen and (orientation:portrait) {
+
     #contactMe {
         position: relative;
         top: -128px;
@@ -496,7 +497,64 @@ input:not(:placeholder-shown) {
         font-family: 'Quantico';
         text-wrap: wrap;
         flex-direction: column;
-
+        >.privacy-content {
+            top: 60px;
+            position: fixed;
+            display: flex;
+            z-index: 999;
+            height: 80vh;
+            width: unset;
+            max-width: 100%;
+            max-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #242f0b;
+            border-radius: 16px;
+            border: none;
+            padding: 20px 20px 20px 20px;
+            
+            >.content-scroller {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                background-color: #D3ED97;
+                border-radius: 16px;
+                overflow-y: scroll;
+                text-wrap: wrap;
+                padding: 8px;
+                flex-direction: column;
+            }
+    
+            >.button-wrapper {
+                display: flex;
+                justify-content: center;
+                flex: 1;
+                width: 100%;
+                height: 100%;
+                >button {
+    
+                    position: relative;
+                    top: 8px;
+                    background-color: transparent;
+                    justify-content: center;
+                    color: white;
+                    padding: 13px 30px 13px 30px;
+                    font-family: 'Quantico';
+                    border-radius: 30px;
+                    border: #B5E93B solid 1px;
+                    width: max-content;
+                    cursor: pointer;
+    
+                    &:hover {
+                        background-color: #D3ED9733;
+                        font-family: 'Quantico';
+                        border-radius: 30px;
+                        border: #B5E93B solid 1px;
+                    }
+                }
+            }
+        }
 
 
         >.form-wrapper {
@@ -544,7 +602,9 @@ input:not(:placeholder-shown) {
         height: max-content;
         top: 0;
         padding: 16px 0 16px 0;
-
+        .imprint{
+            display: none;
+        }
         >.green-font {
             text-align: left;
             justify-content: unset;

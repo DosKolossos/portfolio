@@ -33,17 +33,17 @@
       "projectJoin": {
         "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
         "technologies": "JavaScript, Firebase, HTML, CSS",
-        "notes": "This is a placeholder for notes about Project Join."
+        "notes": "Working on Join taught me how to efficiently integrate a database with Firebase and implement a functioning login function. The teamwork in particular showed me how important clear communication and the use of Git are for successful collaboration."
       },
       "projectWizardLegacy": {
         "description": "Jump, run and throw game based on object-oriented approach. Help Merlin to fight against dangerous enemies and destroy the strong endboss.",
         "technologies": "Object-oriented programming, JavaScript, HTML, CSS",
-        "notes": "Notes for Wizard Legacy project."
+        "notes": "Working with Canvas on Wizard Legacy helped me understand the structure of 2D games and deepened my knowledge of object-oriented programming. This project challenged my creativity and taught me to break down complex logic into manageable modules."
       },
       "projectPokeDex": {
         "description": "A REST-API based application for displaying all Pokémon, with data fetched from PokéAPI.",
         "technologies": "REST-API, JavaScript, HTML, CSS",
-        "notes": "Notes for PokéDex project."
+        "notes": "The Pokedex project helped me to develop a deep understanding of how to work with Rest APIs. I learned how to retrieve data in a structured and user-friendly way, which improved my skills in JS and CSS tremendously."
       }
     },
     "references": {

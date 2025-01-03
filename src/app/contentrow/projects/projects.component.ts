@@ -46,23 +46,23 @@ export class ProjectsComponent implements OnInit {
       id: 1,
       description: "projects.projectJoin.description",
       technologies: "JavaScript, Firebase, HTML, CSS",
-      notes: "",
+      notes: "projects.projectJoin.notes",
       github: "https://github.com/DosKolossos/join360",
       link: "https://www.david-kolosza.de/join",
     },
     "Project Wizard Legacy": {
       id: 2,
-      description: "",
+      description: "projects.projectWizardLegacy.description",
       technologies: "Object oriented programming, JavaScript, HTML, CSS",
-      notes: "",
+      notes: "projects.projectWizardLegacy.notes",
       github: "https://github.com/DosKolossos/Wizard-Legacy",
       link: "https://www.david-kolosza.de/wizard-legacy",
     },
     "Project PokeDex": {
       id: 3,
-      description: "",
+      description: "projects.projectPokeDex.description",
       technologies: "Rest-API, JavaScript, HTML, CSS",
-      notes: "",
+      notes: "projects.projectPokeDex.notes",
       github: "https://github.com/DosKolossos/Pokedex",
       link: "https://www.david-kolosza.de/pokedex",
     }
@@ -72,13 +72,24 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateDescriptions();
+    this.updateNotes();
 
     this.translateService.onLangChange.subscribe(() => {
       this.updateDescriptions();
+      this.updateNotes();
     })
   }
 
   updateDescriptions(){
+    Object.keys(this.projectlist).forEach(projectKey => {
+      const key = this.toCamelCase(projectKey); // Wandelt "Project PokéDex" zu "projectPokedex"
+      this.translateService.get(`projects.${key}`).subscribe((translation) => {
+        this.projectlist[projectKey].description = translation.description;
+        this.projectlist[projectKey].notes = translation.notes;
+      });
+    });
+  }
+  updateNotes(){
     Object.keys(this.projectlist).forEach(projectKey => {
       const key = this.toCamelCase(projectKey); // Wandelt "Project PokéDex" zu "projectPokedex"
       this.translateService.get(`projects.${key}`).subscribe((translation) => {
