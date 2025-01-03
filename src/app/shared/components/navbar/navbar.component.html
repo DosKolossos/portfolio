@@ -5,20 +5,20 @@
             <img src="../../assets/img/LogoDK.png" class="logo-desktop">
         </a>
         <div class="navbar-text-wrapper">
-            <a (click)="scrollToElement('contactMe')">Contact</a>
-            <a (click)="scrollToElement('myWork')">My Work</a>
+            <a (click)="scrollToElement('contactMe')">{{ 'contactMeNav' | translate }}</a>
+            <a (click)="scrollToElement('myWork')">{{ 'myWork' | translate }}</a>
             <a (click)="scrollToElement('mySkills')">Skills</a>
-            <a (click)="scrollToElement('whyMe')">Why me</a>
+            <a (click)="scrollToElement('whyMe')">{{ 'whyMe' | translate }}</a>
         </div>
     </div>
 </div>
 
 <div class="navbar-mobile-overlay" [class.open]="isMenuOpen">
     <div class="navbar-wrapper">
-        <a (click)="scrollToElement('whyMe')">Why me</a>
-        <a (click)="scrollToElement('mySkills')">My Skill Set</a>
-        <a (click)="scrollToElement('myWork')">My Work</a>
-        <a (click)="scrollToElement('contactMe')">Contact me</a>
+        <a (click)="scrollToElement('whyMe')">{{ 'whyMe' | translate }}</a>
+        <a (click)="scrollToElement('mySkills')">{{ 'mySkills' | translate }}</a>
+        <a (click)="scrollToElement('myWork')">{{ 'myWork' | translate }}</a>
+        <a (click)="scrollToElement('contactMe')">{{ 'contactMeNav' | translate }}</a>
         <div class="languages">
             <p (click)="changeLanguage('en')">EN</p><p>|</p>
             <p (click)="changeLanguage('de')">DE</p><p *ngIf="contactMeUsed">|</p>

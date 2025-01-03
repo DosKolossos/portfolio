@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { Component, Input, inject, Output, EventEmitter } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 
 export class NavbarComponent {
+  private translateService = inject(TranslateService);
   @Input() contactMeUsed: boolean = false;
   isMenuOpen = false; // Standard: Menü geschlossen
 
