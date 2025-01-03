@@ -31,16 +31,8 @@ export class AppComponent implements OnInit{
     private translateService: TranslateService
   ) {}
 
-  contactMeUsed: boolean = true;
-  // updateContactMeUsed(newValue: boolean) {
-  //   this.contactMeUsed = newValue;
-  //   console.log('contactMeUsed updated:', this.contactMeUsed);
-  
-  //   // Falls aktiviert, Sprache auf "LoL" umstellen
-  //   if (this.contactMeUsed) {
-  //     this.changeLanguage('lol');
-  //   }
-  // }
+  contactMeUsed: boolean = false;
+
   updateContactMeUsed(newValue: boolean) {
     this.contactMeUsed = newValue;
     console.log('contactMeUsed updated:', this.contactMeUsed);
@@ -49,9 +41,9 @@ export class AppComponent implements OnInit{
     localStorage.setItem('contactMeUsed', JSON.stringify(this.contactMeUsed));
 
     // Falls aktiviert, Sprache auf "LoL" umstellen
-    if (this.contactMeUsed) {
-      this.changeLanguage('lol');
-    }
+    // if (this.contactMeUsed) {
+    //   this.changeLanguage('lol');
+    // }
   }
   languages = ['en', 'de', 'lol'];
 

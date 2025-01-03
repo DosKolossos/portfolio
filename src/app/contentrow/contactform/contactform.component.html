@@ -7,6 +7,7 @@
 
             </p>
             <span>{{ 'contactform.successMessageSubtext' | translate }}</span>
+            <div class="button-wrapper"><button (click)="hideSuccessMessage()">{{ 'contactform.successWindowButton' | translate }}</button></div>
         </div>
         <div class="form-wrapper">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="form-overall"
@@ -47,8 +48,10 @@
                                 'contactform.privacyPolicyName' | translate }} </a>{{ 'contactform.privacyPolicy2' |
                             translate }}</label>
                     </div>
-                    <span *ngIf="!checkbox.valid && checkbox.touched" class="error-message">{{
+                    <div class="error-message-wrapper">
+                        <span *ngIf="!checkbox.valid && checkbox.touched" class="error-message">{{
                         'contactform.privacyError' | translate }}</span>
+                    </div>
 
                     <!-- Submit Button -->
                     <div class="submit-wrapper">

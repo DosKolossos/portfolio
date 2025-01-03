@@ -6,27 +6,57 @@
     position: relative;
     font-family: 'Quantico';
     text-wrap: wrap;
-    >.success-window{
+
+    >.success-window {
         position: absolute;
         display: flex;
         flex-direction: column;
-        background-color: #546d1a;
+        background-color: #242f0b;
         z-index: 999;
         width: 100%;
         height: 100%;
         border-radius: 16px;
-        border: #B5E93B solid 5px;
-        align-items: center;
+        border: none;
         justify-content: center;
-        >.success-message{
+        text-align: start;
+        color: #B5E93B;
+        gap: 35px;
+        padding: 20px;
+
+        >.success-message {
             display: flex;
             font-size: 32px;
-            padding: 20px;
+            margin: 20px;
         }
+
         >span {
-            padding: 20px !important;
             font-size: 24px;
-            
+            color: white;
+            margin: 20px;
+        }
+
+        >.button-wrapper {
+            display: flex;
+            justify-content: center;
+
+            >button {
+                background-color: transparent;
+                justify-content: center;
+                color: white;
+                padding: 13px 30px 13px 30px;
+                font-family: 'Quantico';
+                border-radius: 30px;
+                border: #B5E93B solid 1px;
+                width: max-content;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #D3ED9733;
+                    font-family: 'Quantico';
+                    border-radius: 30px;
+                    border: #B5E93B solid 1px;
+                }
+            }
         }
     }
 
@@ -154,9 +184,13 @@ span {
 
         >span {
             gap: 8px;
+
             >a {
                 text-decoration: none;
                 color: #FFFDFD;
+                &:hover{
+                    color: #B5E93B;
+                }
             }
         }
 
@@ -289,8 +323,7 @@ input:focus {
 }
 
 input:not(:placeholder-shown) {
-    background-color: #f5f5f5;
-    /* Behalte Hintergrundfarbe bei Eingabe */
+    background-color: transparent;
 }
 
 /* Add a background color and some padding around the form */
@@ -307,7 +340,6 @@ input:not(:placeholder-shown) {
     position: relative;
     width: 407px;
     height: 107px;
-
     .top-row {
         display: flex;
         gap: 12px;
@@ -328,6 +360,17 @@ input:not(:placeholder-shown) {
             &:not(:hover) {
                 text-decoration: none !important;
             }
+        }
+    }
+    >.error-message-wrapper{
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        width: 100%;
+        font-size: 14px;
+        >span{
+            position: relative;
+            left: 31px;
         }
     }
 
@@ -354,8 +397,8 @@ input:not(:placeholder-shown) {
     border: none;
 }
 
-.active{
-    background-color:#B5E93B !important;
+.active {
+    background-color: #B5E93B !important;
     color: black;
     cursor: pointer;
 }
@@ -492,6 +535,7 @@ input:not(:placeholder-shown) {
             padding-right: 32px;
             width: 100%;
         }
+
     }
 
 }

@@ -63,7 +63,6 @@ export class ContactformComponent implements OnInit {
             this.contactMeUsedChange.emit(this.contactMeUsed); // Emit an event
             ngForm.resetForm();
             ngForm.resetForm();
-            this.hideSuccessMessageAfterDelay();
           },
           error: (error) => {
             console.error('Error sending form:', error);
@@ -74,15 +73,12 @@ export class ContactformComponent implements OnInit {
       this.isSubmitted = true;
       this.contactMeUsed = true;
       ngForm.resetForm();
-      this.hideSuccessMessageAfterDelay();
     }
   }
   
 
-  hideSuccessMessageAfterDelay() {
-    setTimeout(() => {
+  hideSuccessMessage() {
       this.isSubmitted = false;
-    }, 5000);
   }
 
   ngOnInit(): void {
