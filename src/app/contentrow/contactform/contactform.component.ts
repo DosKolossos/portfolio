@@ -27,6 +27,8 @@ export class ContactformComponent implements OnInit {
   @Output() contactMeUsedChange = new EventEmitter<boolean>();
   isSubmitted: boolean = false;
   contactMeUsed: boolean = false;
+  privacyOpen: boolean = false;
+  imprintOpen: boolean = false;
 
   post = {
     endPoint: 'https://david-kolosza.de/sendMail.php',
@@ -74,6 +76,14 @@ export class ContactformComponent implements OnInit {
       this.contactMeUsed = true;
       ngForm.resetForm();
     }
+  }
+
+  togglePrivacy(){
+    this.privacyOpen = !this.privacyOpen;
+  }
+
+  toggleImprint(){
+    this.imprintOpen = !this.imprintOpen;
   }
   
 

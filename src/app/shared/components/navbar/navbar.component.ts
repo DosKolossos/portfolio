@@ -14,9 +14,10 @@ export class NavbarComponent {
   @Input() contactMeUsed: boolean = false;
   isMenuOpen = false; // Standard: Menü geschlossen
 
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen; // Umschalten des Zustands
-
+    
   }
 
   scrollToElement(id: string) {
@@ -25,7 +26,6 @@ export class NavbarComponent {
       element.scrollIntoView({ behavior: 'smooth', inline: 'start'});
     }
     this.isMenuOpen = false; // Schließen des Menüs nach Navigation
-    this.toggleMenu();
 
   }
     @Input() languages: string[] = [];

@@ -7,6 +7,62 @@
     font-family: 'Quantico';
     text-wrap: wrap;
 
+    >.privacy-content {
+        position: absolute;
+        display: flex;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #242f0b;
+        border-radius: 16px;
+        border: none;
+        padding: 20px 20px 20px 20px;
+
+        >.content-scroller {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-color: #D3ED97;
+            border-radius: 16px;
+            overflow-y: scroll;
+            text-wrap: wrap;
+            padding: 8px;
+            flex-direction: column;
+        }
+
+        >.button-wrapper {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            >button {
+
+                position: relative;
+                top: 8px;
+                background-color: transparent;
+                justify-content: center;
+                color: white;
+                padding: 13px 30px 13px 30px;
+                font-family: 'Quantico';
+                border-radius: 30px;
+                border: #B5E93B solid 1px;
+                width: max-content;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #D3ED9733;
+                    font-family: 'Quantico';
+                    border-radius: 30px;
+                    border: #B5E93B solid 1px;
+                }
+            }
+        }
+    }
+
     >.success-window {
         position: absolute;
         display: flex;
@@ -164,10 +220,6 @@ span {
     text-wrap: wrap;
     right: 20px;
 
-    >.imprint {
-        display: none !important;
-    }
-
     >.green-font {
         color: #D3ED97;
         width: 100%;
@@ -188,7 +240,8 @@ span {
             >a {
                 text-decoration: none;
                 color: #FFFDFD;
-                &:hover{
+
+                &:hover {
                     color: #B5E93B;
                 }
             }
@@ -340,6 +393,7 @@ input:not(:placeholder-shown) {
     position: relative;
     width: 407px;
     height: 107px;
+
     .top-row {
         display: flex;
         gap: 12px;
@@ -362,13 +416,15 @@ input:not(:placeholder-shown) {
             }
         }
     }
-    >.error-message-wrapper{
+
+    >.error-message-wrapper {
         display: flex;
         justify-content: flex-start;
         position: relative;
         width: 100%;
         font-size: 14px;
-        >span{
+
+        >span {
             position: relative;
             left: 31px;
         }

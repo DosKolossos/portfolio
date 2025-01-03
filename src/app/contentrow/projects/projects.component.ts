@@ -47,7 +47,7 @@ export class ProjectsComponent implements OnInit {
       description: "projects.projectJoin.description",
       technologies: "JavaScript, Firebase, HTML, CSS",
       notes: "",
-      github: "https://github.com/DosKolossos/join",
+      github: "https://github.com/DosKolossos/join360",
       link: "https://www.david-kolosza.de/join",
     },
     "Project Wizard Legacy": {
