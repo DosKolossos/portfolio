@@ -3,7 +3,7 @@
 <div class="content-wrapper">
     <div class="headline">{{ 'myWork' | translate }}</div>
     <div class="projects">
-        <div *ngFor="let project of projectlist | keyvalue: sortById" class="project-wrapper">
+        <div *ngFor="let project of projectlist | keyvalue: sortById" class="project-wrapper" data-aos="fade-up" data-aos-duration="300">
 
             <div class="project-headline">
                 <div class="project-number">{{ project.value.id }}</div>
