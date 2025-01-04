@@ -39,6 +39,7 @@
             flex: 1;
             width: 100%;
             height: 100%;
+
             >button {
 
                 position: relative;
@@ -182,27 +183,7 @@ span {
     bottom: 0;
 }
 
-.arrow-right {
-    cursor: pointer;
-    position: absolute;
-    left: 889px !important;
-    top: 60% !important;
-    width: 107px;
-    height: 30px;
-    transform: scaleX(-1);
 
-    &:hover {
-        transition: 0.3s;
-        transform: scaleX(-1) scale(1.2);
-        filter: brightness(5);
-    }
-
-    &:not(:hover) {
-        transition: 0.3s;
-        transform: scaleX(-1) scale(1.0);
-        filter: brightness(1);
-    }
-}
 
 .subtext {
     display: flex;
@@ -215,53 +196,93 @@ span {
     font-size: 18px;
     font-weight: 400;
     color: #FFFDFD;
-    gap: 16px;
+    justify-content: space-between;
     text-align: right;
     text-wrap: wrap;
+    align-items: end;
     right: 20px;
 
-    >.green-font {
-        color: #D3ED97;
-        width: 100%;
+    >.arrow-positioner {
         display: flex;
-        justify-content: end;
-    }
-
-    >.subtext-row {
         position: relative;
-        display: flex;
-        gap: 8px;
-        justify-content: flex-end;
-        align-items: center;
+        width: fit-content;
+        >a {
+            display: flex;
+            position: relative;
+            top: 0 !important;
 
-        >span {
-            gap: 8px;
-
-            >a {
-                text-decoration: none;
-                color: #FFFDFD;
+            .arrow-right {
+                display: flex;
+                cursor: pointer;
+                position: relative;
+                width: 107px;
+                height: 30px;
+                transform: scaleX(-1);
 
                 &:hover {
-                    color: #B5E93B;
+                    transition: 0.3s;
+                    transform: scaleX(-1) scale(1.2);
+                    filter: brightness(5);
+                }
+
+                &:not(:hover) {
+                    transition: 0.3s;
+                    transform: scaleX(-1) scale(1.0);
+                    filter: brightness(1);
                 }
             }
         }
+    }
 
-        >.mail-icon {
-            width: 14.47px;
-            height: 17.75px;
+    >.text-summary {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        >.green-font {
+            color: #D3ED97;
+            width: 100%;
+            display: flex;
+            justify-content: end;
         }
 
-        >.phone-icon {
-            width: 14.39px;
-            height: 15.86px;
+        >.subtext-row {
+            position: relative;
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+            align-items: center;
+
+            >span {
+                gap: 8px;
+
+                >a {
+                    text-decoration: none;
+                    color: #FFFDFD;
+
+                    &:hover {
+                        color: #B5E93B;
+                    }
+                }
+            }
+
+            >.mail-icon {
+                width: 14.47px;
+                height: 17.75px;
+            }
+
+            >.phone-icon {
+                width: 14.39px;
+                height: 15.86px;
+            }
         }
     }
 
-    .imprint {
+
+    >.imprint {
         display: flex;
         flex-direction: column;
-        position: absolute;
+        position: relative;
         height: 101px;
         text-align: right;
         gap: 8px;
@@ -497,6 +518,60 @@ input:not(:placeholder-shown) {
         font-family: 'Quantico';
         text-wrap: wrap;
         flex-direction: column;
+        >.success-window {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            background-color: #242f0b;
+            z-index: 999;
+            width: 100%;
+            height: fit-content;
+            border-radius: 16px;
+            border: none;
+            justify-content: center;
+            text-align: start;
+            color: #B5E93B;
+            gap: 35px;
+            padding: unset;
+    
+            >.success-message {
+                display: flex;
+                font-size: 32px;
+                margin: 20px;
+            }
+    
+            >span {
+                font-size: 24px;
+                color: white;
+                margin: 20px;
+            }
+    
+            >.button-wrapper {
+                display: flex;
+                position: relative;
+                justify-content: center;
+                bottom: 12px;
+                >button {
+                    background-color: transparent;
+                    justify-content: center;
+                    color: white;
+                    padding: 13px 30px 13px 30px;
+                    font-family: 'Quantico';
+                    border-radius: 30px;
+                    border: #B5E93B solid 1px;
+                    width: max-content;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        background-color: #D3ED9733;
+                        font-family: 'Quantico';
+                        border-radius: 30px;
+                        border: #B5E93B solid 1px;
+                    }
+                }
+            }
+        }
+
         >.privacy-content {
             top: 60px;
             position: fixed;
@@ -513,7 +588,7 @@ input:not(:placeholder-shown) {
             border-radius: 16px;
             border: none;
             padding: 20px 20px 20px 20px;
-            
+
             >.content-scroller {
                 display: flex;
                 width: 100%;
@@ -525,15 +600,16 @@ input:not(:placeholder-shown) {
                 padding: 8px;
                 flex-direction: column;
             }
-    
+
             >.button-wrapper {
                 display: flex;
                 justify-content: center;
                 flex: 1;
                 width: 100%;
                 height: 100%;
+
                 >button {
-    
+
                     position: relative;
                     top: 8px;
                     background-color: transparent;
@@ -545,7 +621,7 @@ input:not(:placeholder-shown) {
                     border: #B5E93B solid 1px;
                     width: max-content;
                     cursor: pointer;
-    
+
                     &:hover {
                         background-color: #D3ED9733;
                         font-family: 'Quantico';
@@ -602,19 +678,58 @@ input:not(:placeholder-shown) {
         height: max-content;
         top: 0;
         padding: 16px 0 16px 0;
-        .imprint{
+
+        >.text-summary {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+    
+            >.green-font {
+                text-align: left;
+                justify-content: unset;
+            }
+    
+            >.subtext-row {
+                text-align: left;
+                justify-content: unset;
+    
+            }
+        }
+        >.imprint {
+            display: none !important;
+        }
+        >.arrow-positioner {
             display: none;
-        }
-        >.green-font {
-            text-align: left;
-            justify-content: unset;
+            position: relative;
+            width: fit-content;
+            >a {
+                display: flex;
+                position: relative;
+                top: 0 !important;
+    
+                .arrow-right {
+                    display: flex;
+                    cursor: pointer;
+                    position: relative;
+                    width: 107px;
+                    height: 30px;
+                    transform: scaleX(-1);
+    
+                    &:hover {
+                        transition: 0.3s;
+                        transform: scaleX(-1) scale(1.2);
+                        filter: brightness(5);
+                    }
+    
+                    &:not(:hover) {
+                        transition: 0.3s;
+                        transform: scaleX(-1) scale(1.0);
+                        filter: brightness(1);
+                    }
+                }
+            }
         }
 
-        >.subtext-row {
-            text-align: left;
-            justify-content: unset;
-
-        }
     }
 
     .privacy-policy {
@@ -653,5 +768,7 @@ input:not(:placeholder-shown) {
         }
 
     }
+
+
 
 }

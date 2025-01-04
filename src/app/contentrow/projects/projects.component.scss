@@ -197,7 +197,32 @@
     flex-direction: column;
     position: relative;
     justify-content: space-between;
+    >a {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        top: 190px;
+        z-index: 20;
+        >.arrow-right {
+            cursor: pointer;
+            position: relative;
 
+            width: 107px;
+            height: 30px;
+        
+            &:hover {
+                transition: 0.3s;
+                transform: scale(1.2);
+                filter: brightness(5);
+            }
+        
+            &:not(:hover) {
+                transition: 0.3s;
+                transform: scale(1.0);
+                filter: brightness(1);
+            }
+        }
+    }
     >#ogpHeadline {
         display: flex;
         height: 58px;
@@ -259,26 +284,7 @@
     }
 }
 
-.arrow-right {
-    cursor: pointer;
-    position: absolute;
-    left: 3190px !important;
-    top: 600px !important;
-    width: 107px;
-    height: 30px;
 
-    &:hover {
-        transition: 0.3s;
-        transform: scale(1.2);
-        filter: brightness(5);
-    }
-
-    &:not(:hover) {
-        transition: 0.3s;
-        transform: scale(1.0);
-        filter: brightness(1);
-    }
-}
 
 .arrow-right-center {
     cursor: pointer;

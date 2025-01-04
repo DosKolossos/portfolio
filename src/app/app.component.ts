@@ -6,7 +6,6 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { ContentrowComponent } from './contentrow/contentrow.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import AOS from 'aos'; // Default-Import
 
 @Component({
   selector: 'app-root',
@@ -42,7 +41,7 @@ export class AppComponent implements OnInit{
   languages = ['en', 'de', 'lol'];
 
   ngOnInit(): void {
-    AOS.init();
+
     const defaultLang = localStorage.getItem('language') || 'en';
     this.translateService.setDefaultLang(defaultLang);
     this.translateService.use(defaultLang);

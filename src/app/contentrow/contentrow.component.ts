@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { LandingpageComponent } from '../contentrow/landingpage/landingpage.component';
 import { WhymeComponent } from '../contentrow/whyme/whyme.component';
 import { MyskillsetComponent } from '../contentrow/myskillset/myskillset.component';
@@ -6,6 +6,8 @@ import { ContactformComponent } from './contactform/contactform.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ReferencesComponent } from './references/references.component';
 import { FooterComponent } from './footer/footer.component';
+
+
 
 @Component({
   selector: 'app-contentrow',

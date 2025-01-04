@@ -1,15 +1,21 @@
 <div id="mySkills"></div>
 <div class="content-wrapper">
-    <div class="headline">{{ 'mySkills' | translate }}</div>
-    <div class="content-column">
+    <div class="headline" data-aos="fade-left" data-aos-duration="500" data-aos-offset="200">{{ 'mySkills' | translate
+        }}</div>
+    <div class="content-column" data-aos="fade-left" data-aos-duration="800">
         <span id="mySkillsText">{{ 'mySkillsText' | translate }}
         </span>
-        <div class="logo-box">
+        <div class="logo-box" data-aos-anchor="#mySkills">
             <div class="logo-with-text" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11]; let index = index">
-
-                <img [ngStyle]="{'left.px': index * 128}" class="logo" src="../../../assets/img/mySkillSet/{{i}}.png">
-                <span>{{logoTexts[index]}}</span>
-
+                <div class="logo-wrapper" 
+                    data-aos="fade-left" 
+                    data-aos-duration="200" 
+                    data-aos-offset="200" 
+                    [attr.data-aos-delay]="i * 200">
+                    <img [ngStyle]="{'left.px': index * 128}" class="logo"
+                        src="../../../assets/img/mySkillSet/{{i}}.png">
+                    <span>{{logoTexts[index]}}</span>
+                </div>
             </div>
             <div class="logo-with-text-mobile" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11]; let index = index">
                 <div class="hauptgruppe" id="group{{[i]}}">
@@ -18,13 +24,8 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="logo-box-2-mobile">
-            <div class="logo-with-text-mobile-2nd-area {{style[index]}}" *ngFor="let i of [10,11]; let index = index">
-                <img class="logo" src="../../../assets/img/mySkillSet/{{i}}.png">
-                <span id="span{{[i]}}" class="{{style[index]}}">{{logoTextsMobile2ndArea[index]}}</span>
-            </div>
-        </div> -->
-        <div id="newTechnoText">{{ 'newTechnoText' | translate }}</div>
+        <div id="newTechnoText" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="2400">{{ 'newTechnoText' |
+            translate }}</div>
         <div id="newTechnoTextMobile">{{ 'newTechnoTextMobile' | translate }}</div>
     </div>
     <a href="https://google.de" target="_blank" class="lets-talk">{{ 'letsTalk' | translate }}</a>
