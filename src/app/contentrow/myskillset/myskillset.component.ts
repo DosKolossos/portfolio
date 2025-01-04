@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, OnInit, inject } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ElementRef, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import AOS from 'aos';
 
@@ -12,6 +12,7 @@ import AOS from 'aos';
 })
 export class MyskillsetComponent implements OnInit, AfterViewInit {
   private translateService = inject(TranslateService);
+  private elementRef = inject(ElementRef);
 
   logoTexts = [
     "Angular",
@@ -45,15 +46,28 @@ export class MyskillsetComponent implements OnInit, AfterViewInit {
     this.translateService.get('myskillset').subscribe((translation) => {
     });
   }
-  
+
   ngAfterViewInit(): void {
-    AOS.init({
-      offset: 120, // Abstand bis zur Aktivierung
-      duration: 600, // Dauer der Animation
-      easing: 'ease-in-out', // Animationseffekt
-      once: true, // Animation nur einmal abspielen
-      anchorPlacement: 'top-bottom', // Aktivieren, wenn das Element in den Viewport scrollt
-    });
+    const elements = this.elementRef.nativeElement.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+
+          
+          if (entry.isIntersecting) {
+            console.log(entry);
+            entry.target.classList.add('aos-animate'); // Animation-Klasse hinzufügen
+            observer.unobserve(entry.target); // Beobachtung beenden, wenn Animation ausgelöst wurde
+          }
+        });
+      },
+      {
+        root: null, // Standard: viewport
+        threshold: 1, // 10% des Elements müssen sichtbar sein
+      }
+    );
+
+    elements.forEach((element: Element) => observer.observe(element));
   }
 
   isMenuOpen = false; // Standard: Menü geschlossen
