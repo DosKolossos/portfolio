@@ -40,20 +40,10 @@ export class AppComponent implements OnInit{
     // Save the new value to localStorage
     localStorage.setItem('contactMeUsed', JSON.stringify(this.contactMeUsed));
 
-    // Falls aktiviert, Sprache auf "LoL" umstellen
-    // if (this.contactMeUsed) {
-    //   this.changeLanguage('lol');
-    // }
   }
   languages = ['en', 'de', 'lol'];
 
   ngOnInit(): void {
-    this.languages.forEach(lang => {
-      this.translateService.getTranslation(lang).subscribe({
-        next: () => console.log(`${lang} language file preloaded.`),
-        error: (err) => console.error(`Error preloading ${lang} language file:`, err),
-      });
-    });
   
     const defaultLang = localStorage.getItem('language') || 'en';
     this.translateService.setDefaultLang(defaultLang);
