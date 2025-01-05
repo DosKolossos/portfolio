@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, NgZone, ElementRef, AfterViewInit } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
@@ -40,6 +40,8 @@ interface Project {
 
 export class ProjectsComponent implements OnInit {
   private translateService = inject(TranslateService);
+  private elementRef = inject(ElementRef);
+  private zone = inject(NgZone);
 
   projectlist: { [key: string]: Project } = {
     "Project Join": {
@@ -141,5 +143,53 @@ getToggleText(projectId: number): string {
     this.isMenuOpen = false; // Schließen des Menüs nach Navigation
     this.toggleMenu();
 
+  }
+
+  ngAfterViewInit(): void {
+    const elements = this.elementRef.nativeElement.querySelectorAll('.project-wrapper');
+    const headline = this.elementRef.nativeElement.querySelectorAll('.content-wrapper');
+    const ogp = this.elementRef.nativeElement.querySelectorAll('.ogp');
+    const checkVisibility = () => {
+      elements.forEach((element: Element) => {
+        const rect = element.getBoundingClientRect();
+
+        // Überprüfen, ob das Element horizontal sichtbar ist
+        if (rect.left >= 0 && rect.left <= window.innerWidth) {
+          element.classList.add('animate'); // Animation-Klasse hinzufügen
+
+        }
+      });
+        headline.forEach((element: Element) => {
+          const rect = element.getBoundingClientRect();
+
+          // Überprüfen, ob das Element horizontal sichtbar ist
+          if (rect.left >= 0 && rect.left <= window.innerWidth) {
+            
+            element.classList.add('slide-bottom-normal'); // Animation-Klasse hinzufügen
+            console.log(element.classList);
+            
+          }
+        });
+        ogp.forEach((element: Element) => {
+          const rect = element.getBoundingClientRect();
+
+          // Überprüfen, ob das Element horizontal sichtbar ist
+          if (rect.left >= 0 && rect.left <= window.innerWidth) {
+            
+            element.classList.add('slide-bottom-normal'); // Animation-Klasse hinzufügen
+            console.log(element.classList);
+            
+          }
+        });
+    };
+
+    // Initiale Prüfung beim Laden der Seite
+    this.zone.runOutsideAngular(() => {
+      window.addEventListener('scroll', checkVisibility);
+      window.addEventListener('resize', checkVisibility);
+    });
+
+    // Bereinigen der Events beim Verlassen des Components
+    checkVisibility();
   }
 }

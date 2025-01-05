@@ -5,9 +5,9 @@
     height: 62px;
     max-width: 1440px;
     position: fixed;
-    left: 1000px;
+    left: calc(100vw - 286px);
     gap: 40px;
-    z-index: 9999;
+    z-index: 999;
 
     >.social-wrapper {
         display: flex;
@@ -68,8 +68,11 @@
     }
 }
 
-@media only screen and (orientation:portrait) {
+
+
+@media only screen and (max-width: 800px) {
     .header {
         display: none;
     }
 }
+

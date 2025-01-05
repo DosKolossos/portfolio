@@ -2,15 +2,15 @@
 <div id="project3"></div>
 <div class="content-wrapper">
     <div class="headline">{{ 'myWork' | translate }}</div>
-    <div class="projects" data-aos="fade-up" data-aos-duration="200">
+    <div class="projects">
         <div *ngFor="let project of projectlist | keyvalue: sortById" class="project-wrapper">
 
-            <div class="project-headline" data-aos="fade-left" data-aos-duration="200" [attr.data-aos-delay]="project.value.id * 200">
+            <div class="project-headline">
                 <div class="project-number">{{ project.value.id }}</div>
                 <div class="project-name">{{ project.key }}</div>
             </div>
 
-            <div class="project-description" data-aos="zoom-in" data-aos-duration="200" [attr.data-aos-delay]="project.value.id * 200">
+            <div class="project-description">
                 <div class="image-wrapper">
                     <img src="../../../assets/img/Projects/{{ project.value.id }}.png" alt="">
                     <div class="button-row">
@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div id="ongoingProject">
+        <div id="ongoingProject" class="ogp">
             <div id="ogpHeadline">
                 <div id="ogpNumber">4</div>
                 <div id="ogpTitle">{{ 'ongoingProject' | translate }}</div>

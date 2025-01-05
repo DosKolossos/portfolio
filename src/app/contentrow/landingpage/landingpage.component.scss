@@ -76,7 +76,7 @@
     margin: 0;
 }
 
-@media only screen and (orientation:portrait) {
+@media only screen and (max-width: 800px) {
     .landing-page {
         position: relative;
         display: flex;

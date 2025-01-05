@@ -293,7 +293,7 @@
     left: -140px;
 }
 
-@media only screen and (orientation:portrait) {
+@media only screen and (max-width: 800px) {
     #whyMe {
         position: relative;
         top: -78px;

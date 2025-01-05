@@ -55,7 +55,7 @@ body {
     src: url('./assets/fonts/RobotoMono-VariableFont_wght.ttf');
 }
 
-@media only screen and (orientation:portrait) {
+@media only screen and (max-width: 800px) {
     ::-webkit-scrollbar {
         display: none;
     }

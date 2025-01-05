@@ -7,7 +7,6 @@
     left: 5px;
     font-family: 'Quantico';
     text-wrap: wrap;
-
     >.headline {
         position: absolute;
         width: 303px;
@@ -17,6 +16,11 @@
         -webkit-text-stroke: 3px #B5E93B;
         color: transparent;
         transform: translateX(-44%) translateY(132%) rotate(-90deg);
+        opacity: 0;
+        transition: opacity 0.5s ease; // Für saubere Übergänge
+    }
+    &.slide-bottom-normal > .headline {
+        opacity: 1; // Wird durch die Animation aufgedeckt
     }
 
     >.projects-mobile {
@@ -36,6 +40,8 @@
             height: 560px;
             background-color: rgba(181, 233, 59, 0.2);
             border-radius: 30px;
+            opacity: 0;
+
             >.project-headline {
                 align-items: center;
                 display: flex;
@@ -197,25 +203,27 @@
     flex-direction: column;
     position: relative;
     justify-content: space-between;
+
     >a {
         position: relative;
         display: flex;
         justify-content: flex-end;
         top: 190px;
         z-index: 20;
+
         >.arrow-right {
             cursor: pointer;
             position: relative;
 
             width: 107px;
             height: 30px;
-        
+
             &:hover {
                 transition: 0.3s;
                 transform: scale(1.2);
                 filter: brightness(5);
             }
-        
+
             &:not(:hover) {
                 transition: 0.3s;
                 transform: scale(1.0);
@@ -223,6 +231,7 @@
             }
         }
     }
+
     >#ogpHeadline {
         display: flex;
         height: 58px;
@@ -313,11 +322,12 @@
     left: -180px;
 }
 
-@media only screen and (orientation:portrait) {
+@media only screen and (max-width: 800px) {
     #myWork {
         position: relative;
         top: 78px;
     }
+
     .arrow-right {
         display: none;
     }
@@ -365,7 +375,7 @@
                 height: max-content;
                 gap: 32px;
 
-                >.for-show-me-less{
+                >.for-show-me-less {
                     .collapse-mobile {
                         position: relative;
                         color: #B5E93B;
@@ -374,6 +384,7 @@
                         justify-content: center;
                         top: 32px;
                     }
+
                     >.project-headline {
                         align-items: center;
                         display: flex;
@@ -381,6 +392,7 @@
                         position: relative;
                         gap: 10px;
                         left: 20px;
+
                         >.project-number {
                             position: relative;
                             font-size: 40px;
@@ -389,7 +401,7 @@
                             color: transparent;
                             -webkit-text-stroke: 1px #B5E93B;
                         }
-    
+
                         >.project-name {
                             position: relative;
                             font-size: 24px;
@@ -397,7 +409,7 @@
                             color: #B5E93B;
                         }
                     }
-    
+
                     >.project-description {
                         display: flex;
                         position: relative;
@@ -407,6 +419,7 @@
                         width: fit-content;
                         gap: 32px;
                         padding-bottom: 10px;
+
                         >.image-wrapper {
                             display: flex;
                             position: relative;
@@ -416,19 +429,20 @@
                             align-items: center;
                             width: fit-content;
                             gap: 20px;
+
                             >img {
                                 border-radius: 30px;
                                 position: relative;
                                 width: 90%;
                             }
-    
+
                             >.button-row {
                                 display: flex;
                                 position: relative;
                                 top: 0px;
                                 gap: 16px;
                                 z-index: 100;
-    
+
                                 >.github-btn {
                                     display: flex;
                                     align-items: center;
@@ -442,15 +456,15 @@
                                     border-radius: 30px;
                                     border-color: #B5E93B;
                                     border-style: solid;
-    
+
                                     >a {
                                         display: flex;
                                         position: relative;
                                         z-index: 999;
-                                        
+
                                     }
                                 }
-    
+
                                 >.livetest-btn {
                                     display: flex;
                                     align-items: center;
@@ -467,12 +481,12 @@
                                 }
                             }
                         }
-    
+
                         >.column {
                             position: relative;
                             text-align: left;
                             left: 13px;
-    
+
                             >span {
                                 position: relative;
                                 font-size: 16px;
@@ -480,20 +494,20 @@
                                 left: 35px;
                                 width: 80%;
                             }
-    
+
                             >.subtitle-headline {
                                 left: 0;
-    
+
                                 h3 {
                                     font-weight: 400;
                                 }
                             }
                         }
                     }
-    
-    
+
+
                 }
-                
+
             }
 
         }
@@ -503,15 +517,17 @@
         display: none !important;
     }
 
-    #ongoingProjectMobile{
+    #ongoingProjectMobile {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        >.project-headline{
+
+        >.project-headline {
             display: flex;
             flex-direction: row;
             gap: 10px;
             align-items: center;
+
             >.project-number {
                 position: relative;
                 font-size: 40px;
@@ -528,7 +544,8 @@
                 color: #B5E93B;
             }
         }
-        >#ogptextMobile{
+
+        >#ogptextMobile {
             display: flex;
 
         }
@@ -575,9 +592,40 @@
         }
     }
 
-    
+
 }
 
+// Animation section
 
-    
+@keyframes fade-in-top-normal {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
 
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate {
+    animation: fade-in-top-normal 1s ease-out 0ms 1 normal forwards;
+}
+
+@keyframes slide-bottom-normal {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-bottom-normal {
+    animation: slide-bottom-normal 1s ease-out 0ms 1 normal none;
+
+}

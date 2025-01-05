@@ -80,7 +80,7 @@ a {
 #burgerNClose{
     display: none;
 }
-@media only screen and (orientation:portrait) {
+@media only screen and (max-width: 800px) {
     #burgerNClose {
         background-image: url(../../../../assets/img/burgermenu.png); // Standard Burger-Icon
         background-size: cover;

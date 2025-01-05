@@ -480,7 +480,7 @@ input:not(:placeholder-shown) {
     cursor: pointer;
 }
 
-@media only screen and (orientation:portrait) {
+@media only screen and (max-width: 800px) {
 
     #contactMe {
         position: relative;

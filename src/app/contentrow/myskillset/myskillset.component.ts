@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, OnInit, ElementRef, inject } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ElementRef, inject, NgZone } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import AOS from 'aos';
 
@@ -13,6 +13,7 @@ import AOS from 'aos';
 export class MyskillsetComponent implements OnInit, AfterViewInit {
   private translateService = inject(TranslateService);
   private elementRef = inject(ElementRef);
+  private zone = inject(NgZone);
 
   logoTexts = [
     "Angular",
@@ -47,27 +48,40 @@ export class MyskillsetComponent implements OnInit, AfterViewInit {
     });
   }
 
+
   ngAfterViewInit(): void {
     const elements = this.elementRef.nativeElement.querySelectorAll('.animate-on-scroll');
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+    const logos = this.elementRef.nativeElement.querySelectorAll('.logo-wrapper');
 
-          
-          if (entry.isIntersecting) {
-            console.log(entry);
-            entry.target.classList.add('aos-animate'); // Animation-Klasse hinzufügen
-            observer.unobserve(entry.target); // Beobachtung beenden, wenn Animation ausgelöst wurde
-          }
-        });
-      },
-      {
-        root: null, // Standard: viewport
-        threshold: 1, // 10% des Elements müssen sichtbar sein
-      }
-    );
+    const checkVisibility = () => {
+      elements.forEach((element: Element) => {
+        const rect = element.getBoundingClientRect();
 
-    elements.forEach((element: Element) => observer.observe(element));
+        // Überprüfen, ob das Element horizontal sichtbar ist
+        if (rect.left >= 0 && rect.left <= window.innerWidth) {
+          element.classList.add('aos-animate'); // Animation-Klasse hinzufügen
+
+        }
+      });
+      logos.forEach((element: Element, index: number) => {
+        const rect = element.getBoundingClientRect();
+
+        // Überprüfen, ob das Element horizontal sichtbar ist
+        if (rect.left >= 0 && rect.left <= window.innerWidth) {
+          element.classList.add(`fade-in-normal-logo${index +1}`); // Animation-Klasse hinzufügen
+
+        }
+      });
+    };
+
+    // Initiale Prüfung beim Laden der Seite
+    this.zone.runOutsideAngular(() => {
+      window.addEventListener('scroll', checkVisibility);
+      window.addEventListener('resize', checkVisibility);
+    });
+
+    // Bereinigen der Events beim Verlassen des Components
+    checkVisibility();
   }
 
   isMenuOpen = false; // Standard: Menü geschlossen

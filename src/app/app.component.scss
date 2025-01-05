@@ -5,7 +5,7 @@ app-contentrow {
     max-height: 95%;
 }
 
-@media only screen and (orientation:portrait) {
+@media only screen and (max-width: 800px) {
     app-contentrow {
         flex-direction: column;
         width: 100%;

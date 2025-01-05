@@ -180,7 +180,7 @@ button:not(:hover) {
   display: none;
 }
 
-@media only screen and (orientation:portrait) {
+@media only screen and (max-width: 800px) {
   .arrow-right {
     display: none;
   }
