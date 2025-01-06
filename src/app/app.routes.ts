@@ -1,7 +1,7 @@
 // import { Routes } from '@angular/router';
 
 // export const routes: Routes = [];
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, RouterLink } from '@angular/router';
 import { ContentrowComponent } from './contentrow/contentrow.component';
 import { ImprintComponent } from './imprint/imprint.component'; // Pfad anpassen
 import { PrivacyComponent } from './privacy/privacy.component'; // Falls die PrivacyComponent existiert
