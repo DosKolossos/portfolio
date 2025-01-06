@@ -4,7 +4,7 @@
     height: 530px;
     top: 156px;
     position: relative;
-    font-family: 'Quantico';
+    font-family: 'Quantico' !important;
     text-wrap: wrap;
 
     >.privacy-content {
@@ -361,6 +361,7 @@ textarea {
     /* Allow the user to vertically resize the textarea (not horizontally) */
     background-color: black;
     color: #D3ED97;
+    font-family: "Quantico" !important;
 }
 
 textarea {
@@ -381,11 +382,14 @@ input[type=submit] {
     padding: 12px 20px;
     border: none;
     cursor: pointer;
+    font-family: 'Quantico';
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
     background-color: #45a049;
+    font-family: 'Quantico';
+
 }
 
 input:focus {
@@ -393,6 +397,18 @@ input:focus {
     /* Gray border */
     border-radius: 30px;
     outline: none;
+    font-family: 'Quantico';
+
+    /* Entfernt den blauen Standard-Glow */
+}
+
+input:not(:focus) {
+    border: 1px solid #B5E93B;
+    /* Gray border */
+    border-radius: 30px;
+    outline: none;
+    font-family: 'Quantico';
+
     /* Entfernt den blauen Standard-Glow */
 }
 
@@ -403,8 +419,9 @@ input:not(:placeholder-shown) {
 /* Add a background color and some padding around the form */
 .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: black;
     padding: 20px;
+
 }
 
 .privacy-policy {
@@ -660,12 +677,14 @@ input:not(:placeholder-shown) {
     select,
     textarea {
         width: 90%;
+        font-family: 'Quantico';
     }
 
     input[type=email],
     select,
     textarea {
         width: 90%;
+        background-color: black;
     }
 
     .subtext {
