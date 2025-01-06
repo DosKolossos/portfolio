@@ -47,7 +47,7 @@
                         <input type="checkbox" id="privacy" name="privacy" [(ngModel)]="contactData.privacy" required
                             #checkbox="ngModel" [class]="{'is-invalid': checkbox.invalid && checkbox.touched}">
                         <label for="privacy">{{ 'contactform.privacyPolicy1' | translate }} <a style="cursor: pointer"
-                                (click)="togglePrivacy()">{{'contactform.privacyPolicyName' | translate }}</a> {{
+                            routerLink="/privacy">{{'contactform.privacyPolicyName' | translate }}</a> {{
                             'contactform.privacyPolicy2' |
                             translate }}</label>
                     </div>

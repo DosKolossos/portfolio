@@ -27,6 +27,7 @@
         font-family: 'Quantico';
         font-size: 100px;
         font-weight: 700;
+        opacity: 0;
     }
     >.name-text-mobile {
         display: none;
@@ -36,6 +37,8 @@
     }
 
     >.job-title-text {
+        opacity: 0;
+
         width: 455px;
         -webkit-text-stroke: 1px #B5E93B;
         color: transparent;
@@ -112,6 +115,7 @@
 
         }
         >.name-text-mobile {
+            opacity: 0;
             display: flex;
             position: relative;
             color: #B5E93B;
@@ -125,6 +129,7 @@
             display: none;
         }
         >.job-title-text-mobile {
+            opacity: 0;
             display: flex;
             color: #B5E93B;
             font-size: 24px;
@@ -136,6 +141,7 @@
             left: 0;
         }
         >.city-text-mobile {
+            opacity: 0;
             display: flex;
             position: relative;
             color: #FFFDFD;
@@ -145,4 +151,23 @@
             top: -196px;
         }
     }
+}
+
+// Animation Section
+
+
+
+@keyframes slide-down-normal {0% { transform: translateY(100px); opacity: 0;} 100% { transform: translateY(0px); opacity: 100%;} }
+@keyframes slide-up-normal {0% { transform: translateY(-100px); opacity: 0;} 100% { transform: translateY(0px); opacity: 100%;} }
+
+.name-animate { 
+    animation: slide-down-normal 1.2s ease-in-out 200ms 1 normal forwards; 
+}
+
+.job-animate { 
+    animation: slide-up-normal 1s ease-out 1000ms 1 normal forwards; 
+}
+
+.city-animate { 
+    animation: slide-down-normal 1s ease-out 1000ms 1 normal forwards; 
 }
