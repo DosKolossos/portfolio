@@ -167,7 +167,7 @@ a {
         transition: height 0.5s ease-out, opacity 0.3s ease-in-out; // Animationsübergänge
 
         &.open {
-            height: 350px; // Zielzustand: Volle Höhe
+            height: max-content; // Zielzustand: Volle Höhe
             opacity: 1 !important; // Sichtbar
         }
         >.escape-wrapper{

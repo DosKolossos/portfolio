@@ -18,10 +18,10 @@
         <div id="burgerNClose" [class.open]="isMenuOpen" (click)="toggleMenu()"></div>
     </div>
     <div class="navbar-wrapper">
-        <a (click)="scrollToElement('whyMe')">{{ 'whyMe' | translate }}</a>
-        <a (click)="scrollToElement('mySkills')">{{ 'mySkills' | translate }}</a>
-        <a (click)="scrollToElement('myWork')">{{ 'myWork' | translate }}</a>
-        <a (click)="scrollToElement('contactMe')">{{ 'contactMeNav' | translate }}</a>
+        <a (click)="scrollToElement('whyMe')" *ngIf="isHomeRoute()">{{ 'whyMe' | translate }}</a>
+        <a (click)="scrollToElement('mySkills')" *ngIf="isHomeRoute()">{{ 'mySkills' | translate }}</a>
+        <a (click)="scrollToElement('myWork')" *ngIf="isHomeRoute()">{{ 'myWork' | translate }}</a>
+        <a (click)="scrollToElement('contactMe')" *ngIf="isHomeRoute()">{{ 'contactMeNav' | translate }}</a>
         <div class="languages">
             <p (click)="changeLanguage('en')">EN</p><p>|</p>
             <p (click)="changeLanguage('de')">DE</p><p *ngIf="contactMeUsed">|</p>

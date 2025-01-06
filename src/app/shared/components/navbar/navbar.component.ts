@@ -45,5 +45,6 @@ export class NavbarComponent implements OnInit {
     changeLanguage(lang: string) {
       this.currentLanguage = lang; // Setze die aktive Sprache
       this.languageChange.emit(lang); // Emitiere das Ereignis, um die Änderung zu melden
+      this.toggleMenu();
     }
 }
