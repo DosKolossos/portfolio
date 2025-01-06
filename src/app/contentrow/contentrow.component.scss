@@ -7,9 +7,10 @@ body {
 }
 
 app-landingpage {
+    display: flex;
     position: relative;
-    max-width: 1440px;
-    width: 100%;
+    // max-width: 1440px;
+    min-width: 1440px;
     left: 0;
     height: 100vh;
     background-color: black;
@@ -18,8 +19,8 @@ app-landingpage {
 
 app-whyme {
     position: relative;
-    max-width: 1440px;
-    width: 1100px;
+    min-width: 1100px;
+    // width: 1100px;
     height: 100vh;
     background-color: black;
 }
@@ -27,7 +28,7 @@ app-whyme {
 app-myskillset {
     position: relative;
     max-width: 1440px;
-    width: 100%;
+    min-width: 1100px;
     height: 100vh;
     background-color: black;
 }
@@ -39,13 +40,13 @@ app-projects {
     background-color: black;
 }
 
-app-contact {
-    position: relative;
-    max-width: 1440px;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-}
+// app-contact {
+//     position: relative;
+//     max-width: 1440px;
+//     width: 100%;
+//     height: 100vh;
+//     background-color: black;
+// }
 
 app-references {
     position: relative;
@@ -56,7 +57,7 @@ app-references {
 }
 
 app-contactform {
-    width: 1081px;
+    min-width: 1081px;
     height: 100vh;
     background-color: black;
     position: relative;
@@ -77,13 +78,15 @@ app-footer {
         overflow-y: auto;
         background-color: black;
         scroll-behavior: smooth;
-        max-width: 100vw;
+        max-width: 100%;
+        min-width: unset;
     }
 
     app-landingpage {
         position: relative;
         background-color: black;
         height: unset;
+        min-width: unset;
     }
 
     app-whyme {
@@ -101,6 +104,7 @@ app-footer {
         overflow-y: visible;
         z-index: 20;
         padding: 16px 0 36px 0;
+        min-width: unset;
     }
 
     app-projects {
@@ -110,18 +114,19 @@ app-footer {
         background-color: black;
     }
 
-    app-contact {
-        position: relative;
-        background-color: black;
-    }
+    // app-contact {
+    //     position: relative;
+    //     background-color: black;
+    //     max-width: 100%;
+    // }
 
     app-references {
         position: relative;
         max-width: 100%;
         min-width: unset;
         background-color: black;
-        min-height: 860px;
-        height: auto;
+        min-height: 950px;
+        height: max-content;
     }
 
     app-contactform {
@@ -133,6 +138,7 @@ app-footer {
         flex-direction: column;
         height: inherit;
         padding-bottom: 153px;
+        min-width: 100%;
     }
 
     app-footer {

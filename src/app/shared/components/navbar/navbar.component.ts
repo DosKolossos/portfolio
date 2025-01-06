@@ -1,20 +1,27 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, inject, Output, EventEmitter } from '@angular/core';
+import { Component, Input, inject, Output, EventEmitter, OnInit } from '@angular/core';
+import { RouterLink, Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [TranslateModule, CommonModule],
+  imports: [TranslateModule, CommonModule, RouterLink],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   private translateService = inject(TranslateService);
   @Input() contactMeUsed: boolean = false;
   isMenuOpen = false; // Standard: Menü geschlossen
+  constructor(private router: Router) {}
 
+  ngOnInit() {}
+
+  isHomeRoute(){
+    return this.router.url === '/';
+  }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen; // Umschalten des Zustands

@@ -5,7 +5,7 @@
     height: 62px;
     max-width: 1440px;
     position: fixed;
-    left: calc(100vw - 286px);
+    left: calc(100vw - 386px);
     gap: 40px;
     z-index: 999;
 
@@ -15,6 +15,7 @@
         gap: 16px;
 
         >a {
+          
             >img {
                 cursor: pointer;
                 width: 30px;

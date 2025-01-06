@@ -166,7 +166,6 @@ getToggleText(projectId: number): string {
           if (rect.left >= 0 && rect.left <= window.innerWidth) {
             
             element.classList.add('slide-bottom-normal'); // Animation-Klasse hinzufügen
-            console.log(element.classList);
             
           }
         });
@@ -177,7 +176,6 @@ getToggleText(projectId: number): string {
           if (rect.left >= 0 && rect.left <= window.innerWidth) {
             
             element.classList.add('slide-bottom-normal'); // Animation-Klasse hinzufügen
-            console.log(element.classList);
             
           }
         });

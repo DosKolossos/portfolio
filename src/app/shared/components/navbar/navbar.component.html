@@ -1,19 +1,22 @@
-<div id="burgerNClose" [class.open]="isMenuOpen" (click)="toggleMenu()"></div>
+
 <div class="navbar">
     <div class="navbar-content">
-        <a (click)="scrollToElement('landing')">
+        <a routerLink="/" style="cursor: pointer" (click)="scrollToElement('landing')">
             <img src="../../assets/img/LogoDK.png" class="logo-desktop">
         </a>
-        <div class="navbar-text-wrapper">
-            <a (click)="scrollToElement('contactMe')">{{ 'contactMeNav' | translate }}</a>
-            <a (click)="scrollToElement('myWork')">{{ 'myWork' | translate }}</a>
-            <a (click)="scrollToElement('mySkills')">Skills</a>
-            <a (click)="scrollToElement('whyMe')">{{ 'whyMe' | translate }}</a>
+        <div class="navbar-text-wrapper" *ngIf="isHomeRoute()">
+            <a routerLink="/" (click)="scrollToElement('contactMe')">{{ 'contactMeNav' | translate }}</a>
+            <a routerLink="/" (click)="scrollToElement('myWork')">{{ 'myWork' | translate }}</a>
+            <a routerLink="/" (click)="scrollToElement('mySkills')">Skills</a>
+            <a routerLink="/" (click)="scrollToElement('whyMe')">{{ 'whyMe' | translate }}</a>
         </div>
     </div>
 </div>
 
 <div class="navbar-mobile-overlay" [class.open]="isMenuOpen">
+    <div class="escape-wrapper">
+        <div id="burgerNClose" [class.open]="isMenuOpen" (click)="toggleMenu()"></div>
+    </div>
     <div class="navbar-wrapper">
         <a (click)="scrollToElement('whyMe')">{{ 'whyMe' | translate }}</a>
         <a (click)="scrollToElement('mySkills')">{{ 'mySkills' | translate }}</a>
@@ -29,8 +32,10 @@
 
 <div class="navbar-mobile">
     <div class="navbar-content-mobile">
-        <a (click)="scrollToElement('landing')">
+        <a routerLink="/" (click)="scrollToElement('landing')">
             <img src="../../assets/img/LogoDK.png" class="logo-mobile" />
         </a>
+        <div id="burgerNClose" [class.open]="isMenuOpen" (click)="toggleMenu()"></div>
+
     </div>
 </div>

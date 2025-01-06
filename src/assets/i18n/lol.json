@@ -17,6 +17,7 @@
     "openRelocate":"open to gank everywhere",
     "contactMe":"Ping me",
     "myWork":"My Work",
+    "contactMeNav": "Kontakt",
     "aboutTheProject": "About the project",
     "technologies": "Necessary skills",
     "learned":"What I have learned",
@@ -91,7 +92,31 @@
         "legalNotice": "Legal Notice",
         "imprint": "Imprint",
         "copyright": "David Kolosza"
-      }
+      },
+"privacy": {
+    "privacy": "Privacy Policy",
+    "headline1": "1. Privacy at a Glance",
+    "headline2": "General Information",
+    "para1": "The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data includes all data with which you can be personally identified. Detailed information on data protection can be found in our privacy policy below.",
+    "headline3": "Data Collection on This Website",
+    "headline4": "Who is responsible for data collection on this website?",
+    "para2": "The data processing on this website is carried out by the website operator. Their contact details can be found in the section 'Notice on the Responsible Party' in this privacy policy.",
+    "headline5": "How do we collect your data?",
+    "para3": "Your data is collected, on the one hand, when you provide it to us. This may, for example, involve data you enter in a contact form.",
+    "para4": "Other data is collected automatically or after your consent when you visit the website by our IT systems. This primarily includes technical data (e.g., internet browser, operating system, or time of page access). The collection of this data occurs automatically as soon as you enter this website.",
+    "headline6": "What do we use your data for?",
+    "para5": "Part of the data is collected to ensure the error-free provision of the website. Other data can be used to analyze your user behavior. If contracts can be concluded or initiated via the website, the transmitted data is also processed for contract offers, orders, or other inquiries.",
+    "headline7": "What rights do you have regarding your data?",
+    "para6": "You have the right at any time to obtain free information about the origin, recipient, and purpose of your stored personal data. You also have the right to request the correction or deletion of this data. If you have given consent for data processing, you can withdraw this consent at any time for the future. Furthermore, you have the right to request the restriction of the processing of your personal data under certain circumstances. Additionally, you have the right to file a complaint with the responsible supervisory authority.",
+    "para7": "For this and other questions regarding data protection, you can contact us at any time.",
+    "headline8": "2. Hosting",
+    "para8": "We host the content of our website with the following provider:",
+    "para9": "The provider is ALL-INKL.COM - Neue Medien Münnich, owned by René Münnich, Hauptstraße 68, 02742 Friedersdorf (hereinafter referred to as All-Inkl). For details, see All-Inkl's privacy policy: ",
+    "para10": "The use of All-Inkl is based on Art. 6 Para. 1 lit. f GDPR. We have a legitimate interest in the most reliable possible presentation of our website. If consent has been requested, processing is carried out exclusively on the basis of Art. 6 Para. 1 lit. a GDPR and § 25 Para. 1 TDDDG, insofar as consent includes the storage of cookies or access to information in the user's terminal device (e.g., device fingerprinting) within the meaning of the TDDDG. Consent can be revoked at any time.",
+    "headline9": "Contract Data Processing",
+    "para11": "We have concluded a contract for order processing (AVV) for the use of the aforementioned service. This is a legally required contract under data protection law, which ensures that this service processes the personal data of our website visitors only in accordance with our instructions and in compliance with the GDPR."
+}
+
     
 }
     

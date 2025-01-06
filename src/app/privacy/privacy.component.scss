@@ -1,0 +1,14 @@
+.content-scroller{
+    position: relative;
+    left: 200px;
+    text-wrap: wrap;
+    width: 60vw;
+    height: 100vh;
+    overflow: scroll;
+    color: white;
+    >p {
+        >a {
+            color: #b5e93b;
+        }
+    }
+ }

@@ -1,0 +1,30 @@
+.content-scroller {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 300px;
+    left: 200px;
+    text-wrap: wrap;
+    width: 60vw;
+    height: 100vh;
+    overflow: scroll;
+    color: white;
+    >p {
+        >a {
+            color: #b5e93b;
+            text-decoration: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+.content-scroller{
+    top: 0;
+    left: 0;
+    min-width: 100% !important;
+    justify-content: center;
+    align-items: center;
+}
+
+}

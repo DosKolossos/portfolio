@@ -3,11 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, inject, Output, EventEmitter } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, CommonModule, TranslateModule],
+  imports: [FormsModule, CommonModule, TranslateModule, RouterLink],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
@@ -15,8 +17,6 @@ export class ContactformComponent implements OnInit {
   private translateService = inject(TranslateService);
 
   http = inject(HttpClient);
-
-
 
   contactData = {
     name: "",

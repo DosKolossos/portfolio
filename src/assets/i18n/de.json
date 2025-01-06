@@ -6,7 +6,7 @@
     "name": "David Kolosza",
     "job": "Frontend Developer",
     "jobCaps": "Frontend Developer",
-    "town":"Niederkassel",
+    "town": "Niederkassel",
     "title": "Portfolio",
     "welcome": "Willkommen",
     "whyMe": "Zu mir",
@@ -48,7 +48,7 @@
         }
     },
     "references": {
-        "need-a-teamplayer":"Mitspieler gesucht?",
+        "need-a-teamplayer": "Mitspieler gesucht?",
         "title": "Referenzen",
         "teamplayerText": "Was meine Kollegen über mich gesagt haben",
         "comments": {
@@ -92,5 +92,28 @@
         "legalNotice": "Impressum",
         "imprint": "Impressum",
         "copyright": "David Kolosza"
+    },
+    "privacy": {
+        "privacy": "Datenschutzerklärung",
+        "headline1": "1. Datenschutz auf einen Blick",
+        "headline2": "Allgemeine Hinweise",
+        "para1": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.",
+        "headline3": "Datenerfassung auf dieser Website",
+        "headline4": "Wer ist verantwortlich für die Datenerfassung auf dieser Website?",
+        "para2": "Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung entnehmen.",
+        "headline5": "Wie erfassen wir Ihre Daten?",
+        "para3": "Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben.",
+        "para4": "Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.",
+        "headline6": "Wofür nutzen wir Ihre Daten?",
+        "para5": "Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden. Sofern über die Website Verträge geschlossen oder angebahnt werden können, werden die übermittelten Daten auch für Vertragsangebote, Bestellungen oder sonstige Auftragsanfragen verarbeitet.",
+        "headline7": "Welche Rechte haben Sie bezüglich Ihrer Daten?",
+        "para6": "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.",
+        "para7": "Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.",
+        "headline8": "2. Hosting",
+        "para8": "Wir hosten die Inhalte unserer Website bei folgendem Anbieter:",
+        "para9": "Anbieter ist die ALL-INKL.COM - Neue Medien Münnich, Inh. René Münnich, Hauptstraße 68, 02742 Friedersdorf (nachfolgend All-Inkl). Details entnehmen Sie der Datenschutzerklärung von All-Inkl: ",
+        "para10": "Die Verwendung von All-Inkl erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.",
+        "headline9": "Auftragsverarbeitung",
+        "para11": "Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der gewährleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet."
     }
 }

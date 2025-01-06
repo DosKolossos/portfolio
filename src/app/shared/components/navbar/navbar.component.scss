@@ -77,33 +77,14 @@ a {
         }
     }
 }
-#burgerNClose{
+
+#burgerNClose {
     display: none;
 }
-@media only screen and (max-width: 800px) {
-    #burgerNClose {
-        background-image: url(../../../../assets/img/burgermenu.png); // Standard Burger-Icon
-        background-size: cover;
-        z-index: 999 !important;
-        display: flex;
-        width: 30px;
-        height: 32px;
-        right: 16px;
-        top: 17px;
-        position: fixed;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; // Smooth transition
 
-        &.cancel {
-            background-image: url(../../../../assets/img/burgermenu.png); // Cancel-Icon
-            transform: rotate(90deg); // Optional Animation für Wechsel
-        }
-        &.open {
-            background-image: url(../../../../assets/img/escape.png); // Cancel-Icon
-            transform: rotate(90deg); // Optional Animation für Wechsel
-        }
-    }
-    
+@media only screen and (max-width: 800px) {
+
+
     .navbar {
         display: none;
     }
@@ -118,14 +99,34 @@ a {
         z-index: 900;
         align-items: center;
 
-        .navbar-content-mobile {
+        >.navbar-content-mobile {
             display: flex;
             flex-direction: row;
             width: 100%;
             justify-content: space-between;
             align-items: center;
             z-index: 900;
-
+            >#burgerNClose {
+                background-image: url(../../../../assets/img/burgermenu.png); // Standard Burger-Icon
+                background-size: cover;
+                z-index: 999 !important;
+                display: flex;
+                width: 30px;
+                height: 32px;
+                right: 8px;
+                position: absolute;
+                cursor: pointer;
+                transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; // Smooth transition
+        
+                &.cancel {
+                    background-image: url(../../../../assets/img/burgermenu.png); // Cancel-Icon
+                    transform: rotate(90deg); // Optional Animation für Wechsel
+                }
+                &.open {
+                    background-image: url(../../../../assets/img/escape.png); // Cancel-Icon
+                    transform: rotate(90deg); // Optional Animation für Wechsel
+                }
+            }
             a {
                 img {
                     display: flex;
@@ -139,56 +140,79 @@ a {
                     z-index: 990;
                     left: 16px;
                 }
+
+            }
+
+        }
+    }
+
+    .navbar-mobile-overlay {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 0; // Startzustand: Keine Höhe
+        overflow: hidden; // Verhindert das Anzeigen von Inhalten, bevor die Animation abgeschlossen ist
+        z-index: 998;
+        justify-content: center;
+        background: linear-gradient(180deg,
+                rgba(181, 233, 59, 1) 0%,
+                rgba(84, 120, 0, 1) 100%,
+                rgba(0, 212, 255, 1) 100%);
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        opacity: 0; // Unsichtbar im Standardzustand
+        transition: height 0.5s ease-out, opacity 0.3s ease-in-out; // Animationsübergänge
+
+        &.open {
+            height: 350px; // Zielzustand: Volle Höhe
+            opacity: 1 !important; // Sichtbar
+        }
+        >.escape-wrapper{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 78px;
+            >#burgerNClose{
+                position: absolute;
+                display: flex;
+                width: 30px;
+                height: 32px;
+                top: 24px;
+                right: 8px;
+                &.open {
+                    background-image: url(../../../../assets/img/escape.png); // Cancel-Icon
+                    transform: rotate(90deg); // Optional Animation für Wechsel
+                }
+                &.cancel {
+                    background-image: url(../../../../assets/img/burgermenu.png); // Cancel-Icon
+                    transform: rotate(90deg); // Optional Animation für Wechsel
+                }
+            }
+        }
+        .navbar-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            gap: 24px;
+            padding: 20px;
+
+            a {
+                font-size: 18px;
+                color: black;
+            }
+
+            >.languages {
+                display: flex;
+                gap: 8px;
+                font-family: 'Quantico';
+                color: black;
             }
         }
     }
 
-.navbar-mobile-overlay {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0; // Startzustand: Keine Höhe
-    overflow: hidden; // Verhindert das Anzeigen von Inhalten, bevor die Animation abgeschlossen ist
-    z-index: 998;
-    justify-content: center;
-    background: linear-gradient(
-      180deg,
-      rgba(181, 233, 59, 1) 0%,
-      rgba(84, 120, 0, 1) 100%,
-      rgba(0, 212, 255, 1) 100%
-    );
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    opacity: 0; // Unsichtbar im Standardzustand
-    transition: height 0.5s ease-out, opacity 0.3s ease-in-out; // Animationsübergänge
-  
-    &.open {
-      height: 350px; // Zielzustand: Volle Höhe
-      opacity: 1 !important; // Sichtbar
-    }
-  
-    .navbar-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      gap: 24px;
-      padding: 20px;
-  
-      a {
-        font-size: 18px;
-        color: black;
-      }
-      >.languages{
-        display: flex;
-        gap: 8px;
-        font-family: 'Quantico';
-        color: black;
-      }
-    }
-  }
-  
 }
