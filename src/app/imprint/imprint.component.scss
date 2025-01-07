@@ -21,10 +21,21 @@
 
 .content-scroller{
     top: 0;
-    left: 32px;
     min-width: 100% !important;
     justify-content: center;
-    align-items: left;
+    left: 0;
+    >h1 {
+        position: relative;
+        left: 16px;
+    }
+    >h2 {
+        position: relative;
+        left: 16px;
+    }
+    >p {
+        position: relative;
+        left: 16px;
+    }
 }
 
 }
