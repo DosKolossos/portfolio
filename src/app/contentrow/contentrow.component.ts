@@ -32,7 +32,6 @@ export class ContentrowComponent implements AfterViewInit {
       const footer = this.el.nativeElement.querySelector('app-footer');
   
       if (!footer) {
-        console.error('Footer not found');
         return;
       }
   

@@ -1,6 +1,6 @@
 import { Component, OnInit, inject, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
@@ -13,16 +13,20 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class FooterComponent implements OnInit {
   private translateService = inject(TranslateService);
-  ngOnInit(): void {
+  ngOnInit(): void { 
     this.translateService.get('myskillset').subscribe((translation) => {
     });
   }
-
+  constructor(private router: Router) {}
   isMenuOpen = false; // Standard: Menü geschlossen
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen; // Umschalten des Zustands
 
+  }
+
+  isHomeRoute(){
+    return this.router.url === '/';
   }
 
   scrollToElement(id: string) {

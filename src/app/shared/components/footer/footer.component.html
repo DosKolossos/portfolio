@@ -16,7 +16,7 @@
                         41590450</a></span>
             </div>
         </div>
-        <div class="arrow-positioner">
+        <div class="arrow-positioner" *ngIf="isHomeRoute()">
             <a (click)="scrollToElement('landing')" style="scroll-behavior: smooth;">
                 <img src="../../../assets/img/arrowright.png" class="arrow-right">
             </a>
@@ -30,7 +30,7 @@
     </div>
     <div class="background">
         <div class="footer-wrapper">
-            <img src="../../../assets/img/LogoDKKontur.png">
+            <img routerLink="/" src="../../../assets/img/LogoDKKontur.png">
             <div class="footer-name">© David Kolosza 2025</div>
             <div class="footer-bot-lane">
                 <div routerLink="/imprint">{{ 'contactform.imprint' | translate }}</div>
