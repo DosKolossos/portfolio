@@ -1,8 +1,9 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet, RouterModule, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 import { ContentrowComponent } from './contentrow/contentrow.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -14,23 +15,30 @@ import { PrivacyComponent } from "./privacy/privacy.component";
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule,
+    FooterComponent,
     ContentrowComponent,
     RouterOutlet,
     NavbarComponent,
     HeaderComponent,
     TranslateModule,
     RouterLink,
-    RouterLinkActive, ImprintComponent, PrivacyComponent],
+    RouterLinkActive,
+    ImprintComponent,
+    PrivacyComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private translateService: TranslateService
-  ) {}
+    private translateService: TranslateService,
+    private el: ElementRef, 
+    private renderer: Renderer2
+  ) { }
+
+
 
   contactMeUsed: boolean = false;
 
@@ -54,13 +62,13 @@ export class AppComponent implements OnInit{
   }
 
 
-  
-  changeLanguage(lang: string){
+
+  changeLanguage(lang: string) {
     this.translateService.use(lang);
     localStorage.setItem('language', lang);
 
   }
 
-  
+
 }
 

@@ -28,7 +28,7 @@ app-whyme {
 app-myskillset {
     position: relative;
     max-width: 1440px;
-    min-width: 1100px;
+    min-width: 1200px;
     height: 100vh;
     background-color: black;
 }
@@ -62,13 +62,6 @@ app-contactform {
     background-color: black;
     position: relative;
     max-width: 1440px;
-}
-
-app-footer {
-    width: 100px;
-    max-width: 100px;
-    position: relative;
-    height: 100vh;
 }
 
 @media only screen and (max-width: 800px) {
@@ -141,14 +134,4 @@ app-footer {
         min-width: 100%;
     }
 
-    app-footer {
-        display: flex;
-        position: sticky;
-        bottom: 0;
-        width: 100%;
-        max-width: unset;
-        height: 153px;
-        // height: unset;
-
-    }
 }

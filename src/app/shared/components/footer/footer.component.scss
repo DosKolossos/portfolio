@@ -1,0 +1,257 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: 999;
+    width: max-content;
+
+    >.background {
+        display: flex;
+        background: rgb(181, 233, 59);
+        background: linear-gradient(180deg, rgba(181, 233, 59, 1) 0%, rgba(84, 120, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
+        height: 100vh;
+        width: 100px;
+        right: 0;
+        top: 0;
+
+        >.footer-wrapper {
+            display: none;
+        }
+    }
+
+    >.subtext {
+        display: flex;
+        flex-direction: column;
+        width: 365px;
+        height: 665px;
+        top: 152px;
+        position: absolute;
+        font-family: 'Quantico';
+        font-size: 18px;
+        font-weight: 400;
+        color: #FFFDFD;
+        justify-content: space-between;
+        text-align: right;
+        text-wrap: wrap;
+        align-items: end;
+        right: 120px;
+
+        >.arrow-positioner {
+            display: flex;
+            position: relative;
+            width: fit-content;
+
+            >a {
+                display: flex;
+                position: relative;
+                top: 0 !important;
+
+                .arrow-right {
+                    display: flex;
+                    cursor: pointer;
+                    position: relative;
+                    width: 107px;
+                    height: 30px;
+                    transform: scaleX(-1);
+
+                    &:hover {
+                        transition: 0.3s;
+                        transform: scaleX(-1) scale(1.2);
+                        filter: brightness(5);
+                    }
+
+                    &:not(:hover) {
+                        transition: 0.3s;
+                        transform: scaleX(-1) scale(1.0);
+                        filter: brightness(1);
+                    }
+                }
+            }
+        }
+
+        >.text-summary {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            >.green-font {
+                color: #D3ED97;
+                width: 100%;
+                display: flex;
+                justify-content: end;
+            }
+
+            >.subtext-row {
+                position: relative;
+                display: flex;
+                gap: 8px;
+                justify-content: flex-end;
+                align-items: center;
+
+                >span {
+                    gap: 8px;
+
+                    >a {
+                        text-decoration: none;
+                        color: #FFFDFD;
+
+                        &:hover {
+                            color: #B5E93B;
+                        }
+                    }
+                }
+
+                >.mail-icon {
+                    width: 14.47px;
+                    height: 17.75px;
+                }
+
+                >.phone-icon {
+                    width: 14.39px;
+                    height: 15.86px;
+                }
+            }
+        }
+
+
+        >.imprint {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 101px;
+            text-align: right;
+            gap: 8px;
+            bottom: 0;
+            right: 0;
+
+            >a {
+                text-decoration: none;
+                color: #FFFDFD;
+                transition: color 0.3s ease; // Übergang für die Farbe
+
+                &:hover {
+                    color: #B5E93B; // Farbe nach Hover
+                }
+
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 1px;
+                    background: #B5E93B; // Unterstreichungseffektfarbe
+                    transition: width 0.3s ease; // Sanfter Übergang für die Breite
+                }
+
+                &:hover:after {
+                    width: 100%; // Unterstreichung erscheint mit Verzögerung
+                }
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .wrapper {
+        >.subtext {
+            >.text-summary {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .wrapper {
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        bottom: 0;
+
+        .background {
+            display: flex;
+            position: relative;
+            background: rgb(181, 233, 59);
+            background: linear-gradient(180deg, rgba(181, 233, 59, 1) 0%, rgba(84, 120, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
+            height: 153px;
+            width: 100%;
+            right: 0;
+            bottom: 0;
+            z-index: 20;
+            font-family: 'Quantico';
+            color: #4A4A4A;
+
+            >.footer-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                >img {
+                    display: flex;
+                    height: auto;
+                    width: 80px;
+
+                }
+
+                >.footer-name {
+                    display: flex;
+                }
+
+                >.footer-bot-lane {
+                    display: flex;
+                    gap: 30px;
+                    width: 100%;
+                    justify-content: center;
+                    font-size: 14px;
+
+                }
+            }
+        }
+
+        >.subtext {
+            display: none !important;
+
+            >.imprint {
+                display: none !important;
+            }
+
+            >.arrow-positioner {
+                display: none;
+                position: relative;
+                width: fit-content;
+
+                >a {
+                    display: flex;
+                    position: relative;
+                    top: 0 !important;
+
+                    .arrow-right {
+                        display: flex;
+                        cursor: pointer;
+                        position: relative;
+                        width: 107px;
+                        height: 30px;
+                        transform: scaleX(-1);
+
+                        &:hover {
+                            transition: 0.3s;
+                            transform: scaleX(-1) scale(1.2);
+                            filter: brightness(5);
+                        }
+
+                        &:not(:hover) {
+                            transition: 0.3s;
+                            transform: scaleX(-1) scale(1.0);
+                            filter: brightness(1);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}

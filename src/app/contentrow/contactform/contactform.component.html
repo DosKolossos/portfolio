@@ -68,33 +68,5 @@
         </div>
     </div>
 
-    <!-- Subtext Section -->
-    <div class="subtext">
-        <div class="text-summary">
-            <div class="green-font">{{ 'contactform.subtextHeader' | translate }}</div>
-            {{ 'contactform.subtextDescription' | translate }}
-    
-            <div class="subtext-row">
-                <img src="../../../assets/img/mailto-icon.png" class="mail-icon" alt="">
-                <span>{{ 'contactform.emailLabel' | translate }}:<a
-                        href="mailto:kontakt@david-kolosza.de">kontakt&#64;david-kolosza.de</a></span>
-            </div>
-    
-            <div class="subtext-row">
-                <img src="../../../assets/img/phone-icon.png" class="phone-icon" alt="">
-                <span>{{ 'contactform.phoneLabel' | translate }}:<a href="tel:+4917641590450">+49 176 41590450</a></span>
-            </div>
-        </div>
-        <div class="arrow-positioner">
-            <a (click)="scrollToElement('landing')" style="scroll-behavior: smooth;">
-                <img src="../../../assets/img/arrowright.png" class="arrow-right">
-            </a>
-        </div>
 
-        <div class="imprint">
-            <a routerLink="/imprint" style="cursor: pointer">{{ 'contactform.legalNotice' | translate }}</a>
-            <a routerLink="/privacy" style="cursor: pointer">{{ 'contactform.privacyPolicyName' | translate }}</a>
-            © {{ 'contactform.copyright' | translate }} 2025
-        </div>
-    </div>
 </div>
