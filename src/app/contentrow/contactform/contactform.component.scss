@@ -160,6 +160,17 @@
     filter: opacity(1);
 }
 
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    background-color: black !important; /* Schwarzer Hintergrund */
+    color: #D3ED97 !important; /* Textfarbe */
+    font-family: 'Quantico' !important; /* Schriftart */
+    -webkit-text-fill-color: #D3ED97 !important; /* Textfarbe für Autofill */
+    box-shadow: 0 0 0px 1000px black inset !important; /* Entfernt das gelbe Highlight */
+    border-radius: 30px; /* Abgerundete Ecken beibehalten */
+}
+
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -194,6 +205,7 @@ span {
 
 
 /* Style inputs with type="text", select elements and textareas */
+
 input[type=text],
 select,
 textarea {
