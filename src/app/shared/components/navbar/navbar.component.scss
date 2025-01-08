@@ -150,7 +150,6 @@ a {
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: 0;
         left: 0;
         width: 100vw;
         height: 0; // Startzustand: Keine Höhe
@@ -165,10 +164,12 @@ a {
         border-bottom-left-radius: 30px;
         opacity: 0; // Unsichtbar im Standardzustand
         transition: height 0.5s ease-out, opacity 0.3s ease-in-out; // Animationsübergänge
-
+        max-height: 0; // Standardzustand
         &.open {
-            height: max-content; // Zielzustand: Volle Höhe
+            height: auto !important; // Zielzustand: Volle Höhe
             opacity: 1 !important; // Sichtbar
+            max-height: 500px; // Angemessener Wert, der den Inhalt anzeigt
+
         }
         >.escape-wrapper{
             display: flex;

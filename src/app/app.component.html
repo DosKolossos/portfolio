@@ -1,9 +1,6 @@
-<app-navbar
-[languages]="languages"
-  (languageChange)="changeLanguage($event)" [contactMeUsed]="contactMeUsed"></app-navbar>
-<app-header
-  [languages]="languages"
-  (languageChange)="changeLanguage($event)" [contactMeUsed]="contactMeUsed">
+<app-navbar [languages]="languages" (languageChange)="changeLanguage($event)" [contactMeUsed]="contactMeUsed">
+</app-navbar>
+<app-header [languages]="languages" (languageChange)="changeLanguage($event)" [contactMeUsed]="contactMeUsed">
 </app-header>
 
 <router-outlet></router-outlet>

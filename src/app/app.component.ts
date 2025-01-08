@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, ElementRef, Renderer2, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
@@ -9,6 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ImprintComponent } from "./imprint/imprint.component";
 import { PrivacyComponent } from "./privacy/privacy.component";
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 
 @Component({
@@ -42,13 +44,13 @@ export class AppComponent implements OnInit {
 
   contactMeUsed: boolean = false;
 
+
   updateContactMeUsed(newValue: boolean) {
+    console.log('updateContactMeUsed triggered with:', newValue);
     this.contactMeUsed = newValue;
-
-    // Save the new value to localStorage
     localStorage.setItem('contactMeUsed', JSON.stringify(this.contactMeUsed));
+}
 
-  }
   languages = ['en', 'de', 'lol'];
 
   ngOnInit(): void {
@@ -56,11 +58,11 @@ export class AppComponent implements OnInit {
     if (storedValue !== null) {
       this.contactMeUsed = JSON.parse(storedValue); // String zu boolean konvertieren
     }
+  
     const defaultLang = localStorage.getItem('language') || 'en';
     this.translateService.setDefaultLang(defaultLang);
     this.translateService.use(defaultLang);
   }
-
 
 
   changeLanguage(lang: string) {

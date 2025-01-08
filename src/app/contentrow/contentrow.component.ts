@@ -26,6 +26,7 @@ import { ReferencesComponent } from './references/references.component';
 export class ContentrowComponent implements AfterViewInit {
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
+  
 
   ngAfterViewInit() {
     setTimeout(() => {
@@ -56,8 +57,10 @@ export class ContentrowComponent implements AfterViewInit {
   @Output() contactMeUsedChange = new EventEmitter<boolean>();
 
   onContactMeUsedChange(newValue: boolean) {
-    this.contactMeUsedChange.emit(newValue); // Propagiert das Ereignis nach oben
-  }
+    this.contactMeUsedChange.emit(newValue);
+    console.log('onContactMeUsedChange propagated to parent:', newValue);
+}
+
   isMenuOpen = false; // Standard: Menü geschlossen
 
   toggleMenu() {

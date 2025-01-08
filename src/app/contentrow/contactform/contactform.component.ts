@@ -64,7 +64,9 @@ export class ContactformComponent implements OnInit {
             this.contactMeUsed = true;
             this.contactMeUsedChange.emit(this.contactMeUsed); // Emit an event
             ngForm.resetForm();
-            ngForm.resetForm();
+            console.log('contactMeUsed: ', this.contactMeUsed);
+            localStorage.setItem('contactMeUsed', JSON.stringify(this.contactMeUsed));
+
           },
           error: (error) => {
             console.error('Error sending form:', error);
@@ -74,8 +76,11 @@ export class ContactformComponent implements OnInit {
     } else if (ngForm.submitted && ngForm.form.valid) {
       this.isSubmitted = true;
       this.contactMeUsed = true;
+      localStorage.setItem('contactMeUsed', JSON.stringify(this.contactMeUsed));
+      
       ngForm.resetForm();
     }
+
   }
 
   togglePrivacy(){
@@ -87,8 +92,13 @@ export class ContactformComponent implements OnInit {
   }
   
 
+  constructor(private router: Router) {}
   hideSuccessMessage() {
-      this.isSubmitted = false;
+    this.isSubmitted = false;
+  
+    // Navigiere zum Root-Pfad ('')
+    this.router.navigate(['']);
+    this.scrollToElement('landingpage')
   }
 
   ngOnInit(): void {

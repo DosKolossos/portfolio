@@ -8,8 +8,8 @@
 
             </p>
             <span>{{ 'contactform.successMessageSubtext' | translate }}</span>
-            <div class="button-wrapper"><button (click)="hideSuccessMessage()">{{ 'contactform.successWindowButton' |
-                    translate }}</button></div>
+            <div class="button-wrapper"><a href="/"><button (click)="hideSuccessMessage()">{{ 'contactform.successWindowButton' |
+                    translate }}</button></a></div>
         </div>
         <div class="form-wrapper">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="form-overall"
