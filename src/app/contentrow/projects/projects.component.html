@@ -3,16 +3,17 @@
 <div class="content-wrapper">
     <div class="headline">{{ 'myWork' | translate }}</div>
     <div class="projects">
+        <!-- // *ngIf="!languageIsLol" -->
         <div *ngFor="let project of projectlist | keyvalue: sortById" class="project-wrapper">
 
             <div class="project-headline">
                 <div class="project-number">{{ project.value.id }}</div>
-                <div class="project-name">{{ project.key }}</div>
+                <div class="project-name">{{ project.value.headline }}</div>
             </div>
 
             <div class="project-description">
                 <div class="image-wrapper">
-                    <img src="../../../assets/img/Projects/{{ project.value.id }}.png" alt="">
+                    <img src="{{ project.value.image }}" alt="">
                     <div class="button-row">
                         <a [href]="project.value.github" target="_blank" class="github-btn">GitHub</a>
                         <a [href]="project.value.link" target="_blank" class="livetest-btn">Live Test</a>
@@ -33,7 +34,9 @@
                         <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
                         <h3>{{ 'learned' | translate }}</h3>
                     </div>
-                    <span>{{ project.value.notes }}</span>
+                    <div class="bigger-width">
+                        <span>{{ project.value.notes }}</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,23 +51,24 @@
             <div id="letsTalk">
                 <a (click)="scrollToElement('contactMe')" id="contactBtn">{{ 'letsTalk' | translate }}</a>
             </div>
-            <a (click)="scrollToElement('references')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png" class="arrow-right"></a>
+            <a (click)="scrollToElement('references')" style="scroll-behavior: smooth;"><img
+                    src="../../../assets/img/arrowright.png" class="arrow-right"></a>
         </div>
     </div>
-      <div class="projects-mobile">
+
+    <div class="projects-mobile">
         <div *ngFor="let project of projectlist | keyvalue: sortById" class="project-wrapper">
             <div class="for-show-me-less">
                 <!-- Projektüberschrift -->
                 <div class="project-headline" (click)="toggleMobileProject(project.value.id)">
                     <div class="project-number">{{ project.value.id }}</div>
-                    <div class="project-name">{{ project.key }}</div>
+                    <div class="project-name">{{ project.value.headline }}</div>
                 </div>
-    
+
                 <!-- Projektbeschreibung: Sichtbarkeit steuern -->
-                <div 
-                    class="project-description" 
+                <div class="project-description"
                     [@toggleDescription]="expandedMobileProjectId === project.value.id ? 'expanded' : 'collapsed'">
-                    
+
                     <div class="column">
                         <div class="subtitle-headline">
                             <img src="../../../assets/img/ellipseprojects.png" class="ellipse">
@@ -83,18 +87,16 @@
                         <span>{{ project.value.notes }}</span>
                     </div>
                     <div class="image-wrapper">
-                        <img src="../../../assets/img/Projects/{{ project.value.id }}.png" alt="Project Image">
+                        <img src="{{project.value.image}}" alt="Project Image">
                         <div class="button-row">
                             <a [href]="project.value.github" target="_blank" class="github-btn">GitHub</a>
                             <a [href]="project.value.link" target="_blank" class="livetest-btn">Live Test</a>
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Collapse-Bereich -->
-                <div 
-                    class="collapse-mobile" 
-                    (click)="toggleMobileProject(project.value.id)">
+                <div class="collapse-mobile" (click)="toggleMobileProject(project.value.id)">
                     {{ getToggleText(project.value.id) }}
                 </div>
             </div>
@@ -111,9 +113,10 @@
             <div id="letsTalkMobile">
                 <a (click)="scrollToElement('contactMe')" id="contactBtnMobile">{{ 'letsTalk' | translate }}</a>
             </div>
-            
+
         </div>
     </div>
 
 </div>
-<a (click)="scrollToElement('project3')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png" class="arrow-right-center"></a>
+<a (click)="scrollToElement('project3')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png"
+        class="arrow-right-center"></a>

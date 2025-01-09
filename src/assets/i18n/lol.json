@@ -33,19 +33,25 @@
     "mySkills":"My Skill Set",
     "projects": {
       "projectJoin": {
-        "description": "",
-        "technologies": "",
-        "notes": ""
+        "headline": "FF15 denied",
+        "description": "I will never give up a match until we are in summary section. A few other players wanted to give up all the time, but I didn't, so my answer was always “No”",
+        "technologies": "Absolute will, belief in victory, /fullmute",
+        "image": "../../../assets/img/Projects/4.png",
+        "notes": "Sometimes we can win despite of chat's atmosphere"
       },
       "projectWizardLegacy": {
-        "description": "",
-        "technologies": "",
-        "notes": ""
+        "headline": "Iron III in Season 11",
+        "description": "First time I reached the moon with climbing to Iron III after many years of playing!",
+        "technologies": "Endurance, positive mindset, tilt-proof",
+        "image": "../../../assets/img/Projects/5.png",
+        "notes": "Never give up despite chat is flaming and spamming FF15. Just gank bot lane for win."
       },
       "projectPokeDex": {
-        "description": "",
-        "technologies": "",
-        "notes": "."
+        "headline": "School of macro gaming",
+        "description": "I taught the art of macroplaying to thousands of students who are still benefiting from our countless lessons today",
+        "technologies": "Pedagogy, calmness, assertiveness, communication",
+        "image": "../../../assets/img/Projects/6.png",
+        "notes": "I really enjoy teaching the students in the team chat and would do it again anytime!"
       }
     },
     "references": {
@@ -71,7 +77,7 @@
       }
     },
       "contactform": {
-        "title": "Contact Me",
+        "title": "Report Player",
         "namePlaceholder": "Your RiotID",
         "nameRequired": "Your RiotID is required",
         "emailPlaceholder": "Your e-mail",

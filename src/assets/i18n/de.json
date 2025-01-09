@@ -33,19 +33,25 @@
     "mySkills": "Fähigkeiten",
     "projects": {
         "projectJoin": {
+            "headline": "Projekt Join",
             "description": "Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
             "technologies": "JavaScript, Firebase, HTML, CSS",
-            "notes": "Durch die Arbeit an Join habe ich gelernt, wie man mit Firebase eine Datenbank effizient integriert und eine funktionierende Login-Funktion implementiert. Besonders die Teamarbeit hat mir gezeigt, wie wichtig klare Kommunikation und die Nutzung von Git für eine erfolgreiche Zusammenarbeit sind."
+            "image": "../../../assets/img/Projects/1.png",
+            "notes": "Durch Join lernte ich die effiziente Einbindung einer Datenbank und die Implementierung eines Logins. Die Teamarbeit zeigte mir die Bedeutung von klarer Kommunikation und Git für erfolgreiche Zusammenarbeit."
         },
         "projectWizardLegacy": {
+            "headline": "Projekt Wizard Legacy",
             "description": "Ein Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Merlin, gegen gefährliche Feinde zu kämpfen und den mächtigen Endboss zu besiegen.",
             "technologies": "Objektorientierte Programmierung, JavaScript, HTML, CSS",
-            "notes": "Bei Wizard Legacy habe ich durch die Arbeit mit Canvas den Aufbau von 2D-Spielen verstanden und mein Wissen in objektorientierter Programmierung vertieft. Dieses Projekt hat meine Kreativität gefordert und mich gelehrt, komplexe Logik in überschaubare Module zu zerlegen."
+            "image": "../../../assets/img/Projects/2.png",
+            "notes": "Bei Wizard Legacy habe ich durch Canvas den Aufbau von 2D-Spielen verstanden und mein Wissen in objektorientierter Programmierung vertieft."
         },
         "projectPokeDex": {
+            "headline": "Projekt PokéDex",
             "description": "Eine Anwendung auf Basis einer REST-API zur Anzeige aller Pokémon, wobei die Daten aus der PokéAPI abgerufen werden.",
             "technologies": "REST-API, JavaScript, HTML, CSS",
-            "notes": "Das Pokedex-Projekt hat mir geholfen, ein tiefes Verständnis für den Umgang mit Rest-APIs zu entwickeln. Ich habe gelernt, wie man Daten strukturiert abruft und benutzerfreundlich darstellt, was meine Fähigkeiten in JS und CSS enorm verbessert hat."
+            "image": "../../../assets/img/Projects/3.png",
+            "notes": "Ich lernte, Daten strukturiert abzurufen und benutzerfreundlich darzustellen, was meine JS- und CSS-Fähigkeiten deutlich verbesserte."
         }
     },
     "references": {

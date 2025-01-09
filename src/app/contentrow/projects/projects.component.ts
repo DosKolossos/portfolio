@@ -5,13 +5,16 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
 
 interface Project {
+  headline: string;
   id: number;
+  image: string;
   description: string;
   technologies: string;
   notes: string;
   github: string;
   link: string;
 }
+
 
 @Component({
   selector: 'app-projects',
@@ -43,60 +46,72 @@ export class ProjectsComponent implements OnInit {
   private elementRef = inject(ElementRef);
   private zone = inject(NgZone);
 
+
+
   projectlist: { [key: string]: Project } = {
-    "Project Join": {
+    "projectJoin": {
+      headline: "Project Join",
       id: 1,
-      description: "projects.projectJoin.description",
+      image: "",
+      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
       technologies: "JavaScript, Firebase, HTML, CSS",
-      notes: "projects.projectJoin.notes",
+      notes: "Working on Join taught me how to efficiently integrate a database with Firebase and implement a functioning login function. The teamwork in particular showed me how important clear communication and the use of Git are for successful collaboration.",
       github: "https://github.com/DosKolossos/join360",
-      link: "https://www.david-kolosza.de/join",
+      link: "https://www.david-kolosza.de/join"
     },
-    "Project Wizard Legacy": {
+    "projectWizardLegacy": {
+      headline: "Project Wizard Legacy",
       id: 2,
-      description: "projects.projectWizardLegacy.description",
-      technologies: "Object oriented programming, JavaScript, HTML, CSS",
-      notes: "projects.projectWizardLegacy.notes",
+      image: "",
+      description: "Jump, run and throw game based on object-oriented approach. Help Merlin to fight against dangerous enemies and destroy the strong endboss.",
+      technologies: "Object-oriented programming, JavaScript, HTML, CSS",
+      notes: "Working with Canvas on Wizard Legacy helped me understand the structure of 2D games and deepened my knowledge of object-oriented programming. This project challenged my creativity and taught me to break down complex logic into manageable modules.",
       github: "https://github.com/DosKolossos/Wizard-Legacy",
-      link: "https://www.david-kolosza.de/wizard-legacy",
+      link: "https://www.david-kolosza.de/wizard-legacy"
     },
-    "Project PokeDex": {
+    "projectPokeDex": {
+      headline: "Project PokéDex",
       id: 3,
-      description: "projects.projectPokeDex.description",
-      technologies: "Rest-API, JavaScript, HTML, CSS",
-      notes: "projects.projectPokeDex.notes",
+      image: "",
+      description: "A REST-API based application for displaying all Pokémon, with data fetched from PokéAPI.",
+      technologies: "REST-API, JavaScript, HTML, CSS",
+      notes: "The Pokedex project helped me to develop a deep understanding of how to work with Rest APIs. I learned how to retrieve data in a structured and user-friendly way, which improved my skills in JS and CSS tremendously.",
       github: "https://github.com/DosKolossos/Pokedex",
-      link: "https://www.david-kolosza.de/pokedex",
+      link: "https://www.david-kolosza.de/pokedex"
     }
-  }
+  };
+  
 
   expandedMobileProjectId: number | null = null;
+  currentLanguage: String = localStorage['language'];
+  languageIsLol: boolean = false;
 
   ngOnInit(): void {
-    this.updateDescriptions();
-    this.updateNotes();
 
+    
     this.translateService.onLangChange.subscribe(() => {
-      this.updateDescriptions();
-      this.updateNotes();
+      if (this.currentLanguage == 'lol') {
+        this.languageIsLol = true;
+      }
+
+      this.updateData()
+      
     })
+    
+
   }
 
-  updateDescriptions(){
+  updateData(){
     Object.keys(this.projectlist).forEach(projectKey => {
       const key = this.toCamelCase(projectKey); // Wandelt "Project PokéDex" zu "projectPokedex"
       this.translateService.get(`projects.${key}`).subscribe((translation) => {
         this.projectlist[projectKey].description = translation.description;
         this.projectlist[projectKey].notes = translation.notes;
-      });
-    });
-  }
-  updateNotes(){
-    Object.keys(this.projectlist).forEach(projectKey => {
-      const key = this.toCamelCase(projectKey); // Wandelt "Project PokéDex" zu "projectPokedex"
-      this.translateService.get(`projects.${key}`).subscribe((translation) => {
-        this.projectlist[projectKey].description = translation.description;
-        this.projectlist[projectKey].notes = translation.notes;
+        this.projectlist[projectKey].headline = translation.headline;
+        this.projectlist[projectKey].technologies = translation.technologies;
+        this.projectlist[projectKey].image = translation.image;
+        // this.projectlist[projectKey].github = translation.github;
+        // this.projectlist[projectKey].link = translation.link;
       });
     });
   }

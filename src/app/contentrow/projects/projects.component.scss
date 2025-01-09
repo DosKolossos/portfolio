@@ -83,7 +83,7 @@
                         justify-content: space-around;
                         align-items: center;
                         margin-top: 30px;
-
+                        z-index: 999;
                         >.github-btn {
                             display: flex;
                             align-items: center;
@@ -148,13 +148,24 @@
                     flex-direction: column;
                     justify-content: space-around;
                     flex: 1;
-
+                    left: 240px;
                     >span {
                         display: flex;
                         position: relative;
                         margin-left: 73px;
                         top: -10px;
                         width: 366px;
+                    }
+                    >.bigger-width {
+                        width: 759px;
+                        margin: 0;
+                        >span {
+                            display: flex;
+                            position: relative;
+                            margin-left: 73px;
+                            top: -10px;
+                            width: 366px;
+                        }
                     }
 
                     >.subtitle-headline {
@@ -444,10 +455,11 @@
                                 position: relative;
                                 top: 0px;
                                 gap: 16px;
-                                z-index: 100;
+                                z-index: 999;
 
                                 >.github-btn {
                                     display: flex;
+                                    z-index: 999;
                                     align-items: center;
                                     justify-content: center;
                                     text-decoration: none;
@@ -496,6 +508,7 @@
                                 display: flex;
                                 left: 35px;
                                 width: 80%;
+                                text-wrap: wrap;
                             }
 
                             >.subtitle-headline {
