@@ -14,7 +14,7 @@
             <div class="project-description">
                 <div class="image-wrapper">
                     <img src="{{ project.value.image }}" alt="">
-                    <div class="button-row">
+                    <div class={{project.value.class}}>
                         <a [href]="project.value.github" target="_blank" class="github-btn">GitHub</a>
                         <a [href]="project.value.link" target="_blank" class="livetest-btn">Live Test</a>
                     </div>
@@ -88,7 +88,7 @@
                     </div>
                     <div class="image-wrapper">
                         <img src="{{project.value.image}}" alt="Project Image">
-                        <div class="button-row">
+                        <div class={{project.value.class}}>
                             <a [href]="project.value.github" target="_blank" class="github-btn">GitHub</a>
                             <a [href]="project.value.link" target="_blank" class="livetest-btn">Live Test</a>
                         </div>

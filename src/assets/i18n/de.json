@@ -27,8 +27,8 @@
     "ongoingProject": "Aktuelles Projekt",
     "ongoingProjectText": "Derzeit arbeite ich an einem Quidditch-Management-Spiel. Hierzu kommen HTML, CSS, JS und FireBase zum Einsatz. Quidditch ist die populärste Sportart aus dem Harry-Potter-Universum.",
     "letsTalk": "Projekt starten",
-    "mySkillsText": "Die IT-Landschaft entwickelt sich stetig weiter. Um meine Fähigkeiten zu erweitern, brauche ich eine strategische Herangehensweise, Neugier und lebenslanges Lernen.",
-    "newTechnoText": "Ich lerne immer gerne neue Technologien, sag mir einfach, was du brauchst.",
+    "mySkillsText": "Die IT-Landschaft entwickelt sich stetig weiter. Anbei findest du eine Übersicht meiner Skills, die mit der Zeit immer weiter vertieft werden. Ich bin auch offen, mir neue Skills anzueignen, um dein Projekt zum Erfolg zu führen.",
+    "newTechnoText": "Dein Projekt braucht eine weitere Technologie? Ich kann sie lernen.",
     "newTechnoTextMobile": "Ich versuche stets, mein aktuelles Skillset zu erweitern, und lerne gerne neue Technologien. Sag mir einfach, was du sonst noch brauchst.",
     "mySkills": "Fähigkeiten",
     "projects": {
@@ -37,6 +37,7 @@
             "description": "Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
             "technologies": "JavaScript, Firebase, HTML, CSS",
             "image": "../../../assets/img/Projects/1.png",
+            "class": "button-row",
             "notes": "Durch Join lernte ich die effiziente Einbindung einer Datenbank und die Implementierung eines Logins. Die Teamarbeit zeigte mir die Bedeutung von klarer Kommunikation und Git für erfolgreiche Zusammenarbeit."
         },
         "projectWizardLegacy": {
@@ -44,6 +45,7 @@
             "description": "Ein Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Merlin, gegen gefährliche Feinde zu kämpfen und den mächtigen Endboss zu besiegen.",
             "technologies": "Objektorientierte Programmierung, JavaScript, HTML, CSS",
             "image": "../../../assets/img/Projects/2.png",
+            "class": "button-row",
             "notes": "Bei Wizard Legacy habe ich durch Canvas den Aufbau von 2D-Spielen verstanden und mein Wissen in objektorientierter Programmierung vertieft."
         },
         "projectPokeDex": {
@@ -51,13 +53,14 @@
             "description": "Eine Anwendung auf Basis einer REST-API zur Anzeige aller Pokémon, wobei die Daten aus der PokéAPI abgerufen werden.",
             "technologies": "REST-API, JavaScript, HTML, CSS",
             "image": "../../../assets/img/Projects/3.png",
+            "class": "button-row",
             "notes": "Ich lernte, Daten strukturiert abzurufen und benutzerfreundlich darzustellen, was meine JS- und CSS-Fähigkeiten deutlich verbesserte."
         }
     },
     "references": {
         "need-a-teamplayer": "Mitspieler gesucht?",
         "title": "Referenzen",
-        "teamplayerText": "Was meine Kollegen über mich gesagt haben",
+        "teamplayerText": "Was meine Kollegen über mich sagen",
         "comments": {
             "julian": {
                 "name": "Julian Wünkhaus",
@@ -93,7 +96,7 @@
         "successMessageSubtext": "Als Dank steht dir nun eine neue Sprache zur Auswahl: Die Gamersprache von League of Legends! Viel Spaß!",
         "successWindowButton": "Ok",
         "subtextHeader": "Lass uns zusammenarbeiten.",
-        "subtextDescription": "Egal, ob dein Projekt die Entwicklung einer neuen Anwendung, die Aktualisierung bestehender Systeme oder die Implementierung robuster Cybersicherheitsmaßnahmen umfasst – ich verfüge über das technische Know-how und die Problemlösungskompetenz, um erfolgreiche Ergebnisse sicherzustellen.",
+        "subtextDescription": "Ob es um die Realisierung neuer Ideen oder die Verbesserung vorhandener Systeme geht – ich bringe die nötige Expertise mit, um deine Visionen Wirklichkeit werden zu lassen.",
         "emailLabel": "E-Mail",
         "phoneLabel": "Telefon",
         "legalNotice": "Impressum",

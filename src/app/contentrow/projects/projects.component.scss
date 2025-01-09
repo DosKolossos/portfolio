@@ -76,7 +76,9 @@
                     margin-right: 60px;
                     flex-direction: column;
                     align-items: center;
-
+                    >.d-none{
+                        display: none !important;
+                    }
                     >.button-row {
                         display: flex;
                         width: 240px;

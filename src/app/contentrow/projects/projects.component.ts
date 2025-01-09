@@ -13,6 +13,7 @@ interface Project {
   notes: string;
   github: string;
   link: string;
+  class: string;
 }
 
 
@@ -57,7 +58,8 @@ export class ProjectsComponent implements OnInit {
       technologies: "JavaScript, Firebase, HTML, CSS",
       notes: "Working on Join taught me how to efficiently integrate a database with Firebase and implement a functioning login function. The teamwork in particular showed me how important clear communication and the use of Git are for successful collaboration.",
       github: "https://github.com/DosKolossos/join360",
-      link: "https://www.david-kolosza.de/join"
+      link: "https://www.david-kolosza.de/join",
+      class: "",
     },
     "projectWizardLegacy": {
       headline: "Project Wizard Legacy",
@@ -67,7 +69,8 @@ export class ProjectsComponent implements OnInit {
       technologies: "Object-oriented programming, JavaScript, HTML, CSS",
       notes: "Working with Canvas on Wizard Legacy helped me understand the structure of 2D games and deepened my knowledge of object-oriented programming. This project challenged my creativity and taught me to break down complex logic into manageable modules.",
       github: "https://github.com/DosKolossos/Wizard-Legacy",
-      link: "https://www.david-kolosza.de/wizard-legacy"
+      link: "https://www.david-kolosza.de/wizard-legacy",
+      class: ""
     },
     "projectPokeDex": {
       headline: "Project PokéDex",
@@ -77,7 +80,8 @@ export class ProjectsComponent implements OnInit {
       technologies: "REST-API, JavaScript, HTML, CSS",
       notes: "The Pokedex project helped me to develop a deep understanding of how to work with Rest APIs. I learned how to retrieve data in a structured and user-friendly way, which improved my skills in JS and CSS tremendously.",
       github: "https://github.com/DosKolossos/Pokedex",
-      link: "https://www.david-kolosza.de/pokedex"
+      link: "https://www.david-kolosza.de/pokedex",
+      class: ""
     }
   };
   
@@ -110,8 +114,7 @@ export class ProjectsComponent implements OnInit {
         this.projectlist[projectKey].headline = translation.headline;
         this.projectlist[projectKey].technologies = translation.technologies;
         this.projectlist[projectKey].image = translation.image;
-        // this.projectlist[projectKey].github = translation.github;
-        // this.projectlist[projectKey].link = translation.link;
+        this.projectlist[projectKey].class = translation.class;
       });
     });
   }
