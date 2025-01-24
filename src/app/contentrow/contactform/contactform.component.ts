@@ -4,6 +4,7 @@ import { Component, OnInit, inject, Output, EventEmitter } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RouterLink, Router } from '@angular/router';
+import { HttpHeaders } from '@angular/common/http';
 
 
 @Component({
@@ -30,17 +31,27 @@ export class ContactformComponent implements OnInit {
   privacyOpen: boolean = false;
   imprintOpen: boolean = false;
 
+  // post = {
+  //   endPoint: 'https://david-kolosza.de/sendMail.php',
+  //   body: (payload: any) => JSON.stringify(payload),
+  //   options: {
+  //     headers: {
+  //       'Content-Type': 'text/plain',
+  //       responseType: 'text',
+  //     },
+  //   },
+  // };
   post = {
     endPoint: 'https://david-kolosza.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json', // Nur Content-Type setzen
+      }),
     },
   };
-
+  
+  
   getEmailPlaceholder(emailInvalid: boolean, emailTouched: boolean): string {
     return emailInvalid && emailTouched
       ? this.translateService.instant('contactform.emailRequired')
@@ -54,34 +65,52 @@ export class ContactformComponent implements OnInit {
   }
 
 
+  // onSubmit(ngForm: NgForm) {
+  //   if (ngForm.submitted && ngForm.form.valid) {
+  //     this.http.post(this.post.endPoint, this.contactData, this.post.options)
+  //       .subscribe({
+  //         next: (response) => {
+  //           console.log('Response:', response);
+  //           this.isSubmitted = true;
+  //           this.contactMeUsed = true;
+  //           this.contactMeUsedChange.emit(this.contactMeUsed);
+  //           ngForm.resetForm();
+  //         },
+  //         error: (error) => {
+  //           console.error('Error sending form:', error);
+  //           alert(`Error: ${error.message}`);
+  //         },
+  //         complete: () => console.info('Send post complete'),
+  //       });
+  //   }
+  // }
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            console.log('Response:', response);
-            this.isSubmitted = true;
-            this.contactMeUsed = true;
-            this.contactMeUsedChange.emit(this.contactMeUsed); // Emit an event
-            ngForm.resetForm();
-            console.log('contactMeUsed: ', this.contactMeUsed);
-            localStorage.setItem('contactMeUsed', JSON.stringify(this.contactMeUsed));
-
-          },
-          error: (error) => {
-            console.error('Error sending form:', error);
-          },
-          complete: () => console.info('Send post complete'),
+      console.log('Sending contact data:', this.contactData);
+  
+      fetch(this.post.endPoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(this.contactData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log('Response:', data);
+          this.isSubmitted = true;
+          this.contactMeUsed = true;
+          this.contactMeUsedChange.emit(this.contactMeUsed);
+          ngForm.resetForm();
+        })
+        .catch((error) => {
+          console.error('Error sending form:', error);
+          alert(`Error: ${error.message}`);
         });
-    } else if (ngForm.submitted && ngForm.form.valid) {
-      this.isSubmitted = true;
-      this.contactMeUsed = true;
-      localStorage.setItem('contactMeUsed', JSON.stringify(this.contactMeUsed));
-      
-      ngForm.resetForm();
     }
-
   }
+  
+  
 
   togglePrivacy(){
     this.privacyOpen = !this.privacyOpen;
