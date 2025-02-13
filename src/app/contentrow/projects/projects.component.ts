@@ -72,15 +72,15 @@ export class ProjectsComponent implements OnInit {
       link: "https://www.david-kolosza.de/wizard-legacy",
       class: ""
     },
-    "projectPokeDex": {
-      headline: "Project PokéDex",
+    "projectTemdosia": {
+      headline: "Project Wiki Temdosia",
       id: 3,
       image: "",
-      description: "A REST-API based application for displaying all Pokémon, with data fetched from PokéAPI.",
-      technologies: "REST-API, JavaScript, HTML, CSS",
+      description: "A REST-API based application for displaying all Temtem, with data fetched from own API.",
+      technologies: "Angular, REST-API, PHP, TypeScript, CSS, HTML",
       notes: "The Pokedex project helped me to develop a deep understanding of how to work with Rest APIs. I learned how to retrieve data in a structured and user-friendly way, which improved my skills in JS and CSS tremendously.",
-      github: "https://github.com/DosKolossos/Pokedex",
-      link: "https://www.david-kolosza.de/pokedex",
+      github: "https://github.com/DosKolossos/Temdosia",
+      link: "https://www.temdosia.de",
       class: ""
     }
   };

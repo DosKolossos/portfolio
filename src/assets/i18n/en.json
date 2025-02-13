@@ -48,13 +48,13 @@
         "class": "button-row",
         "notes": "Working with Canvas on Wizard Legacy helped me understand the structure of 2D games and deepened my knowledge of object-oriented programming. This project challenged my creativity and taught me to break down complex logic into manageable modules."
       },
-      "projectPokeDex": {
-        "headline": "Project PokéDex",
-        "description": "A REST-API based application for displaying all Pokémon, with data fetched from PokéAPI.",
+      "projectTemdosia": {
+        "headline": "Project Wiki Temdosia",
+        "description": "A REST-API based application for displaying all Temtem, with data fetched from own API.",
         "technologies": "REST-API, JavaScript, HTML, CSS",
         "image": "../../../assets/img/Projects/3.png",
         "class": "button-row",
-        "notes": "The Pokedex project helped me to develop a deep understanding of how to work with Rest APIs. I learned how to retrieve data in a structured and user-friendly way, which improved my skills in JS and CSS tremendously."
+        "notes": "Temdosia deepened my understanding of REST APIs and enhanced my skills in Angular, TypeScript, and CSS. Key challenges included performance optimization, responsive design, and dynamic filtering."
       }
     },
     "references": {
