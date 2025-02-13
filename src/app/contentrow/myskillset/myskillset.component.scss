@@ -135,6 +135,28 @@
     }
 }
 
+.arrow-left {
+    cursor: pointer;
+    position: absolute;
+    left: 960px !important;
+    top: 500px !important;
+    width: 107px;
+    height: 30px;
+    transform: scaleX(-1); /* Bild horizontal spiegeln */
+
+    &:hover {
+        transition: 0.3s;
+        transform: scaleX(-1) scale(1.2); /* Behalte das Spiegeln bei */
+        filter: brightness(5);
+    }
+
+    &:not(:hover) {
+        transition: 0.3s;
+        transform: scaleX(-1) scale(1.0); /* Behalte das Spiegeln bei */
+        filter: brightness(1);
+    }
+}
+
 .logo-with-text-mobile {
     display: none;
 }

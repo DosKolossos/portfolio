@@ -22,6 +22,7 @@ export class HeaderComponent {
 
   changeLanguage(lang: string) {
     this.currentLanguage = lang; // Setze die aktive Sprache
+    localStorage.setItem('language', lang); // Speichere die Sprache im LocalStorage
     this.languageChange.emit(lang);
     // Emitiere das Ereignis, um die Änderung zu melden
   }

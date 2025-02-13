@@ -14,20 +14,20 @@
                 </div>
             </div>
             <div class="logo-with-text-mobile" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11]; let index = index">
-                <div class="hauptgruppe" id="group{{[i]}}" 
-                data-aos="zoom-out" 
-                data-aos-duration="1000" 
-                data-aos-offset="200" 
-                [attr.data-aos-delay]="i * 250">
+                <div class="hauptgruppe" id="group{{[i]}}" data-aos="zoom-out" data-aos-duration="1000"
+                    data-aos-offset="200" [attr.data-aos-delay]="i * 250">
                     <img class="logo" src="../../../assets/img/mySkillSet/{{i}}.png">
                     <span id="span{{[i]}}" class="{{classes[index]}}">{{logoTexts[index]}}</span>
                 </div>
             </div>
         </div>
         <div id="newTechnoText" class="fade-in-normal-text">{{ 'newTechnoText' | translate }}</div>
-        <div id="newTechnoTextMobile" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="3000">{{ 'newTechnoTextMobile' | translate }}</div>
+        <div id="newTechnoTextMobile" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="3000">{{
+            'newTechnoTextMobile' | translate }}</div>
     </div>
     <a href="https://google.de" target="_blank" class="lets-talk">{{ 'letsTalk' | translate }}</a>
 </div>
 <a (click)="scrollToElement('myWork')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png"
         class="arrow-right"></a>
+<a (click)="scrollToElement('whyMe')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png"
+        class="arrow-left"></a>

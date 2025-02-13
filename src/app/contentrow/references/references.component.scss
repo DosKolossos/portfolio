@@ -78,7 +78,7 @@
   cursor: pointer;
   position: absolute;
   left: 770px !important;
-  top: 500px;
+  top: 690px;
   width: 107px;
   height: 30px;
 
@@ -92,6 +92,29 @@
     transition: 0.3s;
     transform: scale(1.0);
     filter: brightness(1);
+  }
+}
+
+.arrow-left {
+  cursor: pointer;
+  position: absolute;
+  left: 650px !important;
+  top: 690px;
+  width: 107px;
+  height: 30px;
+
+  transform: scaleX(-1);
+
+  &:hover {
+      transition: 0.3s;
+      transform: scaleX(-1) scale(1.2);
+      filter: brightness(5);
+  }
+
+  &:not(:hover) {
+      transition: 0.3s;
+      transform: scaleX(-1) scale(1.0);
+      filter: brightness(1);
   }
 }
 

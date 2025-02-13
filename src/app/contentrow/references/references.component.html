@@ -1,5 +1,7 @@
 <a (click)="scrollToElement('contactMe')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png"
     class="arrow-right"></a>
+<a (click)="scrollToElement('ongoingProjectAnker')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png"
+    class="arrow-left"></a>
 <div id="references"></div>
 <div #references>
 
@@ -23,12 +25,9 @@
         <div class="navigation">
           <button (click)="showPrevious()">&#8592;</button>
           <!-- <button (click)="stopSlide()">| |</button> -->
-          <button 
-          [class.active]="pause" 
-          (click)="toggleSlide()"
-        >
-          {{ pause ? '| |' : '| |' }}
-        </button>
+          <button [class.active]="pause" (click)="toggleSlide()">
+            {{ pause ? '| |' : '| |' }}
+          </button>
           <button (click)="showNext()">&#8594;</button>
         </div>
       </div>

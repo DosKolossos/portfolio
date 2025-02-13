@@ -1,5 +1,7 @@
 <div id="myWork"></div>
 <div id="project3"></div>
+<div id="ongoingProjectAnker"></div>
+
 <div class="content-wrapper">
     <div class="headline">{{ 'myWork' | translate }}</div>
     <div class="projects">
@@ -53,6 +55,8 @@
             </div>
             <a (click)="scrollToElement('references')" style="scroll-behavior: smooth;"><img
                     src="../../../assets/img/arrowright.png" class="arrow-right"></a>
+            <a (click)="scrollToElement('project3')" style="scroll-behavior: smooth;"><img
+                    src="../../../assets/img/arrowright.png" class="arrow-left"></a>
         </div>
     </div>
 
@@ -120,3 +124,5 @@
 </div>
 <a (click)="scrollToElement('project3')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png"
         class="arrow-right-center"></a>
+<a (click)="scrollToElement('mySkills')" style="scroll-behavior: smooth;"><img src="../../../assets/img/arrowright.png"
+        class="arrow-left-center"></a>

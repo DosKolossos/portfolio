@@ -7,9 +7,9 @@
   </div>
 
   <div class="languages">
-    
-    <p (click)="changeLanguage('en')">EN</p><p>|</p>
-    <p (click)="changeLanguage('de')">DE</p><p *ngIf="contactMeUsed">|</p>
-    <p (click)="changeLanguage('lol')" *ngIf="contactMeUsed">LOL</p>
+    <p (click)="changeLanguage('en')" [class.active]="currentLanguage === 'en'">EN</p><p>|</p>
+    <p (click)="changeLanguage('de')" [class.active]="currentLanguage === 'de'">DE</p><p *ngIf="contactMeUsed">|</p>
+    <p (click)="changeLanguage('lol')" [class.active]="currentLanguage === 'lol'" *ngIf="contactMeUsed">LOL</p>
 </div>
+
 </div>
