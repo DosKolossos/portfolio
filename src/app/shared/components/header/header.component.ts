@@ -16,11 +16,12 @@ export class HeaderComponent {
   @Output() languageChange = new EventEmitter<string>();
 
   // Variable zur Speicherung der aktuellen Sprache
-  currentLanguage: string = 'en'; // Standardmäßig auf 'en' (Englisch) gesetzt
+  currentLanguage: string = localStorage.getItem('language') || 'en'; // Lese den Wert aus localStorage
 
 
 
   changeLanguage(lang: string) {
+    
     this.currentLanguage = lang; // Setze die aktive Sprache
     localStorage.setItem('language', lang); // Speichere die Sprache im LocalStorage
     this.languageChange.emit(lang);

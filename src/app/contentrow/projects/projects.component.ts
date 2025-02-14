@@ -63,7 +63,7 @@ export class ProjectsComponent implements OnInit {
     },
     "projectWizardLegacy": {
       headline: "Project Wizard Legacy",
-      id: 2,
+      id: 3,
       image: "",
       description: "Jump, run and throw game based on object-oriented approach. Help Merlin to fight against dangerous enemies and destroy the strong endboss.",
       technologies: "Object-oriented programming, JavaScript, HTML, CSS",
@@ -74,7 +74,7 @@ export class ProjectsComponent implements OnInit {
     },
     "projectTemdosia": {
       headline: "Project Wiki Temdosia",
-      id: 3,
+      id: 2,
       image: "",
       description: "A REST-API based application for displaying all Temtem, with data fetched from own API.",
       technologies: "Angular, REST-API, PHP, TypeScript, CSS, HTML",
